@@ -23,3 +23,11 @@ Hyperlinks to each of the lab exercises and demos are listed below.
 | --- | --- | 
 {% for activity in demos  %}| {{ activity.demo.module }} | [{{ activity.demo.title }}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
+
+## CaseStudy
+
+{% assign casestudy= site.pages | where_exp:"page", "page.url contains '/Instructions/CaseStudy'" %}
+| Module | CaseStudy |
+| --- | --- | 
+{% for activity in casestudy  %}| {{ activity.casestudy.module }} | [{{ activity.casestudy.title }}]({{ site.github.url }}{{ activity.url }}) |
+{% endfor %}
