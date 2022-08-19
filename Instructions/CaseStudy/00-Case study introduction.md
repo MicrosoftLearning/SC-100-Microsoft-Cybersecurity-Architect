@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: Case study introduction'
+    module: 'Module 0: Case study introduction'
+---
+
 ## Case study introduction
 
 Many of the case studies in this course will based on cybersecurity design challenges being faced by the fictional Tailwind Traders company.
