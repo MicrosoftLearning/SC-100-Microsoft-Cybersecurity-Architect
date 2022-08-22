@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: evaluate security posture'
+    module: 'Module 5: Evaluate security posture and recommend technical strategies'
+---
+
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case study: evaluate security posture

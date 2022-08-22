@@ -1,3 +1,8 @@
+---
+casestudy:
+    title: 'CaseStudy: remote access and endpoint strategy'
+    module: 'Module 7: Design a strategy for securing server and client endpoints'
+---
 
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 

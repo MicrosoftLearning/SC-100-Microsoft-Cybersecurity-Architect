@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: architecture best practices'
+    module: 'Module 6: Understand architecture best practices'
+---
+
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case study: architecture best practices

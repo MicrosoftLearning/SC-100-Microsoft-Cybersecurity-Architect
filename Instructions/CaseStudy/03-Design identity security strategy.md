@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: Design an identity security solution'
+    module: 'Module 3: Design identity security strategy'
+---
+
 ## Case Study: Design an identity security solution
 
 Tailwind Traders is a fictitious home improvement retailer. It operates

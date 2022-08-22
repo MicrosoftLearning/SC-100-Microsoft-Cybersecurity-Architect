@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: Design a Security Operations Solution'
+    module: 'Module 2: Design security operations strategy'
+---
+
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case study: Design a Security Operations Solution

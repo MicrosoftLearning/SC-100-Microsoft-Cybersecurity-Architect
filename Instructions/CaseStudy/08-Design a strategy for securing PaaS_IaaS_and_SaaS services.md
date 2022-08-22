@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: securing PaaS, IaaS and SaaS services'
+    module: 'Module 8: Design a strategy for securing PaaS_IaaS_and_SaaS services'
+---
+
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case study: securing PaaS, IaaS and SaaS services

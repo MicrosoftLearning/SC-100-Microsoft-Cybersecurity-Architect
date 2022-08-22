@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: requirements for applications'
+    module: 'Module 9: Specify security requirements for applications'
+---
+
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case study: requirements for applications

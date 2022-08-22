@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: data security'
+    module: 'Module 10: Design a strategy for securing data'
+---
+
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case study: data security

@@ -1,3 +1,9 @@
+---
+casestudy:
+    title: 'CaseStudy: design a Zero Trust solution'
+    module: 'Module 1: Build overall security strategy'
+---
+
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case study: design a Zero Trust solution
