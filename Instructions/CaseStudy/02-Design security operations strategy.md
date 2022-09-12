@@ -26,3 +26,7 @@ The company has a new security optimization project for customer environments. T
 * What are different ways Tailwind Traders could collect events, performance data, or custom data provided through the API? Evaluate a solution and explain your decision-making process.
 * What are the different ways Tailwind Traders could prevent, detect, and respond to threats with increased visibility into (and control over) the security of your Azure resources? Evaluate a solution and explain your decision-making process.
 * How are you incorporating Azure Security Operations services available to users to protect their data, applications, and other assets in Microsoft Azure?
+
+### Resources
+
+* [Microsoft Cybersecurity References Architecture](https://github.com/MicrosoftDocs/security/blob/main/Downloads/microsoft-cybersecurity-reference-architectures.pptx?raw=true): Slides 9 (Cybersecurity Reference Architecture), 49 (Security Operations Model – Functions and Tools), 48 (Security Operations), and 51 (Converging tools and data)
