@@ -3,6 +3,7 @@ casestudy:
     title: 'CaseStudy: Design an identity security solution'
     module: 'Module 3: Design identity security strategy'
 ---
+This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case Study: Design an identity security solution
 
