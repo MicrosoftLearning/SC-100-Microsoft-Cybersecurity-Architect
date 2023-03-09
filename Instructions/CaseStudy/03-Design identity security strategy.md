@@ -27,8 +27,9 @@ The company has a new security optimization project for customer environments. T
 ## Design tasks
 
 * What could Tailwind Traders do to enforce Privileged Users to require MFA for all cloud access?
-    * Evaluate a solution and explain your decision-making process.
-    * Create a Conditional Access Policy that enforces all Global Administrators to require MFA.
+
 * What could Tailwind Traders do to review administrators' access regularly to ensure only the right people have continued access to Azure resources?
-* Configure recurring access reviews to revoke unneeded permissions over time.
+
 * How are you enforcing Identity Security for all users to protect their data, applications, and other assets in Microsoft Azure?
+
+    * Evaluate a solution and explain your decision-making process.
