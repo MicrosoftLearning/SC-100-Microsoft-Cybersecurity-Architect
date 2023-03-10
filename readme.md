@@ -13,3 +13,6 @@ This repository contains case studies for the SC-100: Microsoft Cybersecurity Ar
 * [Design a strategy for security PaaS, IaaS and SaaS services](/Instructions/CaseStudy/08-Design%20a%20strategy%20for%20securing%20PaaS_IaaS_and_SaaS%20services.md)
 * [Specify security requirements for applications](/Instructions/CaseStudy/09-Specify%20security%20requirements%20for%20applications.md)
 * [Design a strategy for securing data](/Instructions/CaseStudy/10-Design%20a%20strategy%20for%20securing%20data.md)
+* [Best practices with MCRA and MCSB](/Instructions/CaseStudy/11-Best%20practices%20with%20MCRA%20and%20MCSB.md)
+* [Recommend secure methodology with CAF](/Instructions/CaseStudy/12-Secure%20methodology%20with%20CAF.md)
+* [Recommend a ransomware strategy by using Microsoft Security Best Practices](/Instructions/CaseStudy/13-Ransomware%20strategy.md)
