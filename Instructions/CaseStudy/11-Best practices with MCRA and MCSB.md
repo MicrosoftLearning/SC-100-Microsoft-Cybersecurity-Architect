@@ -3,6 +3,7 @@ casestudy:
     title: 'Case study: Best practices with MCRA and MCSB'
     module: 'Module 11: Recommend security best practices with MCRA and MCSB'
 ---
+
 This case study exercise is designed to provide experience performing some conceptual design tasks that relate to the subjects learned in this module.
 
 ## Case study: Best practices with MCRA and MCSB
