@@ -36,3 +36,4 @@ landscape, and security community resources.
 * Validating the solution
    -   Which solution should Tailwind Traders utilize to understand the security state and risk across resources in Azure?
    -   Which product should Tailwind Traders utilize to define consistent security policies and enable controls?
+* Which cloud security capability should be used to enable the AI/Robotics Team test their apps without disrupting the production environment?

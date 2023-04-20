@@ -38,4 +38,3 @@ will examine how IT operates in the cloud.
     - Which tool should be utilized to aggregate CTI feeds and present in a meaningful dashboard?
     - Which tool provides built-in threat intelligence report that can be used to improve the companies' defenses?
 * Which security capability will enable Tailwind Traders to implement the CIO's vision of empowering the remote users while enforcing security and restrictions based on the user's geo-location?
-* Which cloud security capability should be used to enable the AI/Robotics Team test their apps without disrupting the production environment?
