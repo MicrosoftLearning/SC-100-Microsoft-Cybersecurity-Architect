@@ -11,7 +11,7 @@ Hyperlinks to each case study is listed below.
 
 ## Case studies reorganized for May 2023 content refresh
 
-{% assign casestudy= site.pages | where_exp:"page", "page.url contains '/Instructions/CaseStudyv2'" %}
+{% assign casestudy= site.pages | where_exp:"page", "page.url contains '/Instructions/CaseStudyv2/'" %}
 | Module | CaseStudy |
 | --- | --- | 
 {% for activity in casestudy  %}| {{ activity.casestudy.module }} | [{{ activity.casestudy.title }}]({{ site.github.url }}{{ activity.url }}) |
@@ -20,7 +20,7 @@ Hyperlinks to each case study is listed below.
 
 ## Old case study organization
 
-{% assign casestudy= site.pages | where_exp:"page", "page.url contains '/Instructions/CaseStudy'" %}
+{% assign casestudy= site.pages | where_exp:"page", "page.url contains '/Instructions/CaseStudy/'" %}
 | Module | CaseStudy |
 | --- | --- | 
 {% for activity in casestudy  %}| {{ activity.casestudy.module }} | [{{ activity.casestudy.title }}]({{ site.github.url }}{{ activity.url }}) |
