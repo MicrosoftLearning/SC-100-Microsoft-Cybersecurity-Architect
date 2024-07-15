@@ -56,7 +56,7 @@ Before Defender for Cloud can apply protections to your assets you have to enabl
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
 2. Search for **Microsoft Defender for Cloud** and open it.
-3. In the left navigation pane, select **Enviroment settings**.
+3. In the left navigation pane, expand **Management** and select **Enviroment settings**.
 4. Click **Expand all** and select your Subscription.
 5. If the Subscription is shown as **unregistered** reload the page.
 6. Select the ellipses (...) next to the subscription and select **Edit settings**.
@@ -71,7 +71,7 @@ Azure Arc is required so that it can be used to send data to the log analytics w
 
 1. Swap to VM **LON-SC2** and sign into the Azure portal **https://portal.azure.com**.
 2. Search for Azure Arc and open it.
-3. In the left hand navigation pane, select **Machines**.
+3. In the left hand navigation pane, expand **Azure Arc resources** and select **Machines**.
 4. Select **Add/Create** > **Add Machine**.
 5. Under Add a single server, select **Generate script**.
 6. Choose **ContosoRG** in Resource group.
@@ -125,7 +125,7 @@ It may take a few hours till the resource is fully onboarded in Defender for Clo
 Based on the recommendation you can start to secure the resource and assign security policies e.g. NIST SP 800-53 Rev.5 to ensure that the resources of Tailwind traders comply with our compliance regulations.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-2. Open Defender for Cloud select **Enviroment settings**.
+2. Open Defender for Cloud expand **Management** and select **Enviroment settings**.
 3. Select **Expand all**.
 4. Select the ellipses (...) next to the subscription and select **Edit settings**.
 5. Select **Security policies** in the navigation menu on the left. The list might take a while to load.
