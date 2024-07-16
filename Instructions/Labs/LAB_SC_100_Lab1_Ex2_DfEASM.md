@@ -70,11 +70,11 @@ In this Task, you´ll configure a data connection from Defender EASM to an log a
 1. You should still be logged into the Azure portal **<https://portal.azure.com>**.
 2. In the top search bar, search for **Log Analytics Workspaces**.
 3. Select your **law-sentinel** workspace from the last exercise.
-4. In the left navigation pane, select **Agents**.
+4. In the left navigation pane, expand **settings** and select **Agents**.
 5. Leave the page as it is and open another tab and log into the Azure portal **<https://portal.azure.com>**.
 6.  On the Searchbar on the top, search for **Microsoft Defender EASM** and open it.
 7.  Select your **EASM** workspace.
-8.  In the left navigation pane, select **Data connections**.
+8.  In the left navigation pane, expand **Manage** and select **Data connections**.
 9.  Under Log Analytics, select **Add connection**.
 10. Name it **law-sentinel**
 11. Switch to the previous tab with the log analytics workspace that should be open.
@@ -95,7 +95,7 @@ In this Task, you´ll review the Defender EASM Security posture and get informat
 1. You should still be logged into the Azure portal **<https://portal.azure.com>**.
 2. On the Searchbar on the top, search for **Microsoft Defender EASM** and open it.
 3. Select your **EASM** workspace.
-4. In the left navigation pane, select **Attack surface summary**
+4. In the left navigation pane, expand **Dashboards** and select **Attack surface summary**
 
 The Attack Surface Summary dashboards provide key insights and high level overview of the impacted core assets of your attack surface.
 
@@ -122,7 +122,7 @@ In this task, you´ll manage and categorize the discovered assets.
 1. You should still be logged into the Azure portal **<https://portal.azure.com>**.
 2. On the Searchbar on the top, search for **Microsoft Defender EASM** and open it.
 3. Select your **EASM** workspace.
-4. In the left navigation pane, select **Inventory**.
+4. In the left navigation pane, expand **General** and select **Inventory**.
 5. Under Search in the dropdown menu select **Label**
 6. In the dropdown menu below choose the label we recently created in Task 4 **Open ports**.
 7. Select **Search**.

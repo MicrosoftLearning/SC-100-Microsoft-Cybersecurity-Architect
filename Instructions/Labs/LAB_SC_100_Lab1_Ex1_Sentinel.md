@@ -28,7 +28,7 @@ Workbooks allow security analysts and administrators to visualize security data 
 |----|----|----|
 |Deploy SIEM/SOAR Solution| Microsoft Sentinel, Log Analytics Workspace| Setup Log analytics workspace and deploy Microsoft Sentinel
 |Limit access to specific SOC Roles| Log Analytics Workspace, Role based Access Control| Setup RBAC for Log Analytics Workspace|
-|Create a Dashboard with custom vies for incidents and their alerts|Microsoft Sentinel, Workbook | Create a workbook with custom view on current incidents and alerts|
+|Create a Dashboard with custom views for incidents and their alerts|Microsoft Sentinel, Workbook | Create a workbook with custom view on current incidents and alerts|
 
 ## Part 2: Implement the solution (optional)
 
@@ -131,7 +131,7 @@ Read : Query workspace table data
 27. Select **Create**.
 28. In the top searchbar, search for **Resoure groups** and select **rg_eastus_soc**.
 29. Open the log analytics workspace **law-sentinel**.
-30. In the left navigation pane, select **Tables**.
+30. In the left navigation pane, expand **Settings** and select **Tables**.
 31. Search for **Cisco_Umbrella_dns_CL**.
 32. Click on the ellipses (...), select **Access control (IAM)**.
 33. Select **Add** > **Add role assignment**.
@@ -149,7 +149,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
 2. On the Searchbar on the top, search for **Microsoft Sentinel** and open it.
 3. Select **law-sentinel**.
-4. In the left navigation pane, select **Workbooks**.
+4. In the left navigation pane, expand **Threat management** and select **Workbooks**.
 5. Select **Add Workbook**.
 6. Select **Edit**.
 7. Select the first **Edit** button on the right side.
