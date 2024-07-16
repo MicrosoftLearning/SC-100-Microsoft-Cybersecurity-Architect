@@ -5,13 +5,11 @@
 
 # Lab 3 - Exercise 1 - Compliance assessment
 
-Contoso Ltd. is expanding its operations into Europe and aims to boost sales by attracting a larger customer base for its products. However, the company is encountering challenges in meeting customers' IT security demands. Customers are keen on ensuring that their partners maintain a secure environment to facilitate safe collaboration and minimize the risk of data leaks and compromise of company assets. Many customers insist on evidence of well-established IT business processes and a robust security framework, often in the form of an ISO-27001 certification.
-
-To address this, the company has opted to engage an external audit firm to conduct an ISO27001 Audit and obtain the certification. It is imperative to assess the current organizational stance and develop an action plan to meet the ISO27001 requirements. As the company's cyber security architect, you have been given the task of identifying existing gaps and assigning people within the organisation specific tasks to resolve them.
+Contoso Ltd. is expanding into Europe to increase sales, but is having trouble satisfying customer IT security demands. Customers want Contoso to maintain a secure environment to facilitate safe collaboration and minimize the risk of data leaks and compromised company assets. Many customers require evidence of well-established IT business processes and a robust security framework, which is often in the form of an ISO-27001 certification. To address this, Contoso has decided to hire an external audit firm to conduct the ISO-27001 Audit and obtain the certification. It is necessary to assess the current organizational stance and develop an action plan to meet the ISO-27001 requirements. As the company's cyber security architect, you are tasked with identifying the existing gaps and assigning specific tasks to people within the organization to resolve them.
 
 ## Part 1: Design a solution (required)
 
-In this task you will design a concept to adress the challenges Contoso Ltd. is facing.
+In this task you will design a concept to address the challenges Contoso Ltd. is facing.
 
 ### Design Approach
 

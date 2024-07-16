@@ -6,11 +6,11 @@
 
 # Lab 2 - Exercise 4 - Shadow-IT
 
-Contoso's IT infrastructure has evolved over the past decades, providing various server instances, applications, and services. The company has recently prioritized securing its environment, with the implementation of Device Management, data governance, and Identity and Application Protection over the last two years. However, the process of restricting users to only specific applications deployed by the company has not yet been established, allowing users to install applications from various sources. As the organisation's cyber security architect, you aim to have a complete overview of all applications used by employees. Your protection measure is to block insecure applications in your environment.
+Contoso's IT infrastructure has evolved over the past few decades, providing various server instances, applications, and services. Recently, the company has prioritized securing its environment by implementing Device Management, data governance, and Identity and Application Protection over the last two years. However, the process of restricting users to only specific applications deployed by the company has not yet been established, allowing users to install applications from various sources. As the organization's cyber security architect, your goal is to have a complete overview of all applications used by employees. Your protection measure is to block insecure applications in your environment. 
 
 ## Part 1: Design a solution (required)
 
-In this task you will design a concept to adress the challenges Contoso Ltd. is facing.
+In this task you will design a concept to address the challenges Contoso Ltd. is facing.
 
 ### Design Approach
 

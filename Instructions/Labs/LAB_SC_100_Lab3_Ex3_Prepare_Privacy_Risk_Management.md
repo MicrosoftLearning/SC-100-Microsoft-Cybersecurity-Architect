@@ -6,7 +6,7 @@
 
 # Lab 3 - Exercise 3 - Prepare Privacy Risk Management
 
-Contoso Ltd. wants to improve their compliance posture as part of the expansion to Europe. As the Cybersecurity Architect Expert you have been tasked with improving the Priva Privacy Risk Management Score in particular. Use Compliance Manager to look at improvement actions and delegate their implementation for an improvement of the privacy risk management compliance score. As part of that you will also add a new policy for the regions U.S. and EU.
+As the Cybersecurity Architect Expert for Contoso, you've been tasked with improving the company's compliance posture as part of its European expansion. Specifically, you'll be working to improve the Priva Privacy Risk Management Score. To accomplish this, you'll use Compliance Manager to identify improvement actions and delegate their implementation. This will lead to an improvement in the privacy risk management compliance score. In addition, you'll be adding a new policy for the U.S. and EU regions. 
 
 ## Part 1: Design a solution (required)
 

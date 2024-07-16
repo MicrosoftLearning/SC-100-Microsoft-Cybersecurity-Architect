@@ -5,13 +5,13 @@
 
 # Lab 4 - Exercise 4 - Endpoint Security
 
-Contoso manages its devices with Microsoft Intune. The company provides its employees with Windows 10 and Windows 11 deviecs. The company has already implemented several configuration profiles in the past. During a company-wide infrastructure analysis, the company discovered that existing policies were created independently from each other in different places, making a holistic view and traceability difficult. As the company's cyber security architect, you have decided to consolidate all the necessary and critical configurations in one place. 
+Contoso uses Microsoft Intune to manage its devices and provides its employees with Windows 10 and Windows 11 devices. The company has implemented several configuration profiles in the past. However, a company-wide infrastructure analysis revealed that the existing policies were created independently, making it difficult to view them holistically and trace them. As the company's cyber security architect, you have decided to consolidate all the necessary and critical configurations in one place. 
 
-The analysis also revealed that Tailwind Traders uses macOS devices in its environment. As part of the upcoming merger, you plan to prepare the Contoso tenant for the new macOS devices.
+In addition, the analysis revealed that Tailwind Traders uses macOS devices in its environment. As part of the upcoming merger, you plan to prepare the Contoso tenant for the new macOS devices.
 
 ## Part 1: Design a solution (required)
 
-In this task you will design a concept to adress the challenges Contoso Ltd. is facing.
+In this task you will design a concept to address the challenges Contoso Ltd. is facing.
 
 ### Design Approach
 

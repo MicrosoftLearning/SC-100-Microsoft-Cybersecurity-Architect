@@ -1,6 +1,6 @@
 # Lab 2 - Exercise 2 - Conditional Access
 
-You have identified access to Microsoft 365 from unknown locations, even though your Conditional Access policies only allow particular locations & devices. Your investigations indicate that these are employees who are accessing remotely whilst travelling home from their office on public transport. You wish to use Continuous Access Evalulation to prevent this behaviour, as it is in breach of your industry regulations. You also want to implement the authentication strength you prepared in the previous exercise to secure certain applications handling customer data.
+You have discovered that employees are accessing Microsoft 365 from unknown locations, despite your Conditional Access policies only allowing access from specific locations and devices. Your investigation has revealed that these employees are accessing Microsoft 365 while traveling home from their office on public transportation. This behavior is in violation of industry regulations, and you want to use Continuous Access Evaluation to prevent it. Additionally, you want to implement the authentication strength you prepared in the previous exercise to secure certain applications that handle customer data. 
 
 ## Part 1: Design a solution (required)
 

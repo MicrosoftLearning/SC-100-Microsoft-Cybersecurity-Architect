@@ -1,7 +1,8 @@
 # Lab 4 - Exercise 2 - Global Secure Access
 
-After setting up the server for monitoring you plan to establish secure networking to the file server using Global Secure Access (GSA). If Tailwind Traders is bringing local servers into your company IT infrastructure, you want to make sure that access to these machines is secured until these file servers can be migrated to secure cloud storage. You decided against reworking the VPN infrastructure of Tailwind Traders to allow your employees access to the servers.
-You will start out creating a Azure App Proxy and enrolling the client to Entra ID, before creating a connector. After that you configure an access policy and install the GSA client. In the last step you will test the GSA connection.
+After setting up the monitoring server, you need to establish secure networking to the file server using Global Secure Access (GSA). You want to ensure that access to these machines is secured until these file servers can be migrated to secure cloud storage, especially if Tailwind Traders is bringing local servers into your company IT infrastructure. You decided against reworking the VPN infrastructure of Tailwind Traders to allow your employees access to the servers. 
+
+To establish secure networking, you will start by creating an Azure App Proxy and enrolling the client to Entra ID, before creating a connector. After that, you will configure an access policy and install the GSA client. Finally, you will test the GSA connection to ensure that everything is working properly.
 
 ## Part 1: Design a solution (required)
 

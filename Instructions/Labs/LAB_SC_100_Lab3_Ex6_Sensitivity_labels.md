@@ -5,19 +5,19 @@
 
 # Lab 3 - Exercise 6 - Sensitivity Labels
 
-Contoso Ltd. is in process to acquire Tailwind Traders. The management has decided to treat all documents in this process as strictly confidential in order to minimise the risk of a data leak.
+Contoso Ltd. is in the process of acquiring Tailwind Traders. Management has decided to treat all documents in this process as strictly confidential to minimize the risk of a data leak.
 
 You have been given the following safety requirements for the label:
 
 - Content may only be shared with internal employees of Contoso Ltd.
 - Content must be encrypted.
-- Files and E-Mails may not be forwarded.
+- Files and e-mails may not be forwarded.
 - Access to content from non-corporate devices is prohibited.
-- Scope of this label is management.
+- The scope of this label is management.
 
 ## Part 1: Design a solution (required)
 
-In this task you will design a concept to adress the issues Contoso Ltd. is facing.
+In this task you will design a concept to address the issues Contoso Ltd. is facing.
 
 ### Design Approach
 

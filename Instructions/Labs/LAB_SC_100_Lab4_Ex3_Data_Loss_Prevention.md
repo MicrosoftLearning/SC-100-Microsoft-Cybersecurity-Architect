@@ -5,13 +5,13 @@
 
 # Lab 4 - Exercise 3 - Data Loss Prevention
 
-Following the acquisition of Tailwind Traders, Contoso Ltd. has been progressively integrating the new company into various projects. While the merger is still in progress, both entities operate within separate tenants, with Tailwind Traders employees considered as external users. Collaboration consists of inviting these users as guests to Contoso's tenant, facilitating the sharing of SharePoint sites and files. For projects with heightened security requirements, selected Tailwind Traders employees receive Windows 11 clients managed by Contoso Ltd., ensuring full access to internal resources while maintaining security oversight. Access to M365 desktop applications is blocked for unmanaged devices. These users can only access the environment via web applications. Managed devices are secured through various policies in Endpoint Manager. Additionally, Contoso Ltd. has implemented Microsoft Purview Information Protection to encrypt sensitive documents based on the type of information they contain. As a cybersecurity architect, you have recently examined various activities in the Defender for Cloud Apps activity log. You realised that some documents marked as confidential are being copied to external USB drives and that users are free to store any company data they have access to on their unmanaged, personal devices. This is a major problem that needs to be addressed.
+Contoso Ltd. is currently integrating Tailwind Traders into their projects. Although the merger is still in progress, both companies operate within separate tenants. Tailwind Traders employees are considered external users and are invited as guests to Contoso's tenant to facilitate sharing of SharePoint sites and files. In certain projects, selected Tailwind Traders employees receive Windows 11 clients managed by Contoso Ltd. to ensure full access to internal resources while maintaining security oversight. Access to M365 desktop applications is blocked for unmanaged devices, and these users can only access the environment via web applications. The managed devices are secured through various policies in Endpoint Manager. Contoso Ltd. has implemented Microsoft Purview Information Protection to encrypt sensitive documents based on the type of information they contain. 
 
-As a cyber security architect, you will design a solution to minimise the risk described above. Decide what type of solution can be used.
+As a cybersecurity architect, you recently examined various activities in the Defender for Cloud Apps activity log and discovered that some documents marked as confidential are being copied to external USB drives. You also discovered that users are free to store any company data they have access to on their unmanaged, personal devices. This poses a major problem that needs to be addressed. As a solution, you will design a security policy to restrict the storage of company data on unmanaged, personal devices. This will help to minimize the risk of sensitive data being compromised.
 
 ## Part 1: Design a solution (required)
 
-In this task you will design a concept to adress the risks Contoso Ltd. is facing.
+In this task you will design a concept to address the risks Contoso Ltd. is facing.
 
 ### Design Approach
 
@@ -23,11 +23,13 @@ Based on the provided use-case, the following requirements can be outlined:
 - Limiting access to sensitive data from unmanaged devices
 - Blocking the download of sensitive data from unmanaged devices
 
-In the second step examinine Contoso Ltd.'s existing environment. Microsoft Purview and Microsoft Defender offer various solutions for managing data flow, encompassing Microsoft Purview Information Protection, Data Loss Prevention, Conditional Access, and Retention Policies. Investiage which controls are already in place. Access various portals to review current configurations and policies, determining if adjustments are necessary or if new settings/policies need implementation.
+In the second step examine Contoso Ltd.'s existing environment. Microsoft Purview and Microsoft Defender offer various solutions for managing data flow, encompassing Microsoft Purview Information Protection, Data Loss Prevention, Conditional Access, and Retention Policies. Investigate which controls are already in place. Access various portals to review current configurations and policies, determining if adjustments are necessary or if new settings/policies need implementation.
 
 The third phase involves crafting the solution concept. Upon investigation, it is evident that none of the current policies meet the defined requirements. Therefore, a new set of policies is essential.
 
 ### Proposed Solution
+
+Design a security policy to restrict the storage of company data on unmanaged, personal devices. This will help to minimize the risk of sensitive data being compromised. The policy should outline the types of data that are considered sensitive and the acceptable devices on which they can be stored. Additionally, the policy should provide guidelines for the secure transfer of data to external devices. Employees should be required to sign an agreement acknowledging their understanding of the policy and their commitment to adhering to it. The policy should be communicated to all employees and enforced through regular audits and disciplinary action for non-compliance. Regular training sessions should also be conducted to ensure that employees are aware of the risks associated with storing company data on personal devices and the importance of following the policy. Finally, the policy should be reviewed and updated regularly to ensure that it remains effective and relevant. 
 
 |Requirement|Solution|Action plan|
 |----|----|----|

@@ -1,11 +1,8 @@
 # Lab 2 - Exercise 3 - Cross-tenant Synchronization
 
-After Contoso recently acquired Tailwind Traders, it has been highlighted that it is difficult to determine which guests are customers or partners, and which are employees of the acquired company as well as providing an initial common address list from Tailwind Traders to Contoso.
-Additionally, a new requirement is, that your tenant must only allow known domain names to be added from now as guest users to Entra ID. You also want to limit who can invite guests to the organization to internal users only.
-You will restrict external access to only one domain, and create a B2B collaboration and cross-tenant synchronization from Tailwind Traders to Contoso.
-Your tasks as a Cybersecurity Architect will be to make sure, that all the requirements are met and to implement the changes to Entra ID that have to be made for the carve in applying Zero Trust principles.
+Contoso recently acquired Tailwind Traders and it has been difficult to determine which guests are customers or partners, and which are employees of the acquired company. Your task is to provide an initial common address list from Tailwind Traders to Contoso. Additionally, your tenant must only allow known domain names to be added as guest users to Entra ID. You want to limit who can invite guests to the organization to internal users only. You will restrict external access to only one domain. You will also create a B2B collaboration and cross-tenant synchronization from Tailwind Traders to Contoso.
 
-In this exercise you will team up with a lab partner to create a Cross-tenant synchronization. 
+As a Cybersecurity Architect, you must ensure that all requirements are met and implement the necessary changes to Entra ID to apply Zero Trust principles. In this exercise, you will team up with a lab partner to create a cross-tenant synchronization. 
 
 ## Part 1: Design a solution (required)
 

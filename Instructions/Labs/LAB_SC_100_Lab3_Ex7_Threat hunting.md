@@ -6,9 +6,11 @@
 
 # Lab 3 - Exercise 7 - Content Search Microsoft Purview
 
-You have just been informed that your company is facing a significant amount of malicious emails, posing a serious threat to its integrity and security. Considering this challenge, it is now your responsibility to identify the sender addresses or subject lines of these emails. Your remedial action includes the mass deletion of these malicious emails.
+Your company is facing a serious threat to its integrity and security. A significant number of malicious emails have been detected. Your task is to identify the sender addresses or subject lines of these emails. Once you have identified these malicious emails, you must delete them en masse.
 
-### Approach
+## Part 1: Design a solution (required)
+
+### Design approach
 
 The first step is to identify malicious emails. Therefore, an analysis of the current mail-flow is essential. The Microsoft Defender Portal provides a comprehensive overview of all outgoing and incoming mail flow, along with further capabilities for investigating this traffic. The remediation action involves deleting the malicious emails. 
 

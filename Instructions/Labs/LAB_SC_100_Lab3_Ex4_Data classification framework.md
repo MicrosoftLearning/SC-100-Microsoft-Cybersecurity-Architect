@@ -6,8 +6,7 @@
 
 # Lab 3 - Exercise 4 - Data classification framework
 
-
-Assigned with the task of structuring data classification for Contoso Ltd. in preparation for an ISO-27001:2022 audit, your role involves integrating a new project ID system for construction projects within the company. All pertinent documents containing a certain project-ID must be kept for 5 years to comply with government regulations. The overarching objective is to establish a robust framework crucial for ensuring effective data protection against leakage, deletion, and loss.
+You have been assigned the task of structuring data classification for Contoso Ltd. in preparation for an ISO-27001:2022 audit. The goal is to establish a robust framework that is crucial for ensuring effective data protection against leakage, deletion, and loss. Your role involves integrating a new project ID system for construction projects within the company. To comply with government regulations, all documents that contain a certain project-ID must be kept for 5 years.
 
 You were given following examples to classify Project IDs:
 
@@ -22,7 +21,7 @@ You were given following examples to classify Project IDs:
 
 ## Part 1: Design a solution (required)
 
-In this task you will design a concept to adress the issues Contoso Ltd. is facing.
+In this task you will design a concept to address the issues Contoso Ltd. is facing.
 
 ### Design Approach
 

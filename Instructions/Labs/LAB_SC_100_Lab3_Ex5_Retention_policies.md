@@ -5,15 +5,11 @@
 
 # Lab 3 - Exercise 5 - Retention policies
 
-Recently, the german government enacted amendments to specific laws governing retention periods for companies. Under the new regulations, all financial documents must now be retained for 11 years, as opposed to the previous requirement of 10 years. Conversely, commercial or business correspondence, copies of dispatched commercial or business correspondence can now be retained for 5 years instead of 7.
-
-Currently, your company adheres to a retention policy that maintains all documents for a duration of 7 years. However, Contoso Ltd. has encountered challenges in recent years due to the accumulation of a large volume of data in its environment, leading to increased maintenance costs and significant storage space consumption.
-
-Your assignment is to optimize the retention policy in your company to comply with legal regulations while minimizing data storage requirements. The company policy dictates that all data must be retained for at least five years after creation, in strict adherence to all applicable laws governing data retention.
+The German government recently modified specific laws governing retention periods for companies. One significant change is that all financial documents must now be retained for 11 years, instead of the previous requirement of 10 years. Another change is that commercial or business correspondence, including copies of dispatched commercial or business correspondence, can now be retained for 5 years instead of 7. Currently, your company adheres to a retention policy that maintains all documents for a duration of 7 years. However, Contoso Ltd. has encountered challenges in recent years due to the accumulation of a large volume of data in its environment. This has led to increased maintenance costs and significant storage space consumption. Your assignment is to optimize the retention policy in your company to comply with legal regulations while minimizing data storage requirements. The company policy dictates that all data must be retained for at least five years after creation, in strict adherence to all applicable laws governing data retention.
 
 ## Part 1: Design a solution (required)
 
-In this task you will design a concept to adress the challenges Contoso Ltd. is facing.
+In this task you will design a concept to address the challenges Contoso Ltd. is facing.
 
 ### Design Approach
 

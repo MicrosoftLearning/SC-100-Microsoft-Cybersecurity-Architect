@@ -6,7 +6,11 @@
 
 # Lab 3 - Exercise 2 - Delegate Subject rights requests
 
-As one part of the ISO-27001 preperation, Contoso Ltd. plans to implement a process for GDPR subject rights requests. Contoso Ltd. plans to use the Microsoft Priva subject rights requests feature while also integrating the new workflow into an internal compliance audit process. You as the Cybersecurity Architect Expert have to delegate handling the European DSRs and set up read permissions for the audit. A custom view-only role group is needed as the built-in role groups grant too many permissions for the audit and employees handling DSR cases are not intended to also handle the Privacy Risk Management feature. Assign the chosen employees the necessary roles for handling subject rights requests or auditing following the principle of least privilege. For the POC you are planning to use the Microsoft Priva trial and you have to check if audit logs are activated in your tenant. Because the compliance audit is happening bi-monthly you also have to increase the subject rights request retention duration, so there is no blind spot between the audits.
+Contoso Ltd. is preparing for ISO-27001 certification. As part of this preparation, they need to implement a process for GDPR subject rights requests. The company will use the Microsoft Priva subject rights requests feature and integrate the new workflow into their internal compliance audit process. 
+
+As the Cybersecurity Architect Expert, you will delegate the handling of European DSRs and set up read permissions for the audit. To ensure that employees handling DSR cases do not also handle the Privacy Risk Management feature, you will create a custom view-only role group. The built-in role groups grant too many permissions for the audit. 
+
+You will assign the chosen employees the necessary roles for handling subject rights requests or auditing, following the principle of least privilege. To complete the POC, you will use the Microsoft Priva trial and ensure that audit logs are activated in your tenant. Since the compliance audit occurs bi-monthly, you will increase the subject rights request retention duration to eliminate any blind spots between the audits. 
 
 ## Part 1: Design a solution (required)
 
