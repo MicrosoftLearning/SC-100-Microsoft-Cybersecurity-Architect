@@ -38,7 +38,7 @@ The first step is to activate Global Secure Access in your tenant. This will all
 3. You will be asked to setup multifactor authentication, follow the instructions.
 4. On the Stay signed in? dialog box select the Don’t show this again checkbox and then select **No**.
 5. Close the password save dialog from the bottom by selecting Never, to not save the default global admins credentials in your browser.
-6. In the left navigation pane expand **Global Secure Access** and select **Get started**.
+6. In the left navigation pane expand **Global Secure Access** and select **Dashboard**.
 7. Under **Activate Global Secure Access in your Tenant** select **Activate**.
 
 You have successfully activated Global Secure Access.
