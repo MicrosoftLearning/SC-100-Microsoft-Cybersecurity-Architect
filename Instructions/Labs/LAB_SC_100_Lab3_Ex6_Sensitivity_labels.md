@@ -118,7 +118,7 @@ You will create a new sensitivity label to fulfil the requirements.
 
     - **Name**: Confidential - Acquisition process
     - **Display name**: Confidential - Acquisiton process
-    - **Description for users**: Hihgly confidential data related to any acquisiton process.
+    - **Description for users**: Highly confidential data related to any acquisition process.
     - **Desription for admins**: This label provides protection to any data realated to any acquisitons of Contoso.
 
 1. Select **Next**.

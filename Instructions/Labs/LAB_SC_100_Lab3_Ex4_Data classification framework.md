@@ -70,11 +70,11 @@ You will create a retention label to retain all documents related to constructio
 1. You should still be logged into the Microsoft Purview Compliance portal **https://compliance.microsoft.com/**.
 1. In the Microsoft Purview Compliance portal, in the left navigation pane expand **Data lifecycle management** and select **Microsoft 365**.
 1. On the **Data lifecycle management** page, select **Labels** blade.
-1. On the **Labels** blade, select **New a label**.
+1. On the **Labels** blade, select **Create a label**.
 1. On the **Name your retention policy** page, enter the following information:
 
     - **Name**: Retention of Construction Project Documentation
-    - **Description for users**: The construction project cocumentation Retention Policy dictates the retention of all project-related documents for five years following project completion
+    - **Description for users**: The construction project documentation Retention Policy dictates the retention of all project-related documents for five years following project completion
     - **Description for admins**: This label is applied to retain construction project documents for a period of five years, and it is utilized in conjunction with auto-labeling.
 
 1. Select **Next**

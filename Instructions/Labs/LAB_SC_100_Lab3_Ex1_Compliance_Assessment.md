@@ -38,9 +38,10 @@ Your first step is to analyse the company's current environment. You carry out a
 4. On the **Compliance Manager** page, select **Assessment**.
 5. On the **Compliance Manager \| Assessments** page, select **+ Add assessment**.
 6. On the **Base your assessment on a regulation** page, select **Select regulation**.
-7. In the search text box enter **ISO-27001:2022**, then select the regulation then select **Save** and then select **Save**.
+7. In the search text box enter **ISO-27001:2022**, then select the regulation then select **Save** and then select **Next**.
 8. On the **Add name and group** page, in the text box **Assessment name** , enter **ISO-27001 Audit assessment** and then select **Next**.
-9. Finish the configuration and create the assessment.
+9. On the **Select services** page, select **Select serivices** and select **Microsoft 365** and select **Add** then select **Next**
+10. Finish the configuration and create the assessment.
 
 You have successfully created an assessment based on ISO-27001.
 
@@ -52,11 +53,10 @@ The results of the assessment shows you different areas and actions that are ess
 2. In the Microsoft Purview Compliance portal, in the left navigation page, select **Compliance Manager**.
 3. On the **Compliance Manager** page, select the assessment **ISO-27001 Audit assessment** you created.
 4. On the assessment page, select **Your improvement actions** blade.
-5. Edit the filter for **Status** to filter out all completed or in-progress improvement actions.
-6. Set the filter for **Control family** to **Physical controls**.
-7. Select all shown improvement actions, then select **Assign to user**.
-8. In the new **Assign improvement actions** page, in the search text box enter **Nestor Wilke**.
-9.  Select the user and select **Assign**.
+5. Set the filter for **Control family** to **Physical controls**.
+6. Select all shown improvement actions, then select **Assign to user**.
+7. In the new **Assign improvement actions** page, in the search text box enter **Nestor Wilke**.
+8. Select the user and select **Assign**.
 
 You have successfully viewed and assigned an improvement action to a technical engineer
 

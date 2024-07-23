@@ -148,7 +148,8 @@ To adhere to german regulations you will now create a retention label with a ret
     - Microsoft 365 Group mailboxes & sites
 
 1. Select **Next**.
-1. On the **Choose a label to auto-apply** page select **Next**.
+1. On the **Choose a label to auto-apply** page select **Add label**.
+1. On the **Choose a label** page select **German Financial Data** and select **Add** and select **Next**
 1. On the **Decide whether to test or run your policy** page select **Turn on policy** then select **Next**.
 1. On the **Review and finish** page select **Submit**.
 

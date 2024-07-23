@@ -125,7 +125,7 @@ For the bi-monthly compliance audit you have to configure the retention limit fo
 2. On the left pane select **Compliance Manager** and then select the **Improvement actions** tab.
 3. On top of the page select the **Solutions:** filter and check **Priva Privacy Risk Management** and **Priva Subject Rights Requests**.
 4. Select **Enable and enforce data retention limits for data involved in subject rights request**
-5. Click **Assign to user** > Search for **MOD Administrator** > **Assign**, which assigns MOD Administrator as owner of the improvement action.
+5. Click **Assign Owner** > Search for **MOD Administrator** > **Assign**, which assigns MOD Administrator as owner of the improvement action.
 6. Read the details of the improvement.
 7. Select **Launch Now** at the bottom of the description to directly enter the subject rights request settings.
 8.  Select the **Data retention periods** tab.
