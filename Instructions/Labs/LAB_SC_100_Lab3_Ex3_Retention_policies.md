@@ -1,9 +1,9 @@
 ---
     lab: 3
-    title: 'Exercise 5 - Retention policies'
+    title: 'Exercise 3 - Retention policies'
 ---
 
-# Lab 3 - Exercise 5 - Retention policies
+# Lab 3 - Exercise 3 - Retention policies
 
 Recently, the german government enacted amendments to specific laws governing retention periods for companies. Under the new regulations, all financial documents must now be retained for 11 years, as opposed to the previous requirement of 10 years. Conversely, commercial or business correspondence, copies of dispatched commercial or business correspondence can now be retained for 5 years instead of 7.
 

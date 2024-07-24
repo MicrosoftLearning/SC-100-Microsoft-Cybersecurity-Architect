@@ -1,9 +1,9 @@
 ---
     lab: 3
-    title: 'Exercise 6 - Sensitivity Labels'
+    title: 'Exercise 4 - Sensitivity Labels'
 ---
 
-# Lab 3 - Exercise 6 - Sensitivity Labels
+# Lab 3 - Exercise 4 - Sensitivity Labels
 
 Contoso Ltd. is in process to acquire Tailwind Traders. The management has decided to treat all documents in this process as strictly confidential in order to minimise the risk of a data leak.
 
