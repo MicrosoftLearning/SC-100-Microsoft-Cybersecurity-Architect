@@ -1,10 +1,10 @@
 ---
     lab: 3
-    title: 'Exercise 7 - Threat hunting'
+    title: 'Exercise 5 - Threat hunting'
 ---
 
 
-# Lab 3 - Exercise 7 - Content Search Microsoft Purview
+# Lab 3 - Exercise 5 - Content Search Microsoft Purview
 
 Your company is facing a serious threat to its integrity and security. A significant number of malicious emails have been detected. Your task is to identify the sender addresses or subject lines of these emails. Once you have identified these malicious emails, you must delete them en masse.
 

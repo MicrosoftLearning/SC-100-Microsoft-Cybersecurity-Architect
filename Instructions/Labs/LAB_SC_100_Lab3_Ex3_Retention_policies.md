@@ -1,9 +1,9 @@
 ---
     lab: 3
-    title: 'Exercise 5 - Retention policies'
+    title: 'Exercise 3 - Retention policies'
 ---
 
-# Lab 3 - Exercise 5 - Retention policies
+# Lab 3 - Exercise 3 - Retention policies
 
 The German government recently modified specific laws governing retention periods for companies. One significant change is that all financial documents must now be retained for 11 years, instead of the previous requirement of 10 years. Another change is that commercial or business correspondence, including copies of dispatched commercial or business correspondence, can now be retained for 5 years instead of 7. Currently, your company adheres to a retention policy that maintains all documents for a duration of 7 years. However, Contoso Ltd. has encountered challenges in recent years due to the accumulation of a large volume of data in its environment. This has led to increased maintenance costs and significant storage space consumption. Your assignment is to optimize the retention policy in your company to comply with legal regulations while minimizing data storage requirements. The company policy dictates that all data must be retained for at least five years after creation, in strict adherence to all applicable laws governing data retention.
 
@@ -144,7 +144,8 @@ To adhere to german regulations you will now create a retention label with a ret
     - Microsoft 365 Group mailboxes & sites
 
 1. Select **Next**.
-1. On the **Choose a label to auto-apply** page select **Next**.
+1. On the **Choose a label to auto-apply** page select **Add label**.
+1. On the **Choose a label** page select **German Financial Data** and select **Add** and select **Next**
 1. On the **Decide whether to test or run your policy** page select **Turn on policy** then select **Next**.
 1. On the **Review and finish** page select **Submit**.
 

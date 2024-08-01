@@ -1,9 +1,9 @@
 ---
     lab: 3
-    title: 'Exercise 6 - Sensitivity Labels'
+    title: 'Exercise 4 - Sensitivity Labels'
 ---
 
-# Lab 3 - Exercise 6 - Sensitivity Labels
+# Lab 3 - Exercise 4 - Sensitivity Labels
 
 Contoso Ltd. is in the process of acquiring Tailwind Traders. Management has decided to treat all documents in this process as strictly confidential to minimize the risk of a data leak.
 
@@ -118,7 +118,7 @@ You will create a new sensitivity label to fulfil the requirements.
 
     - **Name**: Confidential - Acquisition process
     - **Display name**: Confidential - Acquisiton process
-    - **Description for users**: Hihgly confidential data related to any acquisiton process.
+    - **Description for users**: Highly confidential data related to any acquisition process.
     - **Desription for admins**: This label provides protection to any data realated to any acquisitons of Contoso.
 
 1. Select **Next**.
