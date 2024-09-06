@@ -54,7 +54,7 @@ In this task you will investigate existing sesnitivity labels and decide whether
     ```powershell
     Connect-IPPSSession
     ```
-1.When the **Sign in** window is displayed, sign in as admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and use the administrative password for your tenant.
+1. When the **Sign in** window is displayed, sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and use the administrative password for your tenant.
 1. Enter the following cmdlet to get a list of all deployes sensitivity labels
 
     ```powershell

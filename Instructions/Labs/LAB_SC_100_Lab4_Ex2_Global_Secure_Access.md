@@ -76,20 +76,20 @@ In this task, you´ll create a SMB Share on the on premises Fileserver, that wil
 
 In order for your users to access the file server through the GSA client you need to enable Quick Access and assign it to your test users. Without this configuration the test user will not be able to connect to the file server.
 
-1.   In the left navigation pane expand **Applications** and select **Quick Access**.
-2.  - Name: SMB to ContosoFS
-    - Connector Group: Default
-3.  Select **Add Quick Access application segment** and fill in the following information:
-     - Destination type: IP address
-     - IP address: "**YOUR VM IP**"
-     - Ports: 445
-4.  Select **Apply**.
-5.  Select **Save** and reload the Quick Access menu.
-6.  On the left select **User and groups**.
-7.  Select **Add user/group**.
-8.  Select **None Selected**.
-9.  Add **MOD Administrator**.
-10. Click **Select** > **Assign**.
+1. In the left navigation pane expand **Applications** and select **Quick Access**. Enter the following information:
+    - Name: **SMB to ContosoFS**
+    - Connector Group: **Default**
+1. Select **Add Quick Access application segment** and fill in the following information:
+    - Destination type: IP address
+    - IP address: "**YOUR VM IP**"
+    - Ports: 445
+1. Select **Apply**.
+1. Select **Save** and reload the Quick Access menu.
+1. On the left select **User and groups**.
+1. Select **Add user/group**.
+1. Select **None Selected**.
+1. Add **MOD Administrator**.
+1. Click **Select** > **Assign**.
 
 You have successfully enabled quick access for your test user, in this case your admin account.
 
