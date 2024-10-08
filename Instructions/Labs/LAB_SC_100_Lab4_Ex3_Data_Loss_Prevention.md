@@ -44,28 +44,29 @@ Design a security policy to restrict the storage of company data on unmanaged, p
 The first step of the solution design involves creating of a Data Loss Prevention rule for Endpoints. You will deploy a DLP rule to block copy of data to USB drives. 
 
 1. Sign-in to the Microsoft Purview Compliance portal **https://compliance.microsoft.com** as Allan Deyoung using his administrator account **MOD Administrator**.
-2. In the Microsoft Purview portal, in the left navigation pane, expand **Data loss prevention** then select **Policies**.
-3. On the **Policies** page select **+ Create policy**.
-4. On the **Start with a template or create a custom policy** page select **Custom**, **Custom policy** then select **Next**.
-5. On the **Name your DLP policy** page enter a Name and Description and select **Next**.
-6. On the **Assign admin units** page select **Next**.
-7. On the **Choose where to apply the policy** page select only **Devices** and select **Next**.
-8. On the **Define policy settings** page select **Next**.
-9. On the **Customize advanced DLP rules** page select **+ Create rule**.
-10. Enter a name and a decription for the rule. 
-11. Under **Conditions** select **+ Add condition** and select **Content contains**.
-12. Specify the following conditions:
+1. If prompted to switch back to the classic Microsoft Purview compliance portal, select **Switch**.
+1. In the Microsoft Purview portal, in the left navigation pane, expand **Data loss prevention** then select **Policies**.
+1. On the **Policies** page select **+ Create policy**.
+1. On the **Start with a template or create a custom policy** page select **Custom**, **Custom policy** then select **Next**.
+1. On the **Name your DLP policy** page enter a Name and Description and select **Next**.
+1. On the **Assign admin units** page select **Next**.
+1. On the **Choose where to apply the policy** page select only **Devices** and select **Next**.
+1. On the **Define policy settings** page select **Next**.
+1. On the **Customize advanced DLP rules** page select **+ Create rule**.
+1. Enter a name and a description for the rule. 
+1. Under **Conditions** select **+ Add condition** and select **Content contains**.
+1. Specify the following conditions:
 
-    - **Content contains**: Sensitivity labels
-      - Select **Add**, then select **Sensitivity labels** and select the labels **Trusted People**, **Project - Falcon**, **Confidential**, **Highly Confidential**, **Confidential - Finance**
+    - **Content contains**: 
+      - Select **Add**, then select **Sensitivity labels** and select the labels **Trusted People**, **Project - Falcon**, **Confidential**, **Highly Confidential**, **Confidential - Finance**. Click **Add**.
 13. Under **Actions** select **+ Add an action** and select **Audit or restrict activities on devices**.
 14. Specify the following actions:
    -    Under **File activities for all apps** select **Apply restrictions to specific activity**.
       - Make sure **Copy to a removable USB device** is selected and select the option **Block** from the dropdown menu for this setting.
       - Leave other settings unchanged.
-15. Select **Save** then select **Save**.
+15. Select **Save**.
 16. Select **Next**.
-17. On the **Policy mode** page select **Turn the policy on immediately**
+17. On the **Policy mode** page select **Turn the policy on immediately**. Select **Next**.
 18.  On the **Review and finish** page select **Submit**.
 
 You have successfully implemented a data loss prevention policy that blocks any copying of data to USB drives.
@@ -87,7 +88,7 @@ In this task you will deploy conditional access app control on your applications
 
 1. Sign-in to the Microsoft Entra portal **https://entra.microsoft.com** as Allan Deyoung using his administrator account **MOD Administrator**.
 2. In the Microsoft Entra portal expand **Protection** and select **Conditional Access**.
-3. In the **Conditional Access | Overview** page select **Policies** and selecht **+ Create new policy**.
+3. In the **Conditional Access | Overview** page select **Policies** and select **+ New policy**.
 4. Enter a name for the policy.
 5. Under **Assignments** select **Users** and include **All users**.
 6. Under **Assignments** select **Target resources** and include **All cloud apps**.
@@ -107,14 +108,14 @@ You have successfully created a conditional access policy to forward all applica
 You will create two session policies in Defender for Cloud apps to block downloads of data and restrict permissions for unmanaged devices.
 
 1. Sign-in to the Microsoft Defender portal **https://security.microsoft.com** as Allan Deyoung using his administrator account **MOD Administrator**.
-2. In the Microsoft Security portal select **Cloud apps** > **Policies** > **Policy management**.
-3. On the **Policies** page create a **Session policy**.
-4. On **Create session policy** page select the policy template **Block download based on real-time content inspection**.
-5. Enter a policy name.
-6. Select a policy severity and a category.
-7. Enter a description.
-8. Under **Session control type** select **Control file download (with inspection)**.
-9. Under **Activity source** in the **Activities matching all of the following** section select the following filter:
+1. In the Microsoft Security portal select **Cloud apps** > **Policies** > **Policy management**.
+1. On the **Policies** page, select **+ Create policy** > **Session policy**.
+1. On the **Create session policy** page select the policy template **Block download based on real-time content inspection**.
+1. Enter a policy name.
+1. Select a policy severity and a category.
+1. Enter a description.
+1. Under **Session control type** select **Control file download (with inspection)**.
+1. Under **Activity source** in the **Activities matching all of the following** section select the following filter:
 
     - **Device tag**: Select **Does not equal** and select **Intune compliant**.
 

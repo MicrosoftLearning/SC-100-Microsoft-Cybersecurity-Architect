@@ -2,39 +2,37 @@
 
 ## Exercise Overview
 
-Contoso has a Security Operations Center (SOC) that monitors and responds to security incidents across the enterprise. The SOC is staffed with security analysts, security engineers, and network engineers. The SOC has decided to use Microsoft Sentinel as their Security Information and Event Management (SIEM) solution. To collect and analyze security logs from across the enterprise, the SOC has a log analytics workspace. The SOC has a requirement to secure access to the log analytics workspace based on the principle of least privilege. The SOC has two different roles, security analyst and security engineer, with different permission requirements. The network team has a requirement to access only the Cisco Umbrella logs. 
+Contoso has a Security Operations Center (SOC) that monitors and responds to security incidents across the enterprise. The SOC is staffed with security analysts, security engineers, and network engineers. The SOC has decided to use Microsoft Sentinel as their Security Information and Event Management (SIEM) solution. To collect and analyze security logs from across the enterprise, the SOC has a log analytics workspace. The SOC has a requirement to secure access to the log analytics workspace based on the principle of least privilege. The SOC has two different roles, security analyst and security engineer, with different permission requirements. The network team has a requirement to access only the Cisco Umbrella logs.
 
 ## Part 1: Design a solution (required)
 
-In this task you´ll design a concept for monitoring and responding to security events with specific access permissions for Contoso´s Security operation center. 
+In this task, you'll design a concept for monitoring and responding to security events with specific access permissions for Contoso's Security Operations Center.
 
 ### Design approach
 
-The initial step involves analyzing the requirements based on the described scenario, understanding the objectives and defining the requirements.
+The initial step involves analyzing the requirements based on the described scenario, understanding the objectives, and defining the requirements.
 
-Based on the provided use-case, the following requirements can be outlined:
+Based on the provided use case, the following requirements can be outlined:
 
 - Deploy SIEM/SOAR Solution
-- Limit access to specific SOC Roles
-- Create a Dashboard with custom views for incidents and their alerts
+- Limit access to specific SOC roles
+- Create a dashboard with custom views for incidents and their alerts
 
-In this scenario, you deploy the SIEM SOAR solution based on Microsoft Sentinel, you set up Role based access control in Workspace-context and limit access for the network team to a single table in log analytics workspace.
-Workbooks allow security analysts and administrators to visualize security data using graphical displays. They provide a tool for presenting and analyzing data in an Dashboard.
-
+In this scenario, you deploy the SIEM SOAR solution based on Microsoft Sentinel, set up role-based access control in the workspace context, and limit access for the network team to a single table in the log analytics workspace. Workbooks allow security analysts and administrators to visualize security data using graphical displays. They provide a tool for presenting and analyzing data in a dashboard.
 
 ### Proposed solution
 
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Deploy SIEM/SOAR Solution| Microsoft Sentinel, Log Analytics Workspace| Setup Log analytics workspace and deploy Microsoft Sentinel
-|Limit access to specific SOC Roles| Log Analytics Workspace, Role based Access Control| Setup RBAC for Log Analytics Workspace|
-|Create a Dashboard with custom views for incidents and their alerts|Microsoft Sentinel, Workbook | Create a workbook with custom view on current incidents and alerts|
+| Requirement | Solution | Action plan |
+| ---- | ---- | ---- |
+| Deploy SIEM/SOAR Solution | Microsoft Sentinel, Log Analytics Workspace | Set up log analytics workspace and deploy Microsoft Sentinel |
+| Limit access to specific SOC roles | Log Analytics Workspace, Role-based Access Control | Set up RBAC for Log Analytics Workspace |
+| Create a dashboard with custom views for incidents and their alerts | Microsoft Sentinel, Workbook | Create a workbook with a custom view on current incidents and alerts |
 
 ## Part 2: Implement the solution (optional)
 
 ### Task 1 - Create Log Analytics Workspace
 
-In this task, you´ll create a log analytics workspace witch is required to house all of the data that Microsoft Sentinel will be ingesting and using for its detections and analytics.
+In this task, you'll create a log analytics workspace which is required to house all of the data that Microsoft Sentinel will be ingesting and using for its detections and analytics.
 
 1. Log into the Client 1 VM (LON-SC1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
 2. Open **Microsoft Edge**, select the address bar, navigate to **https://portal.azure.com** and log into the Azure Portal as user **User1-*******@LODSUATMCA.onmicrosoft.com** (where ****** is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
@@ -60,7 +58,7 @@ In this task, you will add Sentinel to the created log analytics workspace and a
 4. Select **Add** and search for the previously created log analytics workspace **law-sentinel**.
 5. Confirm with click on **Add**.
 6. In the left navigation pane, select **Content hub**.
-7. Search for **Microsoft Sentinel Training Lab**, **select** and **install** the Solution.
+7. Search for `Microsoft Sentinel Training Lab`, **select** and **install** the solution.
 8. Select **Create**.
 9. Choose the resource group **rg_eastus_soc** and workspace **law-sentinel**.
 10. Select **Review & Create**.

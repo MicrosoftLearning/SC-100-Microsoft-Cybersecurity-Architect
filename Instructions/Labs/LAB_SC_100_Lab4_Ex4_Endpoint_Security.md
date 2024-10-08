@@ -42,21 +42,23 @@ Your overall goal is to secure your endpoints appropiately and consolidate as ma
 3. On the **Endpoint security | Overview** page, under **Overview** select **Security baselines**.
 4. On the **Endpoint security | Security baselines** page select **Security Baseline for Windows 10 and later**.
 5. On the **MDM Security Baseline | Profiles** page select **+ Create profile**.
-6. On the **Basics** blade enter a name and a description.
-7. Select **Next**.
-8. On the **Configuration settings** blade investigate the different configuration options. When you have finished, select **Next**.
-9. On the **Scope tags** blade select **Next**.
-10. On the **Assignments** blade under **Included groups** select **Add all users** and select **Next**.
-11. On the **Review + create** blade select **Create**.
-12. Go back to **Endpoint security | Security baselines** page.
-13. On the **Endpoint security | Security baselines** page select **Microsoft Defender for Endpoint Baseline**.
-14. On the **Microsoft Defender for Endpoint baseline | Profiles** select **+ Create profile**.
-15. On the **Basics** blade enter a name and a description.
-16. Select **Next**.
-17. On the **Configuration settings** blade investigate the different configuration options. When you have finished, select **Next**.
-18. On the **Scope tags** blade select **Next**. 
-19. On the **Assignments** blade, under **Included groups** select **Add all users** and select **Next**.
-11. On the **Review + create** blade select **Create**.
+1. Review the description on the **Create a profile** blade and select **Create**.
+1. On the **Basics** blade enter a name and a description.
+1. Select **Next**.
+1. On the **Configuration settings** blade investigate the different configuration options. When you have finished, select **Next**.
+1. On the **Scope tags** blade select **Next**.
+1. On the **Assignments** blade under **Included groups** select **Add all users** and select **Next**.
+1. On the **Review + create** blade select **Create**.
+1. Go back to **Endpoint security | Security baselines** page.
+1. On the **Endpoint security | Security baselines** page select **Microsoft Defender for Endpoint Security Baseline**.
+1. On the **Microsoft Defender for Endpoint Security baseline | Profiles** select **+ Create profile**.
+1. Review the description on the **Create a profile** blade and select **Create**.
+1. On the **Basics** blade enter a name and a description.
+1. Select **Next**.
+1. On the **Configuration settings** blade investigate the different configuration options. When you have finished, select **Next**.
+1. On the **Scope tags** blade select **Next**. 
+1. On the **Assignments** blade, under **Included groups** select **Add all users** and select **Next**.
+1. On the **Review + create** blade select **Create**.
 
 You have successfully created two security baseline policies for Windows devices.
 
@@ -74,16 +76,19 @@ After securing Windows devices with endpoint security baseline policies you will
 8. Select **Next**
 9. On the **Configuration settings** blade ensure the settings are configured as follows:
 
-#### Network protection
+#### Cloud delivered protection preferences
 
-- **Enforcement level**: block
+- **Enable / disable cloud delivered protection**: Enabled (Default)
+- **Enable/ disable automatic sample submissions**: Enabled (Default)
+- **Diagnostic collection level**: optional (Default)
+- **Automatic security intelligence upate**: Enabled (Default)
 
 #### Antivirus engine
 
 - **Enable real-time protecion**: Enabled (Default)
 - **Enable passive mode**: Disabled (Default)
 - **Exclusion merge** : admin_only
-- **Threat type settings**:
+- Under **Threat type settings** select **+ Add**
   - **Threat type**: potentially_unwanted_application
   - **Action to take**: block
 - **Threat type settings merge**: admin_only
@@ -91,12 +96,9 @@ After securing Windows devices with endpoint security baseline policies you will
 - **Run a scan after definitions are updated**: Enabled (Default)
 - **Enforcement level**: real_time
 
-#### Cloud delivered protection preferences
+#### Network protection
 
-- **Enable / disable cloud delivered protection**: Enabled (Default)
-- **Enable/ disable automatic sample submissions**: Enabled (Default)
-- **Diagnostic collection level**: optional (Default)
-- **Automatic security intelligence upate**: Enabled (Default)
+- **Enforcement level**: block
   
 #### Tamper protection
 
@@ -126,7 +128,7 @@ In this task you will encrypt macOS devices.
 4. On the **Endpoint security | Disk encryption** page select **+ Create Policy**.
 5. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **FileVault**.
 6. Select **Create**.
-7. On the **Basic** plade enter a name and description.
+7. On the **Basic** blade enter a name and description. Select **Next**.
 8. On the **Configuration settings** blade under **Encryption** configure the following settings:
    - **Enable FileVault**: Yes
    - **Personal recovery key rotation**: 6 months
