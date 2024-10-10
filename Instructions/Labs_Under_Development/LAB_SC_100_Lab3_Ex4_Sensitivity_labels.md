@@ -30,7 +30,7 @@ Based on above scenario, Microsoft Purview Information Protection can be used to
 |Requirement|Solution|Action plan|
 |----|----|----|
 |Encrypt documents and mails|Microsoft Purview Information Protection|Deploy a sensitivty label|
-|Restrict access to data from unmanaged deviecs|Microsoft Purview Information Protection|Deploy a sensitivity label|
+|Restrict access to data from unmanaged devices|Microsoft Purview Information Protection|Deploy a sensitivity label|
 |Restrict access to internal users only|Microsoft Purview Information Protection|Deploy a sensitivity label
 
 ## Part 2: Implement the solution (optional)
@@ -55,7 +55,7 @@ In this task you will investigate existing sesnitivity labels and decide whether
     Connect-IPPSSession
     ```
 1. When the **Sign in** window is displayed, sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and use the administrative password for your tenant.
-1. Enter the following cmdlet to get a list of all deployes sensitivity labels
+1. Enter the following cmdlet to get a list of all deployed sensitivity labels
 
     ```powershell
     Get-Label | Format-Table -wrap ParentLabelDisplay,DisplayName,LabelActions
@@ -91,6 +91,8 @@ Connect-MgGraph -Scopes "Directory.ReadWrite.All"
 1. Enter following cmdlet to enable Sensitivity labels:
 
 ```powershell
+
+$Setting = Get-MgBetaDirectorySetting | where { $_.DisplayName -eq "Group.Unified"}
 $params = @{
      Values = @(
  	    @{
@@ -100,7 +102,7 @@ $params = @{
      )
 }
 
-Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
+Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id -BodyParameter $params
 ```
 
 1. Close the PowerShell window.

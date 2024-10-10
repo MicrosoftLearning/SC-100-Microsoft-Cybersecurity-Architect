@@ -89,8 +89,8 @@ Your plan involves implementing a new company-wide retention policy with a five-
     - OneDrive accounts
     - Microsoft 365 Group mailboxes & sites
 
-1. Select**Next**.
-1. On the **Decide if you want to ratain content, delete it or both** page enter the following settings:
+1. Select **Next**.
+1. On the **Decide if you want to retain content, delete it or both** page enter the following settings:
 
     - **Retain items for a specific period**: 5 years
     - **Start the retention period based on**: When items were cerated
@@ -103,7 +103,7 @@ You have successfully created a retention policy. You can now delete all remaini
 
 ### Task 3: Create a retention label
 
-To adhere to german regulations you will now create a retention label with a retention period of 11 years and auto-apply it to all documents that contain german financial data.
+To adhere to german regulations you will now create a retention label with a retention period of 10 years and auto-apply it to all documents that contain german financial data.
 
 1. You should still be logged into the Microsoft Purview Compliance portal **https://compliance.microsoft.com/**.
 1. In the Microsoft Purview Compliance portal, in the left navigation page, expand **Data lifecycle management** and select **Microsoft 365**.
@@ -111,23 +111,23 @@ To adhere to german regulations you will now create a retention label with a ret
 1. On the **Name your retention label** page enter the following information:
 
     - **Name**: German financial data
-    - **Description for users**: This label retains all german financial data for 11 years
-    - **Description for admins**: The label retains all financial data for 11 years and it is automaticall applied.
+    - **Description for users**: This label retains all german financial data for 10 years
+    - **Description for admins**: The label retains all financial data for 10 years and it is automatically applied.
 
 1. Select **Next**.
 1. On the **Define label settings** page select **Enforce actions after a specific period** and select **Next**.
 1. On the **Define the period** page enter the following information:
 
-    - **How long is the period?**: 11 years
+    - **How long is the period?**: 10 years
     - **When should the period begin?**: When items were created
 
 1. Select **Next**.
-1. On the **Choose what happens after the period** page select **Delete items automatically**.
+1. On the **Choose what happens after the period** page select **Delete items automatically**. Click **Next**.
 1. On the **Review and finish** page select **Create label**.
 1. On the **Your retention label is created** page select **Auto-apply this label to a specific type of content** and select **Done**.
 1. On the **Let´s get started** page enter the following information:
 
-    - **Name**: Automatically retain all german financial data for 11 years
+    - **Name**: Automatically retain all german financial data for 10 years
     - **Descriptions**: This policy auto-applies the label **German financial data**.
 
 1. Select **Next**.
@@ -144,8 +144,7 @@ To adhere to german regulations you will now create a retention label with a ret
     - Microsoft 365 Group mailboxes & sites
 
 1. Select **Next**.
-1. On the **Choose a label to auto-apply** page select **Add label**.
-1. On the **Choose a label** page select **German Financial Data** and select **Add** and select **Next**
+1. On the **Choose a label to auto-apply** page make sure that the  **German Financial Data** label is already present. Otherwise add it using the **+ Add label** button. Select **Next**.
 1. On the **Decide whether to test or run your policy** page select **Turn on policy** then select **Next**.
 1. On the **Review and finish** page select **Submit**.
 

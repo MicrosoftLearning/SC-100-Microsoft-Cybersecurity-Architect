@@ -49,7 +49,7 @@ The results of the assessment shows you different areas and actions that are ess
 
 1. You should still be logged into the Microsoft Purview Compliance portal **https://compliance.microsoft.com/**.
 2. In the Microsoft Purview Compliance portal, in the left navigation page, select **Compliance Manager**.
-3. On the **Compliance Manager** page, select the assessment **ISO-27001 Audit assessment** you created.
+3. On the **Compliance Manager** page, select the assessment **ISO/IEC-27001:2022** you created.
 4. On the assessment page, select **Your improvement actions** blade.
 5. Set the filter for **Control family** to **Physical controls**.
 6. Select all shown improvement actions, then select **Assign to user**.
@@ -65,7 +65,7 @@ Users need access to view the tasks assigned to them. You will grant Nestor Wilk
 1. You should still be logged into the Microsoft Purview Compliance portal **https://compliance.microsoft.com/**.
 2. In the Microsoft Purview Compliance portal, in the left navigation pane, select **Compliance Manager**.
 3. In the **Compliance Manager** page, select **Assessment** pane then select the **ISO-27001 Audit assessment** assessment.
-4. In the **ISO/IEC 27001:Assessment** page, select **Manage user access**.
+4. In the **ISO/IEC 27001:Assessment** page, in the upper right corner, select **Manage user access**.
 5. In the new **Manage user access** page, select **Assessor** and select **Add assessors**.
 6. In the **Search for users** text box, enter **Nestor Wilke**.
 7. Select the user and then select **Save**.
