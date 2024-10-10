@@ -58,7 +58,7 @@ In this task, you will add Sentinel to the created log analytics workspace and a
 4. Select **Add** and search for the previously created log analytics workspace **law-sentinel**.
 5. Confirm with click on **Add**.
 6. In the left navigation pane, select **Content hub**.
-7. Search for `Microsoft Sentinel Training Lab`, **select** and **install** the solution.
+7. Search for **Microsoft Sentinel Training Lab**, **select** and **install** the solution.
 8. Select **Create**.
 9. Choose the resource group **rg_eastus_soc** and workspace **law-sentinel**.
 10. Select **Review & Create**.
@@ -75,11 +75,11 @@ Furthermore, the network team needs access to cisco umbrella logs. You must ensu
 #### Permission requirements
 
 | Role | Permissions |
-|---- | ---- |
+|---|---|
 | Security analyst | View data, incidents, worksbooks and other Sentinel resources |
-|| Assigning/dismissing incidents. |
+| | Assigning/dismissing incidents. |
 | Security engineer | Create and edit workbooks and analytics rules |
-|| Install and update solutions from content hub |
+| | Install and update solutions from content hub |
 | Network Team | Read Permissions for Group: **NOC** on Table: **Cisco_Umbrella_dns_CL**|
 
 ---
