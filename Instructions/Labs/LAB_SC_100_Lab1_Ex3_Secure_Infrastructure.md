@@ -17,7 +17,7 @@ Based on the provided use-case, the following requirements can be outlined:
 - Logs should be stored, that Contoso´s SIEM Solution can process them
 - Asses the compliance state of deploy resources
 
-In the second step examinine Contoso Ltd.'s existing environment. Defender for Cloud provides recommendations to secure cloud and on-premises resources by identifying steps to improve configuration and deployment. By actively monitoring workloads, it enhances overall security posture and reduces exposure to threats.
+In the second step examine Contoso Ltd.'s existing environment. Defender for Cloud provides recommendations to secure cloud and on-premises resources by identifying steps to improve configuration and deployment. By actively monitoring workloads, it enhances overall security posture and reduces exposure to threats.
 
 ### Proposed solution
 
@@ -68,7 +68,7 @@ When enabling the Plan for Servers you could see that Defender for Cloud support
 Azure Arc is required so that it can be used to send data to the log analytics workspace that Defender for Cloud uses.
 
 1. Swap to VM **LON-SC2** and sign into the Azure portal **https://portal.azure.com**.
-2. Search for Azure Arc and open it.
+2. Search for **Azure Arc** and open it.
 3. In the left hand navigation pane, expand **Azure Arc resources** and select **Machines**.
 4. Select **Add/Create** > **Add Machine**.
 5. Under Add a single server, select **Generate script**.
@@ -127,7 +127,7 @@ Based on the recommendation you can start to secure the resource and assign secu
 3. Select **Expand all**.
 4. Select the ellipses (...) next to the subscription and select **Edit settings**.
 5. Select **Security policies** in the navigation menu on the left. The list might take a while to load.
-6. Search for **NIST SP 800-53 Rev.5**. Change the status slider to **On**. 
+6. Search for **NIST SP 800-53 Rev. 5**. Change the status slider to **On**. 
 7. Go back to Defender for Cloud and select **Regulatory compliance**.
 
 Due to limitation off the lab enivroment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
