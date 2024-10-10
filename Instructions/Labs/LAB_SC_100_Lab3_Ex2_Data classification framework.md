@@ -12,10 +12,10 @@ You were given following examples to classify Project IDs:
 
 |Project ID|
 |----|
-|PAR-1023-DA
-|BER-0822-AB
-|Rom-0419-bm
-|sTr*1223-Se
+|PAR-1023-DA|
+|BER-0822-AB|
+|Rom-0419-bm|
+|sTr*1223-Se|
 |BaR#0418-ag|
 |dui0522-in|
 
@@ -47,13 +47,15 @@ You will create a custom sensitive information type to detect documents that con
     - **Name**: Project Identification Number
     - **Description**: Identifies project idenditification number
 1. Select **Next**.
-1. On the **Define patterns for this sensitive info type** page, select **Crate pattern**.
+1. On the **Define patterns for this sensitive info type** page, select **Create pattern**.
 1. On the **New pattern** page, select **Add primary element** and then **Regular expression**.
 1. On the **Add a regular expression** page in the **ID** text box, type **ProjectID**.
-1. In the tect box **Regular expression** enter the following expression:
-```regex   
+1. In the text box **Regular expression** enter the following expression:
+
+```
 [a-zA-Z]{3}(\W)?[\d]{4}(\W)?[a-zA-Z]{2}
 ```
+
 > [!NOTE] The provided regular expression is crafted to identify a sequence characterized by three letters, followed by potentially optional non-word characters, then four digits, followed once again by optional non-word characters, and ultimately ending with two letters. The presence of non-word characters is discretionary, and the overarching pattern is intended to correspond to a specific format or structure within the data.
 
 1. Select **String match** for the **regular expressions** and select **Done**.
@@ -82,7 +84,6 @@ You will create a retention label to retain all documents related to constructio
 
     - **Retain items for**: 5 years
     - **Start the retention period based on**: When items were created
-    - **At the end of the retention period**: Do nothing
 
 1. Select **Next**.
 1. On the **Choose what happens after retention period** page, select **Deactivate retention settings**.

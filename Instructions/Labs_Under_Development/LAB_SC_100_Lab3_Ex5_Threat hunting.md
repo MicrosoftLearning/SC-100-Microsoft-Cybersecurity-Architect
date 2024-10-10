@@ -65,7 +65,7 @@ You´ve come to the conclusion that mails with the subject "You have tasks due t
 1. Enter the following cmdlet to perform content search and specify the time period in the cmdlet:
 
     ```powershell
-    $Search=New-ComplianceSearch -Name "Purge phishing messages" -ExchangeLocation All -ContentMatchQuery '(Received:mm/dd/yyyy..mm/dd/yyyy) AND (Subject:"You have tasks due today")'
+    $Search=New-ComplianceSearch -Name "Purge phishing messages" -ExchangeLocation All -ContentMatchQuery '(Subject:"You have tasks due today")'
     Start-ComplianceSearch -Identity $Search.Identity
     ```
 1. Enter the followng cmdlet to hard delete messages:
