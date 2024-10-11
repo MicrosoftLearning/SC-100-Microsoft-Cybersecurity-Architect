@@ -2,8 +2,11 @@
     lab: 3
     title: 'Exercise 1 - Compliance assessment'
 ---
+# Compliance assessment
 
-# Lab 3 - Exercise 1 - Compliance assessment
+## Lab scenario introduction
+
+You are Allan Deyoung, a member of the IT department at Contoso Ltd. You have recently been transferred to the IT Security division. Your new role is to evaluate Contoso's Zero Trust readiness and develop an action plan to establish a Zero Trust initiative, following the Zero Trust pillars. Contoso is a large multinational corporation with a global presence in multiple industries. The company has a large cloud footprint and a hybrid infrastructure. Contoso's security operations center (SOC) is responsible for monitoring and responding to security incidents across the enterprise. The SOC is staffed with security analysts, security engineers, and network engineers. The SOC uses Microsoft Sentinel as its security information and event management (SIEM) solution. The SOC has a log analytics workspace that is used to collect and analyze security logs from across the enterprise.
 
 Contoso Ltd. is expanding into Europe to increase sales, but is having trouble satisfying customer IT security demands. Customers want Contoso to maintain a secure environment to facilitate safe collaboration and minimize the risk of data leaks and compromised company assets. Many customers require evidence of well-established IT business processes and a robust security framework, which is often in the form of an ISO-27001 certification. To address this, Contoso has decided to hire an external audit firm to conduct the ISO-27001 Audit and obtain the certification. It is necessary to assess the current organizational stance and develop an action plan to meet the ISO-27001 requirements. As the company's cyber security architect, you are tasked with identifying the existing gaps and assigning specific tasks to people within the organization to resolve them.
 
