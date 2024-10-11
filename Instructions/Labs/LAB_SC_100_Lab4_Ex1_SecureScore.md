@@ -104,4 +104,4 @@ In this task, you´ll manage recommended action and document your solutions.
 10. Add a note **Currently secured with JAMF** to the **Action plan** field.
 11. Select **Save and Close**.
 
-You succesfully setup additional workloads for Secure Score, assigned permission based on least privilege access and managed and delegated recommended actions to identity team of Contoso Ltd.
+You successfully setup additional workloads for Secure Score, assigned permission based on least privilege access and managed and delegated recommended actions to identity team of Contoso Ltd.
