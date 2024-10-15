@@ -28,7 +28,7 @@ The third phase involves crafting the solution's concept. Upon investigation, it
 |Requirement|Solution|Action plan|
 |----|----|----|
 |Restrict invitation rights to internal employees only|External collaboration settings|Limit invitation rights to members of the tenant and specific admin invitation roles|
-|Block invitations from all but the list of trusted domains|External collaboration settings|Create an invitation whitelist including only trusted domains|
+|Block invitations from all but the list of trusted domains|External collaboration settings|Create an invitation allowlist including only trusted domains|
 |Synchronize both company's users|Entra ID Cross-tenant synchronization|Establish access trust between both Entra ID tenants and create a configuration that synchronizes users to the other tenant|
 |Make external users identifiable as externals|Cross-tenant attribute mapping|Edit the displayName attribute of every user synchronized by creating a custom expression using the attribute mapping function of the Cross-tenant synchronization configuration|
 
