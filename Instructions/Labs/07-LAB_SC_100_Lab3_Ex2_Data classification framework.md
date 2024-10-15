@@ -1,9 +1,3 @@
----
-    lab: 3
-    title: 'Exercise 2 - Data classification framework'
----
-
-
 # Data classification framework
 
 You have been assigned the task of structuring data classification for Contoso Ltd. in preparation for an ISO-27001:2022 audit. The goal is to establish a robust framework that is crucial for ensuring effective data protection against leakage, deletion, and loss. Your role involves integrating a new project ID system for construction projects within the company. To comply with government regulations, all documents that contain a certain project-ID must be kept for 5 years.

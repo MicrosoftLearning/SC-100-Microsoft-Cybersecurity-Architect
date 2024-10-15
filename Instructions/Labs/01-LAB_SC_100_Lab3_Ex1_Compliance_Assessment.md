@@ -1,7 +1,3 @@
----
-    lab: 3
-    title: 'Exercise 1 - Compliance assessment'
----
 # Compliance assessment
 
 ## Lab scenario introduction
