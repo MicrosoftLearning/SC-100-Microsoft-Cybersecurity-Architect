@@ -1,4 +1,4 @@
-# Lab 4 - Exercise 1 - Security Posture Management
+# Security Posture Management
 
 Contoso wants to improve its security posture by using Microsoft Secure Score, a tool that provides recommendations and guidance on how to reduce the attack surface and protect against threats. Contoso has a dedicated security team that manages the Secure Score dashboard and assigns actions to different product teams based on their roles and responsibilities. One of the product teams, the Mark 8 Project Team, is responsible for the mobile device management and needs to ensure that devices lock after a period of inactivity to prevent unauthorized access.
 
