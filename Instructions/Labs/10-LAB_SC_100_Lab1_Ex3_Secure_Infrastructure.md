@@ -15,7 +15,7 @@ Based on the provided use-case, the following requirements can be outlined:
 - Enable Defender for Cloud on your subscription
 - On premises servers need to be secured
 - Logs should be stored, that Contoso´s SIEM Solution can process them
-- Asses the compliance state of deploy resources
+- Assess the compliance state of deploy resources
 
 In the second step examine Contoso Ltd.'s existing environment. Defender for Cloud provides recommendations to secure cloud and on-premises resources by identifying steps to improve configuration and deployment. By actively monitoring workloads, it enhances overall security posture and reduces exposure to threats.
 
@@ -26,7 +26,7 @@ In the second step examine Contoso Ltd.'s existing environment. Defender for Clo
 |Enable Defender for Cloud on your subscription| Defender for Cloud | Activate Defender plans in Defender for Cloud |
 |On premises servers need to be secured | Azure Arc | Onboard the on premise Server to the cloud enviroment |
 |Logs need to be stored, that Contoso´s SIEM Solution can process them |Defender for Cloud, DataCollectionRules, AzureMonitoring Agent, Log Analytics workspace | Create a Data Collection Rule to gather logs from Contoso´s on premise Server |
-|Asses the compliance state of deploy resources | Defender for Cloud Security policies| Enable the NIST SP 800-53 Rev.5 Compliance and asses your compliance state.|
+|Assess the compliance state of deploy resources | Defender for Cloud Security policies| Enable the NIST SP 800-53 Rev.5 Compliance and assesses your compliance state.|
 
 ## Part 2: Implement the solution (optional)
 
