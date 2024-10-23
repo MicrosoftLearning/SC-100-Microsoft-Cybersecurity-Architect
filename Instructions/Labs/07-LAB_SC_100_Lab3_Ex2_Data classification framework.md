@@ -49,11 +49,11 @@ You will create a custom sensitive information type to detect documents that con
 1. On the **Add a regular expression** page in the **ID** text box, type **ProjectID**.
 1. In the text box **Regular expression** enter the following expression:
 
-```
-[a-zA-Z]{3}(\W)?[\d]{4}(\W)?[a-zA-Z]{2}
-```
+    ```
+    [a-zA-Z]{3}(\W)?[\d]{4}(\W)?[a-zA-Z]{2}
+    ```
 
->[!NOTE] The provided regular expression is crafted to identify a sequence characterized by three letters, followed by potentially optional non-word characters, then four digits, followed once again by optional non-word characters, and ultimately ending with two letters. The presence of non-word characters is discretionary, and the overarching pattern is intended to correspond to a specific format or structure within the data.
+    >[!NOTE] The provided regular expression is crafted to identify a sequence characterized by three letters, followed by potentially optional non-word characters, then four digits, followed once again by optional non-word characters, and ultimately ending with two letters. The presence of non-word characters is discretionary, and the overarching pattern is intended to correspond to a specific format or structure within the data.
 
 1. Under the Regular expression text box, select **String match** then select **Done**.
 1. On the **New pattern** window, for the **Confidence level**, select **High confidence**, select **Create**, then select **Next**.

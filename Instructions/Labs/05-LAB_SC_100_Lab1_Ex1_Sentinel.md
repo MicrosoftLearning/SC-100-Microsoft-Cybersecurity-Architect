@@ -84,58 +84,55 @@ Furthermore, the network team needs access to Cisco umbrella logs. You must ensu
 ---
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-2. In the top searchbar, search for **Resoure groups** and select your previously created resource group **rg_eastus_soc**.
-3. In the left navigation pane, select **Access control (IAM)**.
-4. Select **Add**, from the dropdown select **Add role assignment**.
-5. Search for **Microsoft Sentinel Responder** and select **View** in the Details column.
-6. Review that the permissions match the requirements.
-7. Close the window with **X** in the top right corner.
-8. Select **Next**.
-9. Select **+Select members**.
-10. Search for **SOC Analysts** Group, select **SOC Analysts** from the search results, press **Select**  and add the role assignment.
-11. Select **Review + assign**.
-12. You'll repeat the steps for the Sentinel Contributor role. Select **Add**, from the dropdown select **Add role assignment**.
-13. Search for **Microsoft Sentinel Contributor** and select the role.
-14. Select **Next**.
-15. Select **+Select members**.
-16. On the **Select members** blade, search for the **SOC Engineers** Group.  From the search results select **SOC Engineers** press **Select** to add the role assignment.
-17. Select **Review + assign** twice.
-18. Select **Role assignments tab**, Confirm that the role assignments are set.
-19. Now you'll add a custom role. Select **Add**, from the dropdown select **Add custom role**.
-20. Name it, **NOC-CiscoUmbrellaCL-Read**.
-21. For **Baseline Permission**, select **Start from scratch**.
-22. Select **Next**.
-23. On the **Permissions** tab, select **Add permissions**.
-24. Search for **Microsoft.OperationalInsights**, Select the **Azure Log Analytics** card.
-25. Add the following permissions.
+1. In the top searchbar, search for **Resoure groups** and select your previously created resource group **rg_eastus_soc**.
+1. In the left navigation pane, select **Access control (IAM)**.
+1. Select **Add**, from the dropdown select **Add role assignment**.
+1. Search for **Microsoft Sentinel Responder** and select **View** in the Details column.
+1. Review that the permissions match the requirements.
+1. Close the window with **X** in the top right corner.
+1. Select **Next**.
+1. Select **+Select members**.
+1. Search for **SOC Analysts** Group, select **SOC Analysts** from the search results, press **Select**  and add the role assignment.
+1. Select **Review + assign**.
+1. You'll repeat the steps for the Sentinel Contributor role. Select **Add**, from the dropdown select **Add role assignment**.
+1. Search for **Microsoft Sentinel Contributor** and select the role.
+1. Select **Next**.
+1. Select **+Select members**.
+1. On the **Select members** blade, search for the **SOC Engineers** Group.  From the search results select **SOC Engineers** press **Select** to add the role assignment.
+1. Select **Review + assign** twice.
+1. Select **Role assignments tab**, Confirm that the role assignments are set.
+1. Now you'll add a custom role. Select **Add**, from the dropdown select **Add custom role**.
+1. Name it, **NOC-CiscoUmbrellaCL-Read**.
+1. For **Baseline Permission**, select **Start from scratch**.
+1. Select **Next**.
+1. On the **Permissions** tab, select **Add permissions**.
+1. Search for **Microsoft.OperationalInsights**, Select the **Azure Log Analytics** card.
+1. Add the following permissions.
+    - Microsoft.OperationalInsights/workspaces
+        - Read : Get Workspace
+        - Other : Search Workspace Data
+    
+    - Microsoft.OperationalInsights/workspaces/analytics
+        - Other : Search 
+    
+    - Microsoft.OperationalInsights/workspaces/query
+        - Read : Query Data in Workspace 
+    
+    - Microsoft.OperationalInsights/workspaces/tables/query
+        - Read : Query workspace table data
 
-```
-Microsoft.OperationalInsights/workspaces
-Read : Get Workspace
-Other : Search Workspace Data
-
-Microsoft.OperationalInsights/workspaces/analytics
-Other : Search 
-
-Microsoft.OperationalInsights/workspaces/query
-Read : Query Data in Workspace 
-
-Microsoft.OperationalInsights/workspaces/tables/query
-Read : Query workspace table data 
-```
-
-26.  Select **Review + Create**.
-27. Select **Create**, then select **Ok**
-28. In the top searchbar, search for **Resource groups** and select **rg_eastus_soc**.
-29. Open the log analytics workspace **law-sentinel**.
-30. In the left navigation pane, expand **Settings** and select **Tables**.
-31. Search for **Cisco_Umbrella_dns_CL**.
-32. Click on the ellipses (...), select **Access control (IAM)**.
-33. Select **Add** > **Add role assignment**.
-34. Search for **NOC-CiscoUmbrellaCL-Read** and select the custom role.
-35. Select **Next**.
-36. Select **Select Members**, search for **NOC**, select it from the search results then press **Select**
-37. Select **Review + assign** twic.
+1.  Select **Review + Create**.
+1. Select **Create**, then select **Ok**
+1. In the top searchbar, search for **Resource groups** and select **rg_eastus_soc**.
+1. Open the log analytics workspace **law-sentinel**.
+1. In the left navigation pane, expand **Settings** and select **Tables**.
+1. Search for **Cisco_Umbrella_dns_CL**.
+1. Click on the ellipses (...), select **Access control (IAM)**.
+1. Select **Add** > **Add role assignment**.
+1. Search for **NOC-CiscoUmbrellaCL-Read** and select the custom role.
+1. Select **Next**.
+1. Select **Select Members**, search for **NOC**, select it from the search results then press **Select**
+1. Select **Review + assign** twic.
 
 You successfully created role based access model for the role requirements for Contoso´s security operations team and created a custom role for the network team and assigned the role on the specific table in your log analytics workspace.
 
@@ -144,106 +141,106 @@ You successfully created role based access model for the role requirements for C
 In this task, you´ll create a workbook, to get a dashboard with custom views and current incidents and their alerts.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-2. On the Searchbar on the top, search for **Microsoft Sentinel** and open it.
-3. Select **law-sentinel**.
-4. In the left navigation pane, expand **Threat management** and select **Workbooks**.
-5. Select **Add Workbook**.
-6. Select **Edit**.
-7. Select the first **Edit** button on the right side.
-8. Select **Add** > **Add parameters**.
-9.  Select **Add parameter** and fill out the following information:
- - **Parameter name:** TimeRange
- - **Parameter type:** Time range picker
-10. Check the following settings:
- - **Required?**
-11. Select **Save**.
-12. In the **TimeRange:** dropdown menu in the lower left, select **Last 7 days**.
-13. Select **Add parameter** and fill out the following information:
- - **Parameter name:** AlertSeverity
- - **Parameter type:** Drop down
-14. Check the following settings:
- - **Required?**
- - **Allow multiple selections**
- - **Hide parameter in reading mode**
-15. Under **Log Analytics workspace Logs Query** paste in:
-```KQL
-SecurityAlert
-| summarize Count = count() by AlertSeverity
-| order by Count desc, AlertSeverity
-| project Value = AlertSeverity, Label = strcat(AlertSeverity, ' - ', Count)
-```
-16.  In the **Time Range** dropdown menu Select **TimeRange**.
-17. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
-18. Select **Save**.
-19. Select **Add parameter** and fill out the following information:
- - **Parameter name:** ProductName
- - **Parameter type:** Drop down
-20. Check the following settings:
- - **Required?**
- - **Allow multiple selections**
- - **Hide parameter in reading mode**
-21. Under **Log Analytics workspace Logs Query** paste in:
-```KQL
-SecurityAlert
-| summarize Count = count() by ProductName
-| order by Count desc, ProductName asc
-| project Value = ProductName, Label = strcat(ProductName, ' - ', Count)
-```
-22.  In the **Time Range** dropdown menu Select **TimeRange**
-23. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
-24. Select **Save**.
-25. Select **Add** and choose **Add query**.
-26. Under **Log Analytics workspace Logs Query** paste in:
-```KQL
-SecurityIncident
-| where CreatedTime {TimeRange:value}
-| summarize arg_max(TimeGenerated,*) by tostring(IncidentNumber)
-| extend IncidentID = IncidentName
-| extend Alerts = extract("\\[(.*?)\\]", 1, tostring(AlertIds))
-| mv-expand AlertIds to typeof(string)
-| join
-(
+1. On the Searchbar on the top, search for **Microsoft Sentinel** and open it.
+1. Select **law-sentinel**.
+1. In the left navigation pane, expand **Threat management** and select **Workbooks**.
+1. Select **Add Workbook**.
+1. Select **Edit**.
+1. Select the first **Edit** button on the right side.
+1. Select **Add** > **Add parameters**.
+1.  Select **Add parameter** and fill out the following information:
+     - **Parameter name:** TimeRange
+     - **Parameter type:** Time range picker
+1. Check the following settings:
+     - **Required?**
+1. Select **Save**.
+1. In the **TimeRange:** dropdown menu in the lower left, select **Last 7 days**.
+1. Select **Add parameter** and fill out the following information:
+     - **Parameter name:** AlertSeverity
+     - **Parameter type:** Drop down
+1. Check the following settings:
+     - **Required?**
+     - **Allow multiple selections**
+     - **Hide parameter in reading mode**
+1. Under **Log Analytics workspace Logs Query** paste in:
+    ```KQL
     SecurityAlert
-    | extend AlertEntities = parse_json(Entities)
-    | mv-expand AlertEntities
-) on $left.AlertIds == $right.SystemAlertId
-| summarize AlertCount=dcount(AlertIds) by IncidentNumber, Status, Severity, Title, Alerts, IncidentUrl, IncidentID
-| project IncidentNumber, IncidentID, Title, Severity, Status, AlertCount, Alerts, IncidentUrl
-| order by Severity
-```
-27. Choose **TimeRange** in the Time Range drop down menu.
+    | summarize Count = count() by AlertSeverity
+    | order by Count desc, AlertSeverity
+    | project Value = AlertSeverity, Label = strcat(AlertSeverity, ' - ', Count)
+    ```
+1.  In the **Time Range** dropdown menu Select **TimeRange**.
+1. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
+1. Select **Save**.
+1. Select **Add parameter** and fill out the following information:
+     - **Parameter name:** ProductName
+     - **Parameter type:** Drop down
+1. Check the following settings:
+     - **Required?**
+     - **Allow multiple selections**
+     - **Hide parameter in reading mode**
+
+1. Under **Log Analytics workspace Logs Query** paste in:
+    ```KQL
+    SecurityAlert
+    | summarize Count = count() by ProductName
+    | order by Count desc, ProductName asc
+    | project Value = ProductName, Label = strcat(ProductName, ' - ', Count)
+    ```
+1.  In the **Time Range** dropdown menu Select **TimeRange**
+1. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
+1. Select **Save**.
+1. Select **Add** and choose **Add query**.
+1. Under **Log Analytics workspace Logs Query** paste in:
+    ```KQL
+    SecurityIncident
+    | where CreatedTime {TimeRange:value}
+    | summarize arg_max(TimeGenerated,*) by tostring(IncidentNumber)
+    | extend IncidentID = IncidentName
+    | extend Alerts = extract("\\[(.*?)\\]", 1, tostring(AlertIds))
+    | mv-expand AlertIds to typeof(string)
+    | join
+    (
+        SecurityAlert
+        | extend AlertEntities = parse_json(Entities)
+        | mv-expand AlertEntities
+    ) on $left.AlertIds == $right.SystemAlertId
+    | summarize AlertCount=dcount(AlertIds) by IncidentNumber, Status, Severity, Title, Alerts, IncidentUrl, IncidentID
+    | project IncidentNumber, IncidentID, Title, Severity, Status, AlertCount, Alerts, IncidentUrl
+    | order by Severity
+    ```
+
+1. Choose **TimeRange** in the Time Range drop down menu.
 You´ll setup dynamic content to get all alerts for the selected incident. Alerts will be exported and available outside this query. 
-28.  Select the **Advanced Settings** tab at the top of the **Editing query** window.
-29. Check the following settings:
-- **When items are selected, export parameters** 
-30.  Select **Add Parameter** and fill in the following information:
-   - **Field to export:** Alerts
-   - **Parameter name:** Alerts
-31.  Select **Save**. 
-32. Go back to the **Settings** tab.
-33. Select **Run Query**.
-34. Select **Column Settings**.
-35. Select **IncidentUrl**.
-36. Set Column renderer to **Link**.
-37. Under Link Settings set **View to open** to **Url**.
-38. Select **Save and Close**.
-
-You´ll create the alerts view based on which incident is selected. 
-
-39. Select **+ Add** on the bottom of the **Editing query item** window. Select **Add query**.
-40. Paste the KQL in the Log Analytics workspace Logs Query 
-```KQL
-SecurityAlert
-| where SystemAlertId in ({Alerts})
-| summarize by  DisplayName, StartTime, EndTime,  SystemAlertId
-| sort by EndTime desc
-```
-41. Choose **TimeRange** in the Time Range drop down.
-42. Select **Done Editing**.
-43. Select **Done Editing** in the top bar of the **New workbook** window.
-44. Select an **Incident**.
-45. Alerts to the linked Incident will show up below.
-46. Save your query by selecting the Save icon.  
+1.  Select the **Advanced Settings** tab at the top of the **Editing query** window.
+1. Check the following settings:
+    - **When items are selected, export parameters** 
+1.  Select **Add Parameter** and fill in the following information:
+    - **Field to export:** Alerts
+    - **Parameter name:** Alerts
+1.  Select **Save**. 
+1. Go back to the **Settings** tab.
+1. Select **Run Query**.
+1. Select **Column Settings**.
+1. Select **IncidentUrl**.
+1. Set Column renderer to **Link**.
+1. Under Link Settings set **View to open** to **Url**.
+1. Select **Save and Close**.
+1. Next, You´ll create the alerts view based on which incident is selected.
+1. Select **+ Add** on the bottom of the **Editing query item** window. Select **Add query**.
+1. Paste the KQL in the Log Analytics workspace Logs Query 
+    ```KQL
+    SecurityAlert
+    | where SystemAlertId in ({Alerts})
+    | summarize by  DisplayName, StartTime, EndTime,  SystemAlertId
+    | sort by EndTime desc
+    ```
+1. Choose **TimeRange** in the Time Range drop down.
+1. Select **Done Editing**.
+1. Select **Done Editing** in the top bar of the **New workbook** window.
+1. Select an **Incident**.
+1. Alerts to the linked Incident will show up below.
+1. Save your query by selecting the Save icon.  
 1. In the **Save as** window, enter a title for your new workbook, select the **rg_eastus_soc** resource group from the drop-down, then select **Save as**.
 
 You successfully created a dashboard with custom views for incidents and the associated alerts.
