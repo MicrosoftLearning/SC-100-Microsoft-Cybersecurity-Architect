@@ -30,7 +30,7 @@ A security baseline policy comprises a set of configuration settings recommended
 
 ### Task 1: Deploy endpoint security baseline policies
 
-Your overall goal is to secure your endpoints appropiately and consolidate as many policies as possible in one place. You will achieve this by creating endpoint security baseline policies for Windows devices in Intune.
+Your overall goal is to secure your endpoints appropriately and consolidate as many policies as possible in one place. You will achieve this by creating endpoint security baseline policies for Windows devices in Intune.
 
 1. Sign-in to the Microsoft Intune admin center **https://intune.microsoft.com** as Allan Deyoung using his administrator account **MOD Administrator**.
 2. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
@@ -62,54 +62,43 @@ You have successfully created two security baseline policies for Windows devices
 After securing Windows devices with endpoint security baseline policies you will deploy antivirus and enable encrpytion on macOS devices to prepare your environment for merging with Trailwind Traders.
 
 1. You should still be logged into the Microsoft Intune admin center **https://intune.microsoft.com**.
-2. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
-3. On the **Endpoint security | Overview** page under **Manage** select **Antivirus**.
-4. On the **Endpoint security | Antivirus** page select **+ Create policy**.
-5. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **Microsoft Defender Antivirus**.
-6. Select **Create**.
-7. On the **Basics** blade enter a name and a description.
-8. Select **Next**
-9. On the **Configuration settings** blade ensure the settings are configured as follows:
-
-#### Cloud delivered protection preferences
-
-- **Enable / disable cloud delivered protection**: Enabled (Default)
-- **Enable/ disable automatic sample submissions**: Enabled (Default)
-- **Diagnostic collection level**: optional (Default)
-- **Automatic security intelligence upate**: Enabled (Default)
-
-#### Antivirus engine
-
-- **Enable real-time protecion**: Enabled (Default)
-- **Enable passive mode**: Disabled (Default)
-- **Exclusion merge** : admin_only
-- Under **Threat type settings** select **+ Add**
-  - **Threat type**: potentially_unwanted_application
-  - **Action to take**: block
-- **Threat type settings merge**: admin_only
-- **Enable file hash computation**: True
-- **Run a scan after definitions are updated**: Enabled (Default)
-- **Enforcement level**: real_time
-
-#### Network protection
-
-- **Enforcement level**: block
-  
-#### Tamper protection
-
-- **Enforcement level**: block (Default)
-
-#### User interface preferences
-
-- **Control sign-in to consumer version**: enabled (Default)
-- **Show / hide status menu icon**: Disabled (Default)
-- **User initiated feedback**: enabled (Default)
-
-1.  Select **Next**.
-2.  On the **Scope tags** blade select **Next**.
-3.  On the **Assignments** blade in the text box enter **All users** and select it.
-4.  Select **Next**.
-5.  On the **Review + create** blade select **Save**.
+1. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
+1. On the **Endpoint security | Overview** page under **Manage** select **Antivirus**.
+1. On the **Endpoint security | Antivirus** page select **+ Create policy**.
+1. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **Microsoft Defender Antivirus**.
+1. Select **Create**.
+1. On the **Basics** blade enter a name and a description.
+1. Select **Next**
+1. On the **Configuration settings** tab ensure the settings are configured as follows:
+1. Under **Cloud delivered protection preferences**:
+    - Enable / disable cloud delivered protection: **Enabled (Default)**
+    - Enable/ disable automatic sample submissions: **Enabled (Default)**
+    - Diagnostic collection level: **optional (Default)**
+    - Automatic security intelligence upate: **Enabled (Default)**
+1. Under **Antivirus engine**:
+    - Enable real-time protecion: **Enabled (Default)**
+    - Enable passive mode: **Disabled (Default)**
+    - Exclusion merge: **admin_only**
+1. Under **Threat type settings** select **+ Add**:
+    - In the text box for Threat type, enter: **potentially_unwanted_application**
+    - Action to take: **block**
+    - Threat type settings merge: **admin_only**
+    - Enable file hash computation: **True****
+    - Run a scan after definitions are updated: **Enabled (Default)**
+    - Enforcement level: **real_time**
+1. Under **Network protection**:
+    - Enforcement level: block
+1. Under **Tamper protection**:
+    - Enforcement level: *block (Default)**
+1. Under **User interface preferences**
+    - Control sign-in to consumer version: **enabled (Default)**
+    - Show / hide status menu icon: **Disabled (Default)**
+    - User initiated feedback: **enabled (Default)**
+1. Select **Next**.
+1. On the **Scope tags** blade select **Next**.
+1. On the **Assignments** tab, in the text box enter **All users** and select it.
+1. Select **Next**.
+1. On the **Review + create** tab select **Save**.
 
 You have successfully configured and deployed antivirus for macOS devices.
 

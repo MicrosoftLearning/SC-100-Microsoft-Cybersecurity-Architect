@@ -25,19 +25,18 @@ Defender for Cloud Apps is a security solution designed to address Shadow IT ris
 
 In order to control the use of application on users company owned devices you must integrate Defender for Endpoint with Defender for Cloud Apps.
 
-1. Sign-in to the Microsoft Defender portal **https://security.microsoft.com/** as Allan Deyoung using his administrator account **MOD Administrator**.
-2. In the Microsoft Defender portal, expand **Hunting** and select **Advanced Hunting**. Wait for the completion of the new spaces preparation.
-3. In the Microsoft Defender portal, in the left navigation page select **Settings**.
-4. On the **Settings** page select **Endpoints**.
-5. On the **Endpoints** page, under **General** select **Advanced features**.
-6. Enable **Microsoft Defender for Cloud Apps**.
-7. Select **Save preferences** at the bottom.
+1. Sign-in to the Microsoft Defender portal **https://security.microsoft.com** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. In the Microsoft Defender portal, expand **Investigation & response** then expand **Hunting** and select **Advanced Hunting**. Wait for the completion of the new spaces preparation.  This step is only for the purpose of setting up the new spaces, there is no hunting in this step.
+1. In the Microsoft Defender portal, in the left navigation page expand **System** then select **Settings**. 
+1. On the **Settings** page select **Endpoints**. NOTE: It can take anywhere from 10 minutes to 1 hour for this option to appear. If after 10 minutes, you don't see it, continue with another exercise and then come back to this step.
+1. Under **Endpoints**, select **Advanced features**. Scroll down until you see Microsoft Defender for Cloud Apps.  Select the slider to set it to **On**.
+1. At the bottom of the page, select **Save preferences**.
 
-You have successfully enabled Microsoft Defender for Cloud Apps for Endpoints. With this set-up all signals coming from Microsoft Defender for Endpoints are forwared to Defender for Cloud Apps giving you the ability to block unsecure applications. All applications tagged as **Unsanctoned** will now be blocked.
+You have successfully enabled Microsoft Defender for Cloud Apps for Endpoints. With this set-up all signals coming from Microsoft Defender for Endpoints are forwarded to Defender for Cloud Apps giving you the ability to block unsecure applications. All applications tagged as **Unsanctoned** will now be blocked.
 
-### Task 2: Investigate the Shadow-IT of Contoso Ltd.
+### Task 2: Investigate the Shadow-IT of Contoso Ltd
 
-In this task, you will analyse all the applications currently used in your company. You will take a closer look at various applications and their respective risk assessment as well as their assessment structure.
+In this task, you will analyze all the applications currently used in your company. You will take a closer look at various applications and their respective risk assessment as well as their assessment structure.
 
 1. You should still be logged into the Microsoft Defender portal **https://security.microsoft.com/**.
 2. In the Microsoft Defender portal, in the left navigation page expand **Cloud apps** and select **Cloud discovery**.
