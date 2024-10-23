@@ -50,27 +50,26 @@ You successfully created the log analytics workspace for your Sentinel deploymen
 
 ### Task 2 - Create Sentinel
 
-In this task, you will add Sentinel to the created log analytics workspace and add demo logs, because the demo tenant doesnt have an existing data in the log analytics workspace, you import demo logs to have a better idea of how sentinel works.
+In this task, you will add Sentinel to the created log analytics workspace and add demo logs, because the demo tenant doesn't have an existing data in the log analytics workspace, you import demo logs to have a better idea of how sentinel works.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-2. Select **Create a resource** and search for **Microsoft Sentinel**, Filter for **Product Type: Azure Services**.
-3. Find the **Microsoft Sentinel tile**, select **Create**.
-4. Select **Add** and search for the previously created log analytics workspace **law-sentinel**.
-5. Confirm with click on **Add**.
-6. In the left navigation pane, select **Content hub**.
-7. Search for **Microsoft Sentinel Training Lab**, **select** and **install** the solution.
-8. Select **Create**.
-9. Choose the resource group **rg_eastus_soc** and workspace **law-sentinel**.
-10. Select **Review & Create**.
-11. Confirm deployment **Create**.
-12. Wait till the solution is successfully installed.
+1. In the search bar, in the blue banner at the top of the page, enter **Microsoft Sentinel**, then select it from the search results listed under services.
+1. From the **Microsoft Sentinel** page, select **Create**.
+1. In the **Add a Microsoft Sentinel to a workspace page** the previously created log analytics workspace should be listed.  Select **law-sentinel** then select **Add**.
+1. It may take a few minutes to add Sentinel to the workspace.  Once it's added, the **Microsoft Sentinel | New & guides** page is displayed.  You're notified that the Microsoft Sentinel fre trial is activated.  Select **Ok**.
+1. From the center of the page, select **Go to content hub**.  Alternatively, from the left navigation panel expand **Content management** then select **Content hub**.
+1. Search for **Microsoft Sentinel Training Lab**, select it from the search results, and **install** the solution.
+1. Select **Create**.
+1. Choose the resource group **rg_eastus_soc** and workspace **law-sentinel**.
+1. Select **Review & Create** then select **Create**.
+1. Wait till the solution is successfully installed.
 
 You have successfully deployed Sentinel to the log analytics workspace and added data. 
 
 ### Task 3 - Setup RBAC
 
-You have to secure the access based on least privilege, you´ll create role assignments for the specific role reqirements. In your upcoming productive deployment, there´ll be two different roles in the Security Operation Center.
-Furthermore, the network team needs access to cisco umbrella logs. You must ensure that the network team can only access these logs.
+You have to secure the access based on least privilege, you´ll create role assignments for the specific role requirements. In your upcoming productive deployment, there´ll be two different roles in the Security Operation Center.
+Furthermore, the network team needs access to Cisco umbrella logs. You must ensure that the network team can only access these logs.
 
 #### Permission requirements
 
@@ -87,22 +86,22 @@ Furthermore, the network team needs access to cisco umbrella logs. You must ensu
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
 2. In the top searchbar, search for **Resoure groups** and select your previously created resource group **rg_eastus_soc**.
 3. In the left navigation pane, select **Access control (IAM)**.
-4. Select **Add**, from the dropdown select **Add role assignement**.
+4. Select **Add**, from the dropdown select **Add role assignment**.
 5. Search for **Microsoft Sentinel Responder** and select **View** in the Details column.
 6. Review that the permissions match the requirements.
 7. Close the window with **X** in the top right corner.
 8. Select **Next**.
 9. Select **+Select members**.
-10. Search for **SOC Analysts** Group and add the role assignment.
+10. Search for **SOC Analysts** Group, select **SOC Analysts** from the search results, press **Select**  and add the role assignment.
 11. Select **Review + assign**.
-12. Select **Add**, from the dropdown select **Add role assignement**.
+12. You'll repeat the steps for the Sentinel Contributor role. Select **Add**, from the dropdown select **Add role assignment**.
 13. Search for **Microsoft Sentinel Contributor** and select the role.
 14. Select **Next**.
 15. Select **+Select members**.
-16. On the **Select members** blade, search for **SOC Engineers** Group and **Select** the role assignment.
+16. On the **Select members** blade, search for the **SOC Engineers** Group.  From the search results select **SOC Engineers** press **Select** to add the role assignment.
 17. Select **Review + assign** twice.
 18. Select **Role assignments tab**, Confirm that the role assignments are set.
-19. Select **Add**, from the dropdown select **Add custom role**.
+19. Now you'll add a custom role. Select **Add**, from the dropdown select **Add custom role**.
 20. Name it, **NOC-CiscoUmbrellaCL-Read**.
 21. For **Baseline Permission**, select **Start from scratch**.
 22. Select **Next**.
@@ -126,17 +125,17 @@ Read : Query workspace table data
 ```
 
 26.  Select **Review + Create**.
-27. Select **Create**.
-28. In the top searchbar, search for **Resoure groups** and select **rg_eastus_soc**.
+27. Select **Create**, then select **Ok**
+28. In the top searchbar, search for **Resource groups** and select **rg_eastus_soc**.
 29. Open the log analytics workspace **law-sentinel**.
 30. In the left navigation pane, expand **Settings** and select **Tables**.
 31. Search for **Cisco_Umbrella_dns_CL**.
 32. Click on the ellipses (...), select **Access control (IAM)**.
 33. Select **Add** > **Add role assignment**.
 34. Search for **NOC-CiscoUmbrellaCL-Read** and select the custom role.
-35. Select Next.
-36. Select **Select Members**, search for NOC and **Select** the group.
-37. Select **Review + assign**.
+35. Select **Next**.
+36. Select **Select Members**, search for **NOC**, select it from the search results then press **Select**
+37. Select **Review + assign** twic.
 
 You successfully created role based access model for the role requirements for Contoso´s security operations team and created a custom role for the network team and assigned the role on the specific table in your log analytics workspace.
 
@@ -170,7 +169,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 ```KQL
 SecurityAlert
 | summarize Count = count() by AlertSeverity
-| order by Count desc, AlertSeverity asc
+| order by Count desc, AlertSeverity
 | project Value = AlertSeverity, Label = strcat(AlertSeverity, ' - ', Count)
 ```
 16.  In the **Time Range** dropdown menu Select **TimeRange**.
@@ -244,5 +243,7 @@ SecurityAlert
 43. Select **Done Editing** in the top bar of the **New workbook** window.
 44. Select an **Incident**.
 45. Alerts to the linked Incident will show up below.
+46. Save your query by selecting the Save icon.  
+1. In the **Save as** window, enter a title for your new workbook, select the **rg_eastus_soc** resource group from the drop-down, then select **Save as**.
 
 You successfully created a dashboard with custom views for incidents and the associated alerts.

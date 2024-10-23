@@ -68,25 +68,27 @@ You successfully created the Discovery of Contoso´s External Attack Surface and
 In this Task, you´ll configure a data connection from Defender EASM to an log analytics workspace that will be used for Sentinel. Defender EASM asset or insights information can be used in Log Analytics to enrich existing workflows with other security data.
 
 1. You should still be logged into the Azure portal **<https://portal.azure.com>**.
-2. In the top search bar, search for **Log Analytics Workspaces**.
-3. Select your **law-sentinel** workspace from the last exercise.
-4. In the left navigation pane, expand **settings** and select **Agents**.
-5. Leave the page as it is and open another tab and log into the Azure portal **<https://portal.azure.com>**.
-6.  On the Searchbar on the top, search for **Microsoft Defender EASM** and open it.
-7.  Select your **EASM** workspace.
-8.  In the left navigation pane, expand **Manage** and select **Data connections**.
-9.  Under Log Analytics, select **Add connection**.
-10. Name it **law-sentinel**
-11. Switch to the previous tab with the log analytics workspace that should be open.
-12. Expand **Log Analytics agent instructions**.
-13. Copy the **Workspace ID** and the **Primary key** into the corresponding field in Defender EASM - Add data connection.
-14. In Content select **All**.
-15. In Frequency select **Daily**.
-16. Select **Add**.
+1. In the top search bar, search for **Log Analytics Workspaces**.
+1. Select your **law-sentinel** workspace from the last exercise.
+1. In the left navigation pane, expand **settings** and select **Agents**.
+1. Leave the page as it is and open another tab and log into the Azure portal **<https://portal.azure.com>**.
+1. On the Searchbar on the top, search for **Microsoft Defender EASM** and open it.
+1. Select your **EASM** workspace.
+1. In the left navigation pane, expand **Manage** and select **Data connections**.
+1. Under Log Analytics, select **Add connection**.
+1. Name it **law-sentinel**
+1. Switch to the previous tab with the log analytics workspace that should be open.
+1. Expand **Log Analytics agent instructions**.
+1. Copy the **Workspace ID** into the corresponding field of the Add data connection window.
+1. Copy the ** **Primary key** into the API key field of the Add data connection window.
+1. In Content select **All**.
+1. In Frequency select **Daily**.
+1. Select **Add**.
+1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under Connected (1).
 
-After the connection has been created, custom log tables are created in the log analytics workspace. In Sentinel, this data can then be used to create or enrich security incidents, build investigation playbooks, train mashine learning algorithms or trigger remediation actions.
+After the connection has been created, custom log tables are created in the log analytics workspace. In Sentinel, this data can then be used to create or enrich security incidents, build investigation playbooks, train machine learning algorithms or trigger remediation actions.
 
-You succesfully setup the connection between Defender EASM and a log analytics workspace.
+You successfully setup the connection between Defender EASM and a log analytics workspace.
 
 ### Task 4 - Review Dashboards and label assets
 
@@ -120,20 +122,20 @@ You successfully reviewed the Security posture and labeled an asset for further 
 In this task, you´ll manage and categorize the discovered assets.
 
 1. You should still be logged into the Azure portal **<https://portal.azure.com>**.
-2. On the Searchbar on the top, search for **Microsoft Defender EASM** and open it.
+2. On the Search bar on the top, search for **Microsoft Defender EASM** and open it.
 3. Select your **EASM** workspace.
 4. In the left navigation pane, expand **General** and select **Inventory**.
-5. Under Search in the dropdown menu select **Label**
-6. In the dropdown menu below choose the label we recently created in Task 4 **Open ports**.
+5. In the EASM | Inventory page, the Search tab is selected (underlined). In the search field use the dropdown menu to select **Labels**
+6. In the dropdown menu below choose the label you recently created, **Open ports**.
 7. Select **Search**.
 8. Open the found asset **34.223.124.45**.
-9. Select the column **Web components**.
+9. Select the **Web components** tab.
 
 You identify that this asset is hosted on Amazon, there are also open CVE´s on some of the components, but these are not active as you can see in the **Recent** and **Last seen** column. These originate from earlier discovery runs.
 Since this asset is hosted by a third party but still belongs to your attack surface, you categorize it based on their role in your organization.
 
 10. Select **Modify Asset**.
-11. Select **Dependency**.
+11. In the Modeify Asset window, use the drop-down the **State** field to select **Dependency**.
 12. Select **Update**.
 
 >[!NOTE]In this Case you choose Dependency, because the asset is Infrastructure that is owned by a third party but is part of your attack surface because it directly supports the operation of your owned assets.

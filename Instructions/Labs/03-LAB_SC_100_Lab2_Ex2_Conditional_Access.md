@@ -33,23 +33,24 @@ The third phase involves crafting the solution's concept. Upon investigation, it
 In this task you will create a named location using your VM's external IP address to define a trusted network you can use in a conditional access policy in the following tasks. You will use this address because your machine is located within your company network.
 
 1. Log into the Client 1 VM (LON-Sc1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
-2. Open a **PowerShell** window by selecting the start menu with the right mouse button and then select **Windows PowerShell**.
-3. Enter the following cmdlet to check your current external IP address:
+1. Open a **PowerShell** window by selecting the start menu with the right mouse button and then select **Terminal**.
+1. Enter the following cmdlet to check your current external IP address:
     ```powershell
     curl ifconfig.me | Select-String -Pattern '.'
     ```
-4. Note down the IP address powershell returned.
-5. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
-6. On the Stay signed in? dialog box, select the Don’t show this again checkbox and then select No.
-7. Close the password save dialog from the bottom by selecting Never, to not save the default global admins credentials in your browser.
-8. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Named locations**.
-9. Select **+ IP Ranges location**.
-10. Enter the name **Trusted contoso network**.
-11. Select **Mark as trusted location**.
-12. Select **+** to add the IP address you noted in **Step 4.**
-13. The Input should look like ``168.245.***.***/32`` (*** may be different depending on your lab hosting provider).
-14. Select **Add**.
-15. Select **Create**.
+1. Note down the IP address powershell returned.
+1. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. If you're asked to setup multifactor authentication, follow the instructions.
+1. On the Stay signed in? dialog box, select the **Don’t show this again** checkbox and then select **No**.
+1. Close the password save dialog box by selecting **Not now**, to not save the default global admin's credentials in your browser.
+1. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Named locations**.
+1. Select **+ IP ranges location**.
+1. Enter the name **Trusted contoso network**.
+1. Select **Mark as trusted location**.
+1. Select **+** to add the IP address you noted in **Step 4.**
+1. The Input should look like ``168.245.***.***/32`` (*** may be different depending on your lab hosting provider).
+1. Select **Add**.
+1. Select **Create**.
 
 You have now defined your Company's external IP Address named and trusted location you can use to restrict access outside the company's network.
 
@@ -59,7 +60,7 @@ As you have successfully created a trusted network you will now use this to crea
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
 2. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Policies**.
-3. Select **+ Create new policy**.
+3. Select **+ New policy**.
 4. Enter the name **Block access outside Trusted Network**.
 5. Select **0 users and groups selected**.
 6. Under **Include** select **Select users and groups** and tick **Users and groups**.
@@ -69,10 +70,10 @@ As you have successfully created a trusted network you will now use this to crea
 10. Select **Yes** to configure the location condition.
 11. Under **Include** select **Any location**.
 12. Under **Exclude** select **All trusted locations**.
-13. Under **Grant** select **0 controls selected** and switch it from **Grant access** to **Block access**.
+13. Under **Grant** select **0 controls selected** and switch it from **Grant access** to **Block access** then choose **Select** at the bottom of the page.
 14. Under **Session** select **0 controls selected**.
-15. Enable **Customize continuous access evaluation** and switch it from **Disable** to **Strictly enforce location policies** and choose **Select** at the bottom to confirm.
-16. Now enable the policy using the control bar at the bottom and select **Create**.
+15. Enable **Customize continuous access evaluation** and select **Strictly enforce location policies (preview)** and choose **Select** at the bottom to confirm.
+16. Where it says **Enable Policy**, select **On**, then select **Create**.
 
 You have now created and enabled your CA policy to restrict access outside trusted networks only affecting your own test user account.
 
@@ -80,24 +81,23 @@ You have now created and enabled your CA policy to restrict access outside trust
 
 Since you have created a Conditional Access policy limiting access to all cloud applications of your company you must make sure that access is still possible.
 
->[!CAUTION] WARNING! This task is significantly abbreviated for illustrative purposes! 
+>[!ALERT] This task is significantly abbreviated for illustrative purposes! 
 In a real world scenario you would do a longer testing period with a larger, more representative group to make sure that no unforeseeable incidents distort the result.
 
 1. Open a new **InPrivate** window in your **Microsoft Edge** browser by selecting its task bar icon with your right mouse button and then select **New InPrivate window**.
-2. Select the address bar, navigate to **https://portal.microsoft.com** and log into the M365 Portal as **Allan Deyoung** alland@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The user's password should be provided by your lab hosting provider.
-3. On the Stay signed in? dialog box, select the Don’t show this again checkbox and then select No.
-4. Close the password save dialog from the bottom by selecting Never, to not save the default global admins credentials in your browser.
-5. Since the login was successful, you can close the **InPrivate** window.
-6. Switch back to your Edge browser window where you should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-7. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Monitoring** > **Sign-in logs**.
-8. Select **Add filters** and filter by the **User** of **Allan Deyoung**.
-9. Select the latest log entry of **Allan Deyoung**.
-10. Under the **Conditional Access** tab, select **Block access outside Trusted Network**.
-11. Select the **User** assignment and you should see, that it **Matched** by **Direct assignment**.
-12. Select the **Application** assignment and you should see, that it **Matched** by **All apps included**.
-13. You should also see, that the **Location** condition was **Not matched** since it is within the trusted network that is excluded.
+1. Select the address bar, navigate to **https://portal.microsoft.com** and log into the M365 Portal as **Allan Deyoung** alland@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The user's password should be provided by your lab hosting provider.
+1. On the Stay signed in? dialog box, select the **Don’t show this again** checkbox and then select **No**.
+1. Since the login was successful, you can close the **InPrivate** window.
+1. Switch back to your Edge browser window where you should still be logged into the Entra ID portal **https://entra.microsoft.com**.
+1. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Monitoring** > **Sign-in logs**.
+1. Select **Add filters** and filter by the **User** of **Allan Deyoung**.
+1. Select the latest log entry of **Allan Deyoung**.
+1. Under the **Conditional Access** tab, select **Block access outside Trusted Network**.
+1. Select the **User** assignment and you should see, that it **Matched** by **Direct assignment**.
+1. Select the **Application** assignment and you should see, that it **Matched** by **All apps included**.
+1. You should also see, that the **Location** condition was **Not matched** since it is within the trusted network that is excluded.
 If you tried to log in from a network with a different external IP address, this condition would match and block the login attempt.
-14. Close the **Conditional Access Policy details** and the **Activity Details: Sign-ins**.
+1. Close the **Conditional Access Policy details** and the **Activity Details: Sign-ins**.
 
 You have now successfully tested and ensured access to all cloud applications from within the company's network. You have also checked the Sign-in logs, to ensure, that the policy works as intended and uses the correct assignments and conditions to restrict access to your cloud applications from outside the company's network.
 
@@ -105,7 +105,7 @@ You have now successfully tested and ensured access to all cloud applications fr
 
 After the successful test in the previous task, you can now enable the policy for the entire company. To do this you will edit the user scope of the existing policy.
 
->[!CAUTION] WARNING! The actions implemented in this task can lead to Account lockout!
+>[!ALERT] The actions implemented in this task can lead to Account lockout!
 Make sure, that you have at least one emergency admin account that is excluded from this policy in a productive, real world scenario. 
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.

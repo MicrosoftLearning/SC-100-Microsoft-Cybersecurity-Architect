@@ -1,6 +1,6 @@
 # Configure Entra ID
 
-You are Allan Deyoung, the newly promoted IT-Security specialist of Contoso Ltd. As the company recently acquired Tailwind Traders, you reviewed your Entra ID tenant and decided on new security requirements. Your task is to manage the tasks and implement policies to meet the requirements that come with the acquisition. 
+You are Allan Deyoung, the newly promoted IT-Security specialist of Contoso Ltd. As the company recently acquired Tailwind Traders, you reviewed your Entra ID tenant and decided on new security requirements. Your task is to manage the tasks and implement policies to meet the requirements that come with the acquisition.
 
 You reviewed enterprise applications and noted that some users have provided permissions for a third-party application to access their mailbox data. This is a potential risk for data loss from email correspondence. Therefore, you wish to restrict this behavior but allow users to sign-in and share login IDs to websites Microsoft has validated. You also want to allow users to request specific access to new SaaS products using their Entra ID identity. 
 
@@ -43,23 +43,23 @@ The third phase involves crafting the solution's concept. Upon investigation, it
 In this task you will restrict the level of access a user can grant to applications. You will also add the functionality for users to request access they are not able to permit themselves. 
 
 1. Log into the Client 1 VM (LON-Sc1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
-2. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The admin password should be provided by your lab hosting provider.
-3. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
-4. You will be asked to setup multifactor authentication, follow the instruction.
-5. Close the password save dialog from the bottom by selecting **Never**, to not save the default global admins credentials in your browser.
-6. On the left navigation pane, navigate to **Identity** > **Applications** > **Enterprise applications** > **Security** > **Consent and permissions**.
-7. Navigate to **Permission classifications**.
-8. Entra will suggest the most used permissions for **low risk** permissions.
-9. Check all these permissions and select **Yes, add selected permissions** to classify them as **low risk** in your Entra ID tenant.
-10. Navigate to **User consent settings**.
-11. Under **User consent for applications** select the recommended option **Allow user consent for apps from verified publishers, for selected permissions** enabling users to consent the **low impact** permissions you defined in step 8 to apps from verified publishers.
-12. Under **Group owner consent for apps accessing data** select **Do not allow group owner consent**. This limits Group owner consent to Users that already have the role eligible or enabled to consent other permissions than the ones defined as **low risk**.
-13. Select **Save**.
-14. Navigate to **Admin consent settings** and enable Admin consent requests by selecting **Yes**.
-15. Select **+ Add users** to add **Lidia Holloway** and **MOD Administrator** as users that can review admin consent requests.
-16. Select **Save** on the **Admin consent settings** window.
+1. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The admin password should be provided by your lab hosting provider.
+1. If you're asked to setup multifactor authentication, follow the instructions.
+1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
+1. Close the password save dialog box by selecting **Not now**, to not save the default global admin's credentials in your browser.
+1. On the left navigation pane, navigate to **Identity** > **Applications** > **Enterprise applications** > **Security** > **Consent and permissions**.
+1. Navigate to **Permission classifications**.
+1. Entra will suggest the most used permissions for **low risk** permissions.
+1. Check all these permissions and select **Yes, add selected permissions** to classify them as **low risk** in your Entra ID tenant.
+1. Navigate to **User consent settings**.
+1. Under **User consent for applications** select the recommended option **Allow user consent for apps from verified publishers, for selected permissions**. This enables users to consent for permissions classified as "low impact" (that you previously selected), for apps from verified publishers.
+1. Select **Save**.
+1. Navigate to **Admin consent settings** and enable Admin consent requests by selecting **Yes**, to allows users to request admin consent to aps they are unable to content to.
+1. Select **+ Add users** to add **Lidia Holloway** and **MOD Administrator** as users that can review admin consent requests.
+1. Select **Save** on the **Admin consent settings** window.
+1. Keep this browser tab open for the next task.
 
-You have now configured the application consent settings limiting the access every user can grant to applications. Users can still request permission consent to applications and the application admin team can approve of them after evaluating the need and risk for the specific application. 
+You have now configured the application consent settings limiting the access every user can grant to applications. Users can still request permission consent to applications and the application admin team can approve of them after evaluating the need and risk for the specific application.
 
 ### Task 2 - Create an Authentication strength
 
@@ -71,7 +71,7 @@ In this Task you will use the Entra ID portal to create an own Authentication st
 4. Enter the name **Hardened MFA**.
 5. Check **Phishing-resistant MFA**, **Passwordless MFA** and **Multifactor authentication**.
 6. Under Multifactor authentication uncheck the following:
-   - **Temporary Access Pass (Mulit-use)**
+   - **Temporary Access Pass (Multi-use)**
    - **Password + SMS**
    - **Password + Voice**
    - **Federated Single factor + SMS**

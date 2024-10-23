@@ -55,7 +55,7 @@ Before Defender for Cloud can apply protections to your assets you have to enabl
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
 2. Search for **Microsoft Defender for Cloud** and open it.
 3. In the left navigation pane, expand **Management** and select **Enviroment settings**.
-4. Click **Expand all** and select your Subscription.
+4. Select **Expand all** and select your Subscription.
 5. If the Subscription is shown as **unregistered** reload the page.
 6. Select the ellipses (...) next to the subscription and select **Edit settings**.
 7. Under **Cloud Workload Protection** set the **Servers** plan the slider on the right to **On**.
@@ -68,24 +68,25 @@ When enabling the Plan for Servers you could see that Defender for Cloud support
 Azure Arc is required so that it can be used to send data to the log analytics workspace that Defender for Cloud uses.
 
 1. Swap to VM **LON-SC2** and sign into the Azure portal **https://portal.azure.com**.
-2. Search for **Azure Arc** and open it.
-3. In the left hand navigation pane, expand **Azure Arc resources** and select **Machines**.
-4. Select **Add/Create** > **Add Machine**.
-5. Under Add a single server, select **Generate script**.
-6. Choose **ContosoRG** in Resource group.
-7. Select **East US** for Region.
-8. Select **Download and run script**.
-9. Select **Download** and run script on your second Lab Client **LON-SC2** to onboard the onpremise Server to Azure.
-10. Run Windows PowerShell as an administrator.
-11. Set the Execution Policy to unrestricted.
+1. Search for **Azure Arc** and open it.
+1. In the left hand navigation pane, expand **Azure Arc resources** and select **Machines**.
+1. Select **Add/Create** > **Add Machine**.
+1. Under Add a single server, select **Generate script**.
+1. In the Resource group field, use the drop-down menu to select **ContosoRG**.
+1. In the Region field, use the drop-down menu to select **East US**.
+1. Select **Download and run script**.
+1. Select **Download** and run script on your second Lab Client **LON-SC2** to onboard the onpremise Server to Azure.
+1. Run Windows PowerShell as an administrator. To do this, use the right mouse key to select the Windows icon on the bottom right corner of the window and select **Windows PowerShell(Admin)**
+1. Set the Execution Policy to unrestricted.
 ```Powershell
 Set-ExecutionPolicy -ExecutionPolicy unrestricted
 ```
-12. Run the onboarding script.
-13. When the authentication popup appears, log in with the same account you are using for the Azure portal.
-14. Wait till the script is successfully completed.
-15. Go back to LON-SC1 and open Azure Arc.
-16. Select **Machines**, select **Refresh** on top of the page and validate your server is successfully deployed to Azure Arc.
+1. On the PowerShell windows, select Y
+1. Run the onboarding script. To do this, select file explorer. It should take you to the downloads folder on the local C drive of the server VM. Use the right mouse key to select the file **OnboardingScript** and select **Run with **PowerShell**.
+1. When the authentication popup appears, log in with the same account you are using for the Azure portal.
+1. Wait till the script is successfully completed.
+1. Go back to LON-SC1 and open Azure Arc.
+1. Select **Machines**, select **Refresh** on top of the page and validate your server is successfully deployed to Azure Arc.
 
 You have successfully enabled Azure Arc on the test server and data should start to flow into the log analytics workspace. This process might take some time until you can see anything in the dashboard.
 
@@ -94,27 +95,27 @@ You have successfully enabled Azure Arc on the test server and data should start
 You´ll deploy a Data collection rule to get event logs from the on premise server. The rule will automatically deploy the monitoring agent on the server and forward logs to the previously created log analytics workspace.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-2. Open Defender for Cloud, select the **Get started** tab at the top of the page.
-3. Under **Add non-Azure servers**, select **Configure**.
-4. You will find your previously created log analytics workspace, next to it select **Upgrade**.
-5. If the Upgrade is done, select **+ Add servers**.
-6. Select **Data Collection Rules**.
-7. Select **Create**.
-8. - Rule Name: ContosoDCR
+1. Open Defender for Cloud. From the left navigation panel, select **Get started**.
+1. From the top of the Getting started page, select the **Upgrade** tab.
+1. You will see the previously created log analytics workspace, **contosola** listed.  Select where it says **Off**.  This will take you to the **Defender plan** page of contosola.  
+1. On the **Servers** plan, select **On**, then select **Save**, from the top of the page.
+1. Use the search bar at the top to search for **Data collection rules**, then select it from the search results.
+1. Select **Create**.
+1. - Rule Name: ContosoDCR
    - Resource group: ContosoRG
-9. Select **Next: Resources**.
-10. Select **Add resources**. Expand the scope of the resource group. Check the previously onboarded Azure Arc machine, select **Apply**.
-11. Select **Next: Collect and deliver**.
-12. Select **Add data source**.
-13. Choose Data Source type **Windows Event Logs**.
-14. Select every option under **Configure the event logs and levels to collect:**.
-15. Select **Next: Destination**.
-16. Select **Add Destination**.
-17.  - Destination type: Azure Monitor Logs
-     - Account or namespace: ContosoLA
-18. Select **Add data source**.
-19. Select **Review & create**.
-20. Select **Create**.
+1. Select **Next: Resources**.
+1. Select **Add resources**. Expand the scope of the resource group. Check the previously onboarded Azure Arc machine, select **Apply**.
+1. Select **Next: Collect and deliver**.
+1. Select **Add data source**.
+1. Choose Data Source type **Windows Event Logs**.
+1. Select every option under **Configure the event logs and levels to collect:**.
+1. Select **Next: Destination**.
+1. Select **Add Destination**.
+   - Destination type: Azure Monitor Logs
+   - Account or namespace: ContosoLA
+1. Select **Add data source**.
+1. Select **Review & create**.
+1. Select **Create**.
 
 It may take a few hours till the resource is fully onboarded in Defender for Cloud. The next step is to look at the recommendation that Defender for Cloud generates for this resource.
 
@@ -123,14 +124,14 @@ It may take a few hours till the resource is fully onboarded in Defender for Clo
 Based on the recommendation you can start to secure the resource and assign security policies e.g. NIST SP 800-53 Rev.5 to ensure that the resources of Tailwind traders comply with our compliance regulations.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-2. Open Defender for Cloud expand **Management** and select **Enviroment settings**.
+2. Open Defender for Cloud expand **Management** and select **Environment settings**.
 3. Select **Expand all**.
 4. Select the ellipses (...) next to the subscription and select **Edit settings**.
 5. Select **Security policies** in the navigation menu on the left. The list might take a while to load.
 6. Search for **NIST SP 800-53 Rev. 5**. Change the status slider to **On**. 
 7. Go back to Defender for Cloud and select **Regulatory compliance**.
 
-Due to limitation off the lab enivroment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
+Due to limitation off the lab enivronment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
 
 In the Regulatory compliance dashboard you can now review any failing assessments that appear in the dashboard to understand the details of the recommendations.
 By continuously assessing resources against these controls, Defender for Cloud identifies issues that may hinder achieving specific compliance certifications. Maintaining regulatory compliance is crucial for safeguarding your organization’s data and ensuring a secure cloud environment.

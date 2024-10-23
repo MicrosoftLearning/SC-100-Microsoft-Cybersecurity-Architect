@@ -40,11 +40,12 @@ In this Task you will check the prerequisites of a cross-tenant synchronization 
 
 1. Log into the Client 1 VM (LON-Sc1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
 2. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
-3. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
-4. Close the password save dialog from the bottom by selecting Never, to not save the default global admins credentials in your browser.
-5. On the left navigation pane, navigate to **Identity** > **Overview**.
-6. Note down the **Tenant ID** and the **Primary domain** that are presented under the **Overview** tab.
-7. Exchange your **Tenant ID** and **Primary domain** with your lab partner.
+1. If you're asked to setup multifactor authentication, follow the instructions.
+1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
+1. Close the password save dialog box by selecting **Not now**, to not save the default global admin's credentials in your browser.
+1. On the left navigation pane, navigate to **Identity** > **Overview**.
+1. Note down the **Tenant ID** and the **Primary domain** that are presented under the **Overview** tab.
+1. Exchange your **Tenant ID** and **Primary domain** with your lab partner.
 
 You should have a plan what topology you want to use, what users will be in scope for the first synchronization test and how you want to map them to Contoso's Entra ID tenant.
 
@@ -54,7 +55,7 @@ Since you now have prepared the information you need for the implementation of t
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
 2. On the left navigation pane, navigate to **Identity** > **External Identities** > **Cross-tenant access settings**.
-3. Select the ** Organizational settings** tab and select **Add organization**.
+3. Select the **Organizational settings** tab and select **Add organization**.
 4. Fill out the **Tenant ID or domain name** field with the tenant ID provided by your lab partner and select **Add**.
 5. Under **Inbound access** for Contoso, select **Inherited from default** to access the cross-tenant sync settings for that specific tenant.
 6. Under the **Trust settings** enable **Automatically redeem invitations with the tenant Contoso**.
@@ -75,10 +76,10 @@ In this Task you will restrict the ability to invite new guest users to your org
 2. On the left navigation pane, navigate to **Identity** > **External Identities** > **External collaboration settings**.
 3. In the **Guest invite settings** section, select **Member users and users assigned to specific admin roles can invite guest users including guests with member permissions**.
 4. Under **Collaboration restrictions** select **Allow invitations only to the specified domains**.
-5. Add your partner's domain **WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your partner's unique tenant ID provided by your lab hosting provider).
+5. Add your lab partner's domain **WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your lab partner's unique tenant ID provided by your lab hosting provider).
 6. Select **Save**.
 
-You have now restricted who is able to invite and who can be invited to your tenant. 
+You have now restricted who is able to invite and who can be invited to your tenant.
 
 ### Task 4 - Create a configuration
 
@@ -88,7 +89,7 @@ In this Task you will create a basic configuration and test the connection to th
 2. On the left navigation pane, navigate to **Identity** > **External Identities** > **Cross-tenant synchronization** > **Configurations**.
 3. Create a **New configuration**.
 4. Enter the name **Contoso cross-tenant synchronization** and select **Create**.
-5. Under **Provisioning** change the **Provisioning Mode** to Automatic.
+5. Under **Provisioning** change the **Provisioning Mode** to **Automatic**.
 6. In the **Tenant Id** box, enter your partner's tenant ID you noted in Task 1.
 7. Select **Test Connection**.
 8. Select **Save**.
@@ -131,10 +132,9 @@ In this Task you will review the attribute mappings and make sure that the synch
 9. Remove the preexisting expression.
 10. Select **Use the expression builder**.
 11. Select the function **Append**.
-12. Select the **[displayName]** attribute.
-13. Enter **' (Contoso)'** including the space in front of the bracket but without the quotation marks.
-14. Select **Add expression**.
-    -  Your expression on the right should look like `Append([displayName], " (Contoso)")`
+12. In the **Seletct attributed** field, select the **[displayName]** attribute from the drop-down list.
+13. In the **Enter suffix** field, enter **' (Contoso)'** including the space in front of the bracket but without the quotation marks.
+14. Select **Add expression**. Your expression on the right should look like `Append([displayName], " (Contoso)")`
 15. You can test your expression by selecting a user.
 16. Select **Apply expression** and select **Ok** to leave the edit dialog.
 17. Select **Save**.
