@@ -58,7 +58,7 @@ In this task, you will familiarise yourself with your company's existing retenti
     ```
 1. Take some time to assess the resulting table.
 
->[!NOTE] You can also access the Microsoft Purview Compliance portal to view retention policies but you have to look into each policy one by one instead of getting an overview over all your policies at a glance.
+    >[!NOTE] You can also access the Microsoft Purview Compliance portal to view retention policies but you have to look into each policy one by one instead of getting an overview over all your policies at a glance.
 
 You successfully viewed the existing labels and settings to decide whether they meet the legal requirements.
 
