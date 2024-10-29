@@ -49,7 +49,7 @@ Connectors are lightweight agents that sit on a server in a private network and 
 
 1. Log into the **Server 1 VM** (LON-SC2) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
 1. On the server VM, enable TLS 1.2. There are multiple ways you can do this
-    1. On a browser tab, enter the URL: +++https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-configure-connectors+++.
+    1. On a browser tab, enter the URL: **https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-configure-connectors**.
     1. Scroll-down to the section **Transport Layer Security (TLS) requirements** and from the code box listed under **Set registry keys**, select **Copy**
     1. In the search bar of the taskbar, type **Notepad**, then select **Notepad** to open the application.
     1. **Ctrl + v** to paste the code into Notepad.
