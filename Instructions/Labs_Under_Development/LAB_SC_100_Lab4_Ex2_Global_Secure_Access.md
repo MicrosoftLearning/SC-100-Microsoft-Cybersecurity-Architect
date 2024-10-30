@@ -29,27 +29,27 @@ Global Secure Access integrates with the existing cloud infrastructure of Contos
 
 ## Part 2: Implement the solution (optional)
 
-## Task 1: Activate Global Secure Access
+### Task 1: Activate Global Secure Access
 
 The first step is to activate Global Secure Access in your tenant. This will allow you to use an Azure App Proxy to provide secure access to OnPremises resources.
 
 1. Log into the **Client 1 VM** (LON-SC1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
-2. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
-3. If you see an information box on the top right of the screen that says Manage multifactor authentication, close it by selecting the **X**.  If you are prompted to setup multifactor authentication, you will be prompted for more information. Follow the instructions.
-4. On the Stay signed in? dialog box select the Don’t show this again checkbox and then select **No**.
-5. Close the password save dialog from the bottom by selecting **Never**, to not save the default global admins credentials in your browser.
-6. In the left navigation pane expand **Global Secure Access** and select **Dashboard**.
-7. Under **Activate Global Secure Access in your Tenant** select **Activate**.
+1. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
+1. If you see an information box on the top right of the screen that says Manage multifactor authentication, close it by selecting the **X**.  If you are prompted to setup multifactor authentication, you will be prompted for more information. Follow the instructions.
+1. On the Stay signed in? dialog box select the Don’t show this again checkbox and then select **No**.
+1. Close the password save dialog from the bottom by selecting **Never**, to not save the default global admins credentials in your browser.
+1. In the left navigation pane expand **Global Secure Access** and select **Dashboard**.
+1. Under **Activate Global Secure Access in your Tenant** select **Activate**.
 
 You have successfully activated Global Secure Access.
 
-## Task 2: Deploy private network connector
+### Task 2: Deploy private network connector
 
 Connectors are lightweight agents that sit on a server in a private network and facilitate the outbound connection to the Global Secure Access service. Connectors must be installed on a Windows Server that has access to the backend resources and applications.  The Windows server where the connector will be installed must have TLS 1.2 enabled before you install the private network connector.
 
 1. Log into the **Server 1 VM** (LON-SC2) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
 1. On the server VM, enable TLS 1.2. There are multiple ways you can do this
-    1. On a browser tab, enter the URL: **https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-configure-connectors**.
+    1. On a browser tab, enter the URL: **`https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-configure-connectors`**.
     1. Scroll-down to the section **Transport Layer Security (TLS) requirements** and from the code box listed under **Set registry keys**, select **Copy**
     1. In the search bar of the taskbar, type **Notepad**, then select **Notepad** to open the application.
     1. **Ctrl + v** to paste the code into Notepad.
@@ -58,18 +58,18 @@ Connectors are lightweight agents that sit on a server in a private network and 
     1. Double click the file name to run it.  Because you are changing the registry file, you are asked, **Are you sure you want to continue?**  Select **Yes**, then select **Ok**.  
     1. Since you updated the registry, you'll need to restart the server. From the taskbar of the Server VM, select the  **Windows icon**, select the **Power icon**, select **Restart**, then select **Continue**.
     1. After the restart, log back in to the Server VM.
-1. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
+1. Open **Microsoft Edge**, select the address bar, navigate to **`https://entra.microsoft.com`** and log into the Entra Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
 1. Under **Global Secure Access** on the left navigation pane expand **Connect** and select **Connectors**.
 1. Select **Download connector service**.
-1.  Select **Accept terms & Download**.
-1.  Select **Install** to install the **Private Network Connector**.
-1.  During the installation process you have to sign in with your username and password provided by the lab.
+1. Select **Accept terms & Download**.
+1. Select **Install** to install the **Private Network Connector**.
+1. During the installation process you have to sign in with your username and password provided by the lab.
 1. Once the installation is complete **Close** the installation window and refresh the browser page.  You should see the connector listed and active.
-1.  Open the **CMD** and execute the **ipconfig** command, then note down the private ip address for your server. For this lab, it will be something like 192.168.2.100.
+1. Open the **CMD** and execute the **ipconfig** command, then note down the private ip address for your server.
 
 You should see you the onboarded VM and the associated IP address. This means you have successfully established the connector.
 
-## Task 3: Create Share on File Server
+### Task 3: Create Share on File Server
 
 In this task, you´ll create a SMB Share on the on premises Fileserver, that will be accessed thru GSA.
 
@@ -83,7 +83,7 @@ In this task, you´ll create a SMB Share on the on premises Fileserver, that wil
 1. Select **No, make the network that I am connected to a private network**.
 1. Select **Done** then **Close**.
 
-## Task 4: Setup Quick Access and assign User
+### Task 4: Setup Quick Access and assign User
 
 In order for your users to access the file server through the GSA client you need to enable Quick Access and assign it to your test users. Without this configuration the test user will not be able to connect to the file server.
 
@@ -105,7 +105,7 @@ In order for your users to access the file server through the GSA client you nee
 
 You have successfully enabled quick access for your test user, in this case your admin account.
 
-## Task 5: Device join Entra ID
+### Task 5: Device join Entra ID
 
 At this point, you are logged into the LON-SC1 VM using the local admin account for the device (VM). In order to use Global Secure Access, you need to join the client endpoint to Entra ID. Otherwise the GSA client will not work.
 
@@ -125,16 +125,16 @@ At this point, you are logged into the LON-SC1 VM using the local admin account 
 
 Once your endpoint is joined to Entra ID you will be able to use the GSA client to connect to any resources you are protecting with Global Secure Access.
 
-## Task 6: Activate profile and validate connection
+### Task 6: Activate profile and validate connection
 
 Global Secure Access is split into two parts. The part you are working on is called Private Access and secures your local and private resources like file servers or OnPremises applications. To enable access to your file server you have to enable the private access profile which allows users to access resources that are assigned to them through Quick Access.
 
 1. You should still be on **LON-SC1**, to which you have signed in with the your MOD Administrator account.
 1. Open **Microsoft Edge**. You'll be prompted to setup Microsoft Edge.
-1. From the Microsoft Edge, navigate to **https://entra.microsoft.com**.
+1. From the Microsoft Edge, navigate to **`https://entra.microsoft.com`**.
 1. From the Global Secure Access menu in the left navigation pane of the Microsoft Entra admin center, expand **Connect** and choose **Traffic forwarding**.
 1. Check **Private access profile** then select **OK**.
-1. Now that you've enabled the private access profile, you'll need to assign users. 
+1. Now that you've enabled the private access profile, you'll need to assign users.
     1. From the Private access profile card, under **User and group assignments**, select **View**.
     1. Select where it says **0 users, 0 groups assigned**
     1. Select **Add user/group**.
@@ -149,8 +149,8 @@ Global Secure Access is split into two parts. The part you are working on is cal
 1. Open **Explorer** in Windows and navigate to **This PC** menu bar select the ellipses (...) and select **Map network drive**.
 1. In the Folder field, enter `\\IP-ADDRESS\Share`. Use the IP address you are noted earlier AND select **Connect using different credentials**.
 1. Select **Finish**.
-1. Enter the local Username **Administrator** and the local administrator password for your client VM, **Pa55w.rd** to map the network drive.  
-1. The reason you log in with the local VM administrator credentials instead of the MOD Administrator account is because for the purpose of the lab, we have an overly simplified on-premise environment that is not synced to Microsoft Entra, so the MOD Administrator account is not known to the on-premises server. In a more typical, enterprise on-premises environment, you would have a domain controller that is synced with Microsoft Entra, via Microsoft Entra Cloud Sync, which would allow you to log in to the mapped network drive with your MOD Administrator account.
-
+1. To map the network drive, use the credentials for the local administrator account on LON-SC2.  You're using the local administrator account because, for this lab, we are using a very simplified on-premise environment.  There is no synchronization of users in Microsoft Entra ID and the on-premise environment.
+    1. Email field: **`Administrator`** (this may vary by lab hoster).
+    1. Password field: **`Pa55w.rd`** (this may vary by lab hoster).
 
 You have successfully connected to the file server by using Global Secure Access.

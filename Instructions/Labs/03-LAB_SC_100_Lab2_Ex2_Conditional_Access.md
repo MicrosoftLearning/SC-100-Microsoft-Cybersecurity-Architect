@@ -39,7 +39,7 @@ In this task you will create a named location using your VM's external IP addres
     curl ifconfig.me | Select-String -Pattern '.'
     ```
 1. Note down the IP address powershell returned.
-1. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. Open **Microsoft Edge**, select the address bar, navigate to **`https://entra.microsoft.com`** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 1. If you're asked to setup multifactor authentication, follow the instructions.
 1. On the Stay signed in? dialog box, select the **Don’t show this again** checkbox and then select **No**.
 1. Close the password save dialog box by selecting **Not now**, to not save the default global admin's credentials in your browser.
@@ -81,11 +81,11 @@ You have now created and enabled your CA policy to restrict access outside trust
 
 Since you have created a Conditional Access policy limiting access to all cloud applications of your company you must make sure that access is still possible.
 
->[!ALERT] This task is significantly abbreviated for illustrative purposes! 
+>[!ALERT] This task is significantly abbreviated for illustrative purposes!
 In a real world scenario you would do a longer testing period with a larger, more representative group to make sure that no unforeseeable incidents distort the result.
 
 1. Open a new **InPrivate** window in your **Microsoft Edge** browser by selecting its task bar icon with your right mouse button and then select **New InPrivate window**.
-1. Select the address bar, navigate to **https://portal.microsoft.com** and log into the M365 Portal as **Allan Deyoung** alland@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The user's password should be provided by your lab hosting provider.
+1. Select the address bar, navigate to **`https://portal.microsoft.com`** and log into the M365 Portal as **Allan Deyoung** alland@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The user's password should be provided by your lab hosting provider.
 1. On the Stay signed in? dialog box, select the **Don’t show this again** checkbox and then select **No**.
 1. Since the login was successful, you can close the **InPrivate** window.
 1. Switch back to your Edge browser window where you should still be logged into the Entra ID portal **https://entra.microsoft.com**.
@@ -145,4 +145,4 @@ This task will skip the testing phase. In a real world scenario you would test w
 16. Select **All users**.
 17. Select **Save**.
 
-You have now created a CA policy to enforce your authentication strength policy to Salesforce excluding SMS OTP and therefore prevent successful attacks using SMS interception. 
+You have now created a CA policy to enforce your authentication strength policy to Salesforce excluding SMS OTP and therefore prevent successful attacks using SMS interception.

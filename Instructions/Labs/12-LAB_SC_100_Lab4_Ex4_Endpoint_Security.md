@@ -32,11 +32,11 @@ A security baseline policy comprises a set of configuration settings recommended
 
 Your overall goal is to secure your endpoints appropriately and consolidate as many policies as possible in one place. You will achieve this by creating endpoint security baseline policies for Windows devices in Intune.
 
-1. Sign-in to the Microsoft Intune admin center **https://intune.microsoft.com** as Allan Deyoung using his administrator account **MOD Administrator**.
-2. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
-3. On the **Endpoint security | Overview** page, under **Overview** select **Security baselines**.
-4. On the **Endpoint security | Security baselines** page select **Security Baseline for Windows 10 and later**.
-5. On the **MDM Security Baseline | Profiles** page select **+ Create profile**.
+1. Sign-in to the Microsoft Intune admin center **`https://intune.microsoft.com`** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
+1. On the **Endpoint security | Overview** page, under **Overview** select **Security baselines**.
+1. On the **Endpoint security | Security baselines** page select **Security Baseline for Windows 10 and later**.
+1. On the **MDM Security Baseline | Profiles** page select **+ Create profile**.
 1. Review the description on the **Create a profile** blade and select **Create**.
 1. On the **Basics** blade enter a name and a description.
 1. Select **Next**.
@@ -51,7 +51,7 @@ Your overall goal is to secure your endpoints appropriately and consolidate as m
 1. On the **Basics** blade enter a name and a description.
 1. Select **Next**.
 1. On the **Configuration settings** blade investigate the different configuration options. When you have finished, select **Next**.
-1. On the **Scope tags** blade select **Next**. 
+1. On the **Scope tags** blade select **Next**.
 1. On the **Assignments** blade, under **Included groups** select **Add all users** and select **Next**.
 1. On the **Review + create** blade select **Create**.
 
@@ -59,7 +59,7 @@ You have successfully created two security baseline policies for Windows devices
 
 ### Task 2: Deploy antivirus on macOS devices
 
-After securing Windows devices with endpoint security baseline policies you will deploy antivirus and enable encrpytion on macOS devices to prepare your environment for merging with Trailwind Traders.
+After securing Windows devices with endpoint security baseline policies you will deploy antivirus and enable encryption on macOS devices to prepare your environment for merging with Trailwind Traders.
 
 1. You should still be logged into the Microsoft Intune admin center **https://intune.microsoft.com**.
 1. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
@@ -74,7 +74,7 @@ After securing Windows devices with endpoint security baseline policies you will
     - Enable / disable cloud delivered protection: **Enabled (Default)**
     - Enable/ disable automatic sample submissions: **Enabled (Default)**
     - Diagnostic collection level: **optional (Default)**
-    - Automatic security intelligence upate: **Enabled (Default)**
+    - Automatic security intelligence update: **Enabled (Default)**
 1. Under **Antivirus engine**:
     - Enable real-time protecion: **Enabled (Default)**
     - Enable passive mode: **Disabled (Default)**
@@ -89,7 +89,7 @@ After securing Windows devices with endpoint security baseline policies you will
 1. Under **Network protection**:
     - Enforcement level: block
 1. Under **Tamper protection**:
-    - Enforcement level: *block (Default)**
+    - Enforcement level: **block (Default)**
 1. Under **User interface preferences**
     - Control sign-in to consumer version: **enabled (Default)**
     - Show / hide status menu icon: **Disabled (Default)**
@@ -107,25 +107,25 @@ You have successfully configured and deployed antivirus for macOS devices.
 In this task you will encrypt macOS devices.
 
 1. You should still be logged into the Microsoft Intune admin center **https://intune.microsoft.com**.
-2. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
-3. On the **Endpoint security | Overview** page, under **Manage** select **Disk encryption**.
-4. On the **Endpoint security | Disk encryption** page select **+ Create Policy**.
-5. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **FileVault**.
-6. Select **Create**.
-7. On the **Basic** blade enter a name and description. Select **Next**.
-8. On the **Configuration settings** blade under **Encryption** configure the following settings:
-   - **Enable FileVault**: Yes
-   - **Personal recovery key rotation**: 6 months
-   - **Escrow location description of personal recovery key**: To recover a lost or recently rotated recovery key, log in to the Intune Company Portal website using any device. Navigate to the Devices section within the portal, choose the device with FileVault enabled, and then select the option to retrieve the recovery key. The portal will display the current recovery key for that device.
-   - **Number of times allowed to bypass**: 3
-   - **Allow deferral until sign out**: Yes
-   - **Disable prompt at sign-out**: Yes
-   - **Hide recovery key**: Yes
+1. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
+1. On the **Endpoint security | Overview** page, under **Manage** select **Disk encryption**.
+1. On the **Endpoint security | Disk encryption** page select **+ Create Policy**.
+1. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **FileVault**.
+1. Select **Create**.
+1. On the **Basic** blade enter a name and description. Select **Next**.
+1. On the **Configuration settings** blade under **Encryption** configure the following settings:
+   - Enable FileVault: **Yes**
+   - Personal recovery key rotation: **6 months**
+   - Escrow location description of personal recovery key: **`To recover a lost or recently rotated recovery key, log in to the Intune Company Portal website using any device. Navigate to the Devices section within the portal, choose the device with FileVault enabled, and then select the option to retrieve the recovery key. The portal will display the current recovery key for that device.`**
+   - Number of times allowed to bypass: **3**
+   - Allow deferral until sign out: **Yes**
+   - Disable prompt at sign-out: **Yes**
+   - Hide recovery key: **Yes**
   
-9.  Select **Next**.
-10. On the **Scope tags** blade select **Next**.
-11. On the **Assignments** blade, under **Included groups** select **Add all users**.
-12. Select **Next**.
-13. On the **Review + create** blade select **Create**.
+1. Select **Next**.
+1. On the **Scope tags** blade select **Next**.
+1. On the **Assignments** blade, under **Included groups** select **Add all users**.
+1. Select **Next**.
+1. On the **Review + create** blade select **Create**.
 
 You have successfully configured and deployed a FileVault profile to encrypt macOS devices.

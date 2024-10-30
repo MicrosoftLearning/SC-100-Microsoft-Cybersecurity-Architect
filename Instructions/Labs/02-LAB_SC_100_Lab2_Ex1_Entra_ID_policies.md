@@ -23,7 +23,7 @@ Based on the provided use-case, the following requirements can be outlined:
 
 In the second step examine Contoso Ltd.'s existing environment. Microsoft Entra ID offers solutions to manage and restrict user's and cloud application's access with the use of Entra ID policies. Investigate which controls exist and which policies are already in place. Use the Entra ID portal to review current configurations and policies and determine if adjustments are necessary or if new policies need to be implemented.
 
-The third phase involves crafting the solution's concept. Upon investigation, it is evident that none of the current policies meet the defined requirements. Therefore, adjustments to the Entra ID configuration are essential. 
+The third phase involves crafting the solution's concept. Upon investigation, it is evident that none of the current policies meet the defined requirements. Therefore, adjustments to the Entra ID configuration are essential.
 
 ### Proposed solution
 
@@ -43,7 +43,7 @@ The third phase involves crafting the solution's concept. Upon investigation, it
 In this task you will restrict the level of access a user can grant to applications. You will also add the functionality for users to request access they are not able to permit themselves. 
 
 1. Log into the Client 1 VM (LON-Sc1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
-1. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The admin password should be provided by your lab hosting provider.
+1. Open **Microsoft Edge**, select the address bar, navigate to **`https://entra.microsoft.com`** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The admin password should be provided by your lab hosting provider.
 1. If you're asked to setup multifactor authentication, follow the instructions.
 1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
 1. Close the password save dialog box by selecting **Not now**, to not save the default global admin's credentials in your browser.
@@ -55,7 +55,7 @@ In this task you will restrict the level of access a user can grant to applicati
 1. Under **User consent for applications** select the recommended option **Allow user consent for apps from verified publishers, for selected permissions**. This enables users to consent for permissions classified as "low impact" (that you previously selected), for apps from verified publishers.
 1. Select **Save**.
 1. Navigate to **Admin consent settings** and enable Admin consent requests by selecting **Yes**, to allows users to request admin consent to aps they are unable to content to.
-1. Select **+ Add users** to add **Lidia Holloway** and **MOD Administrator** as users that can review admin consent requests.
+1. Select **+ Add users** to add **`Lidia Holloway`** and **`MOD Administrator`** as users that can review admin consent requests.
 1. Select **Save** on the **Admin consent settings** window.
 1. Keep this browser tab open for the next task.
 
