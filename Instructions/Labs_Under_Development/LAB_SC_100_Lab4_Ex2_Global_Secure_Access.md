@@ -1,4 +1,4 @@
-# Lab 4 - Exercise 2 - Global Secure Access
+# Global Secure Access
 
 After setting up the monitoring server, you need to establish secure networking to the file server using Global Secure Access (GSA). You want to ensure that access to these machines is secured until these file servers can be migrated to secure cloud storage, especially if Tailwind Traders is bringing local servers into your company IT infrastructure. You decided against reworking the VPN infrastructure of Tailwind Traders to allow your employees access to the servers. 
 
@@ -21,7 +21,7 @@ Based on the provided use-case, the following requirements can be outlined:
 Global Secure Access integrates with the existing cloud infrastructure of Contoso Ltd. and allows your employees to securely remote into local servers within Tailwind Traders local infrastructure. Review GSA and consider the differences to other strategies for remote access to services.
 
 ### Proposed solution
-<!--BITE AUSFÜLLEN-->
+
 |Requirement|Solution|Action plan|
 |----|----|----|
 |Enable secure remote access for on premise servers| EntraID Global Secure Access | Enable Global Secure Access  |
