@@ -34,7 +34,7 @@ Based on above scenario, Microsoft Purview Data Lifecycle Management can be used
 
 ### Task 1: Analyse the current structure of the retention policy
 
-In this task, you will familiarise yourself with your company's existing retention policy. You will have a look into different retention policies, labels and label policies. You will use the Security & Compliance PowerShell module and view the existing policies. You will investigate the current set-up and decide whether the existing retention policies are enough for Contoso Ltd. to meet the legal requirements. 
+In this task, you will familiarize yourself with your company's existing retention policy. You will have a look into different retention policies, labels and label policies. You will use the Security & Compliance PowerShell module and view the existing policies. You will investigate the current set-up and decide whether the existing retention policies are enough for Contoso Ltd. to meet the legal requirements.
 
 >[!NOTE] You should have already installed the Exchange Online PowerShell module. If the module is missing follow the instructions for installing the module.
 
@@ -51,11 +51,13 @@ In this task, you will familiarise yourself with your company's existing retenti
     ```powershell
     Connect-IPPSSession
     ```
+
 1. Enter the following cmdlet to view existing retention policies and settings:
 
     ```powershell
      Get-ComplianceTag | Format-Table -Auto Name,Priority,RetentionAction,RetentionDuration,Workload
     ```
+
 1. Take some time to assess the resulting table.
 
     >[!NOTE] You can also access the Microsoft Purview Compliance portal to view retention policies but you have to look into each policy one by one instead of getting an overview over all your policies at a glance.
@@ -68,7 +70,7 @@ You have effectively assessed Contoso Ltd.'s retention policies, uncovering an o
 
 Your plan involves implementing a new company-wide retention policy with a five-year retention period. Following this timeframe, data may be retained but is not mandatory for deletion. This adjustment satisfies the legal requirements for minimum retention periods and reduces data overhead.
 
-1. Sign-in to the Microsoft Purview Compliance portal **https://compliance.microsoft.com/** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. Sign-in to the Microsoft Purview Compliance portal **`https://compliance.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
 1. If you're asked to setup multifactor authentication, follow the instructions.
 1. You're taken to the new Microsoft Purview portal landing page. Select the box next to the statement, **I agree to the terms of data flow disclosure and Privacy Statements**, then select **Get started**.
 1. From the left navigation panel, select **Solutions** then select **Data Lifecycle Management**. Alternatively, from the main window you can select the **View all solutions** tile, then select the ***Data Lifecycle Management** tile listed under Data Governance.
@@ -76,24 +78,24 @@ Your plan involves implementing a new company-wide retention policy with a five-
 1. On the **Data lifecycle management** pane, expand **Policies** and select **Retention policies**.
 1. On the **Retention policies** page select **+ New retention policy**.
 1. On the **Name your retention policy** page enter the following information:
-    - **Name**: General retention policy
-    - **Description**: This policy is the default retention policy for the entire organization. All data must be retained for at least 5 years. 
+    - **Name**: **`General retention policy`**
+    - **Description**: **`This policy is the default retention policy for the entire organization. All data must be retained for at least 5 years.`**
 1. Select **Next**.
 1. On the **Policy Scope** page select **Next**.
 1. On the **Choose the type of retention policy to create** page select **Static** and select **Next**.
 1. On the **Choose where to apply this policy** page enable following locations:
 
     - Exchange mailboxes
-    - SharePoint classic and communciation sites
+    - SharePoint classic and communication sites
     - OneDrive accounts
     - Microsoft 365 Group mailboxes & sites
 
 1. Select **Next**.
 1. On the **Decide if you want to retain content, delete it or both** page enter the following settings:
 
-    - **Retain items for a specific period**: 5 years
-    - **Start the retention period based on**: When items were cerated
-    - **At the end of the retention period**: Do nothing
+    - Retain items for a specific period: **5 years**
+    - Start the retention period based on: **When items were cerated**
+    - At the end of the retention period: **Do nothing**
 
 1. Select **Next**.
 1. On the **Review and finish** page select **Submit**, then select **Done**.
@@ -104,21 +106,21 @@ You have successfully created a retention policy. You can now delete all remaini
 
 To adhere to german regulations you will now create a retention label with a retention period of 10 years and auto-apply it to all documents that contain german financial data.
 
-1. You should still be logged into the **Data Lifecycle Management** solution in the Microsoft Purview portal.  If not, navigate to **https://compliance.microsoft.com/** > **Solutions** > **Data Lifecycle Management**.
+1. You should still be logged into the **Data Lifecycle Management** solution in the Microsoft Purview portal.  If not, navigate to **`https://compliance.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
 1. On the **Data lifecycle management** pane, select **Retention policies**.
 1. On the **Labels** page, select **+ Create a label**.
 1. On the **Name your retention label** page enter the following information:
 
-    - Name: **German financial data**
-    - Description for users: **This label retains all german financial data for 10 years.**
-    - Description for admins: **The label retains all financial data for 10 years and it is automatically applied.**
+    - Name: **`German financial data`**
+    - Description for users: **`This label retains all German financial data for 10 years.`**
+    - Description for admins: **`The label retains all financial data for 10 years and it is automatically applied.`**
 
 1. Select **Next**.
 1. On the **Define label settings** page select **Enforce actions after a specific period** and select **Next**.
 1. On the **Define the period** page enter the following information:
 
-    - **How long is the period?**: 10 years
-    - **When should the period begin?**: When items were created
+    - How long is the period?: **10 years**
+    - When should the period begin?: **When items were created**
 
 1. Select **Next**.
 1. On the **Choose what happens after the period** page select **Delete items automatically**. Click **Next**.
@@ -126,8 +128,8 @@ To adhere to german regulations you will now create a retention label with a ret
 1. On the **Your retention label is created** page select **Auto-apply this label to a specific type of content** and select **Done**.
 1. On the **Let´s get started** page enter the following information:
 
-    - Name: **Automatically retain all german financial data for 10 years**
-    - Descriptions: **This policy auto-applies the label **German financial data.**
+    - Name: **`Automatically retain all German financial data for 10 years`**
+    - Descriptions: **`This policy auto-applies the label German financial data.`**
 
 1. Select **Next**.
 1. On the **Choose the type of content you want to apply this label to** page select **Apply label to content that contains sensitive info** and select **Next**.
@@ -135,7 +137,7 @@ To adhere to german regulations you will now create a retention label with a ret
 1. On the **Define content that contains sensitive info** page, leave all existing settings (no change) and select **Next**.
 1. On the **Policy scope** page select **Next**.
 1. On the **Choose the type of retention policy to create**, page select **Static**.
-1. On the **Choose where to automatically appliy the label** page enable following locations:
+1. On the **Choose where to automatically apply the label** page enable following locations:
 
     - Exchange mailboxes
     - SharePoint classic and communication sites
