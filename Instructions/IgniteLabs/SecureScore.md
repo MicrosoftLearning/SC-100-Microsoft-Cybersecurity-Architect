@@ -1,12 +1,10 @@
-# Security Posture Management
+# Security Posture Management and Defender XDR Unifed RBAC
 
 Contoso's security team wants to improve its security posture by using Microsoft Secure Score, a tool that provides recommendations and guidance on how to reduce the attack surface and protect against threats.
 
 The security team reviews and delegates Secure Score recommended actions to its extended team members (security ambassadors) that manage the status and action plan associated with improvement actions. The security team also wants to control access to security posture information and the data sources that feed it. Joni Shermann is one of the security ambassadors and needs access to exposure management.
 
 Recently, there have been reports that uninvited associates were automatically being admitted to Teams calls to which they were not directly invited.  Due to the sensitive and confidential nature of calls, the security team want to control this.
-
-## Part 1: Design a solution (required)
 
 ### Design approach
 
@@ -23,9 +21,6 @@ To ensure that the security ambassadors have the necessary role permissions you 
 |Control access to security posture information and the data sources that feed it. | Microsoft Defender XDR Unified RBAC | Activate Microsoft Defender XDR Unified RBAC and create a custom role |
 |Joni Shermann will manage actions and status associated with Security Score recommendations. |Exposure Management - Secure Score and Defender XDR unified RBAC | Create role to manage security posture and grant access to Joni Shermann. |
 |Share Secure Score recommendd action |Secure Score | Share recommended action. |
-
-
-## Part 2: Implement the solution (optional)
 
 ### Task 1 - Activate Defender XDR unified RBAC by activating workloads
 
