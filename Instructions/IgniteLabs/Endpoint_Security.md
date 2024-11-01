@@ -27,6 +27,7 @@ A security baseline policy comprises a set of configuration settings recommended
 Your overall goal is to secure your endpoints appropriately and consolidate as many policies as possible in one place. You will achieve this by creating endpoint security baseline policies for Windows devices in Intune.
 
 1. Sign-in to the Microsoft Intune admin center **`https://intune.microsoft.com`** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 1. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
 1. On the **Endpoint security | Overview** page, under **Overview** select **Security baselines**.
 1. On the **Endpoint security | Security baselines** page select **Security Baseline for Windows 10 and later**.
