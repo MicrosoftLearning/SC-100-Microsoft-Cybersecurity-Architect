@@ -24,17 +24,16 @@ To ensure that the security ambassadors have the necessary role permissions you 
 |Joni Shermann will manage actions and status associated with Security Score recommendations. |Exposure Management - Secure Score and Defender XDR unified RBAC | Create role to manage security posture and grant access to Joni Shermann. |
 |Share Secure Score recommendd action |Secure Score | Share recommended action. |
 
-
 ## Part 2: Implement the solution (optional)
 
-### Task 1 - Activate Defender XDR unified RBAC by activating workloads
+### Task 1 - Activate Defender XDR unified RBAC for specific workloads
 
-For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new custom roles, you must activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
+For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new custom roles, you must activate the Microsoft Defender XDR Unified RBAC model for your workloads. 
 
-In this task you´ll enable specific workloads.
+When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
 
 1. Log into the Client 1 VM (LON-SC1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
-1. Open **Microsoft Edge**, select the address bar, navigate to **'https://security.microsoft.com`** and log into **Microsoft Defender** as MOD Administrator **admin@WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. Open **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`** and log into **Microsoft Defender** as MOD Administrator **admin@WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
 1. If you are asked to setup multifactor authentication, follow the instruction.
 1. Close the password save dialog from the bottom by selecting **Never**, to not save the default global admins credentials in your browser.
@@ -42,9 +41,9 @@ In this task you´ll enable specific workloads.
 1. Select **Microsoft Defender XDR**.
 1. Under General, select **Permissions and roles**.
 1. You may have to wait a few minutes for Microsoft Defender XDR to set up.
-1. Under Workloads, set the slider for **Endpoints & Vulnerability Management** to **Active**.  Do the same for **Defender for Office 365**, and for **Defender for Office 365**.
+1. Note the description under **Activate unified role-based access control**.  When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal. For this lab, you aren't using any of the listed workloads, so it's not necessary to activate, but its important to know that this is where you would do it.
 
-You successfully activated the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
+You learned where to activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
 
 ### Task 2 - Create a custom role to manage security posture for Exposure Management
 
@@ -65,7 +64,7 @@ In this task, you'll set up custom role focused on security posture and more spe
 1. On the **Assign users and data sources** page, select **Add assignment** then populate the fields as follows:
     - Assignment name: **`ExposureManagement`**
     - Assign users and group: Enter **`Joni Sherman`**, then select it.
-    - Under **Data sources**, **uncheck** everything except **Microsoft Security Exposure Management**.
+    - Under **Data sources**, select the down arrow to open the drop-down menu and **uncheck** everything except **Microsoft Security Exposure Management**.
     - Select, **Add**.
     - Select, **Next**.
 1. In the Review and finish page review your settings, select **Submit**, then select **Done**.
@@ -88,17 +87,19 @@ Joni Sherman and her Mark 8 Project Team will be notified about the recommended 
 
 ### Task 4 - Manage Recommendations
 
-As Joni Sherman you received the teams notification that a specific action to increase your security posture was recommended and are going to manage the recommended action and document the solution.
+As Joni Sherman you received the teams notification that a specific action to increase the organization's security posture was recommended.  As an extended member of the security team you have the role permissions to manage the recommended action and document the solution.
 
 In this task, you´ll manage recommended action and document your solutions.
 
 1. Open a Microsoft Edge inPrivate window, navigate to **`https://office.com`** and sign in as **JoniS@WWLxZZZZZZ.onmicrosoft.com**.
+1. If the landing page appears blurred out, refresh the page.
+1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
+1. On the Welcome to Teams window, select **Get Started**.
 1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
 1. Review the message posted from the previous task.
+1. Although all the members of the Team channel and see the messags, only you have the role permission to access the link. Select the link in the posted message. You are taken direclty to the recommended action in Microsoft Secure Score.
 1. Open another tab in the Microsoft Edge inPrivate window, navigate to **`https://security.microsoft.com`**.
 1. On the left navigation pane, expand **Exposure management** and select **Secure Score**.
-1. Select the **Recommended actions** tab to see all the actions you have access to.
-1. Search for **`Only invited users should be automatically admitted to Teams meetings`** and select it.
 1. Select **Edit status & action plan**.
 1. Check **Resolved through third party**.
 1. Add a note **Currently secured** to the **Action plan** field.
