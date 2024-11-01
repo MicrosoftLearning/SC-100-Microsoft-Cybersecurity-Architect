@@ -26,9 +26,11 @@ To ensure that the security ambassadors have the necessary role permissions you 
 
 ## Part 2: Implement the solution (optional)
 
-### Task 1 - Activate Defender XDR unified RBAC by activating workloads
+### Task 1 - Activate Defender XDR unified RBAC for specific workloads
 
-For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new custom roles, you must activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
+For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new custom roles, you must activate the Microsoft Defender XDR Unified RBAC model for your workloads. 
+
+When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
 
 In this task you´ll enable specific workloads.
 
@@ -41,9 +43,9 @@ In this task you´ll enable specific workloads.
 1. Select **Microsoft Defender XDR**.
 1. Under General, select **Permissions and roles**.
 1. You may have to wait a few minutes for Microsoft Defender XDR to set up.
-1. Under Workloads, set the slider for **Endpoints & Vulnerability Management** to **Active**.  Do the same for **Defender for Office 365**, and for **Defender for Office 365**.
+1. Note the description under **Activate unified role-based access control**.  When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal. For this lab, you aren't using any of the listed workloads, so it's not necessary to activate, but its important to know that this is where you would do it.
 
-You successfully activated the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
+You learned where to activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
 
 ### Task 2 - Create a custom role to manage security posture for Exposure Management
 
