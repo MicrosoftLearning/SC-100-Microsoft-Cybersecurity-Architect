@@ -156,6 +156,7 @@ Private access traffic can be forwarded to the service by connecting through the
 1. To map the network drive, use the credentials for the local administrator account on LON-SC2.  
     1. Email field: **`Administrator`** (this may vary by lab hoster).
     1. Password field: **`Pa55w.rd`** (this may vary by lab hoster).
-      > [!NOTE] It's acknowledged that using the local Administrator account is not a typical scenario. It's used in this exercise due to the simplified on-premises environment. A more realistic scenario would have the user access the private resources with their Entra ID account.  This requires synchronization of identities between Microsoft Entra and the on-premises AD DS. using Microsoft Entra Connect Sync or Entra Cloud Sync. You could then set up conditional access policies for greater security.
+    
+    >[!NOTE] It's acknowledged that using the local Administrator account is not a typical scenario. It's used in this exercise due to the simplified on-premises environment. A more realistic scenario would have the user access the private resources with their Entra ID account.  This requires synchronization of identities between Microsoft Entra and the on-premises AD DS. using Microsoft Entra Connect Sync or Entra Cloud Sync. You could then set up conditional access policies for greater security.
 
 You have successfully connected to the file server by using Global Secure Access.
