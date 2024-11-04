@@ -18,38 +18,21 @@ To ensure that the security ambassadors have the necessary role permissions you 
 
 |Requirement|Solution|Action plan|
 |----|----|----|
-|Control access to security posture information and the data sources that feed it. | Microsoft Defender XDR Unified RBAC | Activate Microsoft Defender XDR Unified RBAC and create a custom role |
 |Joni Shermann will manage actions and status associated with Security Score recommendations. |Exposure Management - Secure Score and Defender XDR unified RBAC | Create role to manage security posture and grant access to Joni Shermann. |
+|Control access to security posture information and the data sources that feed it. | Microsoft Defender XDR Unified RBAC | Activate Microsoft Defender XDR Unified RBAC for custom role. |
 |Share Secure Score recommendd action |Secure Score | Share recommended action. |
 
-### Task 1 - Activate Defender XDR unified RBAC for specific workloads
-
-For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new custom roles, you must activate the Microsoft Defender XDR Unified RBAC model for your workloads. 
-
-When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
-
-In this task you´ll enable specific workloads.
-
-1. Log into the Client 1 VM (LON-SC1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
-1. Open **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`** and log into **Microsoft Defender** as MOD Administrator **admin@WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
-1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
-1. If you are asked to setup multifactor authentication, follow the instruction.
-1. Close the password save dialog from the bottom by selecting **Never**, to not save the default global admins credentials in your browser.
-1. On the left navigation pane, expand **System** then select **Settings**.
-1. Select **Microsoft Defender XDR**.
-1. Under General, select **Permissions and roles**.
-1. You may have to wait a few minutes for Microsoft Defender XDR to set up.
-1. Note the description under **Activate unified role-based access control**.  When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal. For this lab, you aren't using any of the listed workloads, so it's not necessary to activate, but its important to know that this is where you would do it.
-
-You learned where to activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
-
-### Task 2 - Create a custom role to manage security posture for Exposure Management
+### Task 1 - Create a custom role to manage security posture for Exposure Management
 
 In this task, you'll set up custom role focused on security posture and more specifically on Exposure Management. As part of the custom role, you'll grant Joni Shermann access to the data source for Exposure Management.
 
-1. You should still be logged into the Microsoft Defender portal.
+1. Log into the Windows client VM **LON-SC1** with the local **Administrator** account. The password should be provided by your lab hosting provider.
+1. Open **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`** and log into **Microsoft Defender** as MOD Administrator **admin@WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
+1. Close the password save dialog from the bottom by selecting **Never**, to not save the default global admins credentials in your browser.
+1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 1. On the left navigation pane, expand **System** then select **Permissions**.
-1. On the **Permissions** page, expand **Microsoft Defender XDR** and select **Roles**.
+1. Under **Microsoft Defender XDR(1)**, select **Roles**. You may have to wait a few minute
 1. Select **Create custom role**.
 1. In the Role name field, enter **`SecureScore Manager`** then select **Next**.
 1. Select **Security posture**.
@@ -62,12 +45,29 @@ In this task, you'll set up custom role focused on security posture and more spe
 1. On the **Assign users and data sources** page, select **Add assignment** then populate the fields as follows:
     - Assignment name: **`ExposureManagement`**
     - Assign users and group: Enter **`Joni Sherman`**, then select it.
-    - Under **Data sources**, select the down arrow to open the drop-down menu and **uncheck** everything except **Microsoft Security Exposure Management**.
+    - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management**.  Keep other data sources unselected.
     - Select, **Add**.
     - Select, **Next**.
 1. In the Review and finish page review your settings, select **Submit**, then select **Done**.
 
 You successfully set up a custom role for security posture that grants Joni Shermann access to the Exposure Management data source.
+
+### Task 2 - Activate Defender XDR unified RBAC for specific workloads
+
+For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new custom roles, you must activate the Microsoft Defender XDR Unified RBAC model for your workloads.
+
+When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
+
+In this task you´ll explore the page where workloads are activated.
+
+1. You should still be logged into the Microsoft Defender portal.
+1. On the left navigation pane, expand **System** then select **Settings**.
+1. Select **Microsoft Defender XDR**.
+1. Under General, select **Permissions and roles**.
+1. Note the description under **Activate unified role-based access control**.  When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
+1. For this exercise, the data source for Exposure Management is enabled by default, which is why there is no setting to enable that workload. If you had created a custom role that included permissions for other workloads, such as Office 365 or Device and Vulnerability Management, as examples, then you would need to activate those specific workloads to activate the custom role, as part of unified RBAC.
+
+You learned where to activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
 
 ### Task 3 - Share a recommended action
 
@@ -95,7 +95,7 @@ In this task, you´ll manage recommended action and document your solutions.
 1. On the Welcome to Teams window, select **Get Started**.
 1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
 1. Review the message posted from the previous task.
-1. Although all the members of the Team channel and see the messags, only you have the role permission to access the link. Select the link in the posted message. You are taken direclty to the recommended action in Microsoft Secure Score.
+1. Although all the members of the Team channel can see the message that was posted, only you have the role permission to access the link. Select the link in the posted message. You are taken directly to the recommended action in Microsoft Secure Score.
 1. Open another tab in the Microsoft Edge inPrivate window, navigate to **`https://security.microsoft.com`**.
 1. On the left navigation pane, expand **Exposure management** and select **Secure Score**.
 1. Select **Edit status & action plan**.
