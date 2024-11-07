@@ -32,7 +32,8 @@ In this task, you'll set up custom role focused on security posture and more spe
 1. Close the password save dialog from the bottom by selecting **Never**, to not save the default global admins credentials in your browser.
 1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 1. On the left navigation pane, expand **System** then select **Permissions**.
-1. Under **Microsoft Defender XDR(1)**, select **Roles**. You may have to wait a few minute
+1. If this is the first time you are accessing Microsoft Defender settings, you will have to wait a few minutes while Defender prepares new spaces for your data and connects them.  Once that completes, refresh the permissions page until you see a listing that includes Microsoft Defender XDR, Microsoft Entra ID, Endpoints roles & groups, Email & collaboration roles, and Cloud Apps.
+1. Under **Microsoft Defender XDR(1)**, select **Roles**.
 1. Select **Create custom role**.
 1. In the Role name field, enter **`SecureScore Manager`** then select **Next**.
 1. Select **Security posture**.
@@ -45,7 +46,7 @@ In this task, you'll set up custom role focused on security posture and more spe
 1. On the **Assign users and data sources** page, select **Add assignment** then populate the fields as follows:
     - Assignment name: **`ExposureManagement`**
     - Assign users and group: Enter **`Joni Sherman`**, then select it.
-    - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management**.  Keep other data sources unselected.
+    - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management**.  If other data sources are listed, unselect them.
     - Select, **Add**.
     - Select, **Next**.
 1. In the Review and finish page review your settings, select **Submit**, then select **Done**.
