@@ -48,38 +48,41 @@ You have successfully activated Global Secure Access.
 
 The private network connector is a lightweight agent that is installed on a Windows Server, in your on-premise environment, that has access to the backend resources and applications, and is used to facilitate the connection to the Global Secure Access service.  The Windows server where the connector will be installed must have TLS 1.2 enabled before you install the private network connector.
 
-1. Log into the Server VM, **LON-SC2**, using the local **Administrator** acount. The password should be provided by your lab hosting provider.
+1. Log into the Server VM, **LON-SC2**, using the local **Administrator** account. The password should be provided by your lab hosting provider.
+1. When you log in to the VM, Server Manager will open.  You can minimize this window.
 1. Before you install the private network connector on the server, you need to enable TLS 1.2.  There are several ways you can do this. For this exercise, you'll copy the commands to set the registry keys into a file and then run that file.
 
     1. Open **Microsoft Edge**.
     1. On a browser tab, enter the URL: **`https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-configure-connectors`** then press the enter key on your keyboard to open the product documentation.
     1. Scroll-down to the section **Transport Layer Security (TLS) requirements** and from the code box listed under **Set registry keys**, select **Copy**
-    1. In the search bar of the taskbar, type **`Notepad`**, then select **Notepad** to open the application.
-    1. Use **Ctrl + v** to paste the code into Notepad.
+    1. From within the VM, you'll open Notepad. In the taskbar's search field, type **`Notepad`**, then select **Notepad** to open the application.
+    1. Use **Ctrl + v** to paste the code into Notepad.  Do NOT change anything in the pasted code. The first line of code is required.
     1. From Notepad, select **File** then select **Save as**. 
-    1. In the **Save as type** field, select **All files** from the drop-down, and in the **File name** field enter **`Enable-TLS.reg`**, then select **Save**.  It's important that you save the file with the .reg extension. Take note of where the document is saved then close Notepad.
+    1. In the **Save as type** field, select **All files** from the drop-down, and in the **File name** field enter **`EnableTLS.reg`**, then select **Save**.  It's important that you save the file with the .reg extension. Take note of where the document is saved then close Notepad.
     1. From the taskbar, open **File Explorer** and navigate to the folder where you saved the file (the default is This PC > Documents).
     1. Double click the file name, **Enable-TLS** to run it.  Because you are changing the registry file, you are asked, **Are you sure you want to continue?**  Select **Yes**, then select **Ok**.  
     1. Since you updated the registry, you'll need to restart the server. From the taskbar of the Server VM, select the  **Windows icon**, select **Power**, select **Restart**, then select **Continue**.
     1. After the restart, log back in to the Server VM, as the local **Administrator**.
+    1. Minimize or close Server Manager.
 1. Open **Microsoft Edge**, select the address bar, navigate to **`https://entra.microsoft.com`** and log into the Entra Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
 1. Dismiss the dialog boxes, as you did in the previous task.
 1. From the left navigation panel, expand **Global Secure Access**, expand **Connect**, and select **Connectors**.
 1. From the top of the Private Network connectors page, select **Download connector service**.
 1. Review the information then select **Accept terms & Download**.
-1. From the downloads window on the top right corner of the page, select **Open file**.
+1. From the downloads window on the top right corner of the page, when the download is complete, select **Open file**.  If the downloads window closed before you were able to select Open file, select **File explorer** from the taskbar, go to the **Downloads** folder, then run the file **MicrosoftEntraPrivateNetworkConnectorInstaller**.
 1. Select the box next to **I agree to the license terms and conditions** then  select **Install**.
-1. During the installation process you have to sign in with the username and password for MOD Administrator.
+1. During the installation process you have to sign in with the username and password for MOD Administrator. It can take a couple of minutes to complete the installation.
 1. Once the installation is complete **Close** the installation window and refresh the browser page.  You should see the connector listed and active.
-1. Open the **CMD** and execute the **ipconfig** command, then note down the private ip address for your server.
+1. In the Windows search bar, on the task bar, enter **`cmd`** then select **Command Prompt**. 
+1. In the Administrator: Command Prompt window, run the **`ipconfig`** command, make note of the private ip address for your server, then close the Command Prompt window.
 
 You've successfully installed the private network connector on your on-premise server.
 
 ### Task 3: Create a folder on the File Server
 
-In this task, you´ll create a SMB Share on the on-premise fileserver, that will be accessed thru GSA.
+In this task, you´ll create an SMB Share on the on-premise file server that will be accessed thru GSA.
 
-1. You should still be log in to LON-SC2.
+1. You should still be logged in to LON-SC2.
 1. From the task bar, open **File Explorer**, navigate to the C: Drive and create a folder named **Share**.
 1. Using the right mouse key, select the **Share** Folder and select **Properties**.
 1. From the Share Properties window, select the **Sharing** tab.
@@ -88,6 +91,7 @@ In this task, you´ll create a SMB Share on the on-premise fileserver, that will
 1. Select **Share**.
 1. Select **No, make the network that I am connected to a private network**.
 1. Select **Done** then **Close**.
+1. Minimize or close File explorer.
 
 You've created a shared folder on the server. It is this folder and its content that you'll access through GSA.
 
@@ -126,7 +130,7 @@ In order to use Global Secure Access, you need to join the client endpoint, the 
 1. From the left navigation panel, select **Accounts**.
 1. From the Accounts page, select  **Access work or school**.
 1. To add a work or school account select **Connect**.
-1. From the bottom of the window, select **Join Device with Microsoft Entra ID**.
+1. From the bottom of the window, select **Join Device to Microsoft Entra ID**.
 1. Sign in with your **MOD Administrator** admin credentials provided by the lab provider.
 1. From the **Make sure this is your organization** window, review the information then select **Join**.
 1. Review the information on the **You're all set** window and select **Done**.
@@ -148,7 +152,7 @@ Private access traffic can be forwarded to the service by connecting through the
 1. You should still be on **LON-SC1**, to which you have signed in with the your MOD Administrator account.
 1. Open **Microsoft Edge**. You'll be prompted to setup Microsoft Edge.
 1. From the Microsoft Edge, navigate to **`https://entra.microsoft.com`**.
-1. From the left navigation panel, expand **Global Secure Access**, expand **Connect** and choose **Traffic forwarding**.
+1. From the left navigation panel, expand **Global Secure Access**, expand **Connect** and choose **Traffic forwarding**.  You may need to expand the left navigation panel by selecting **>>** to view the options.
 1. Select the slider button next to **Private access profile** then select **OK**.
 1. Now that you've enabled the private access profile, you'll need to assign users.
     1. From the Private access profile card, under **User and group assignments**, select **View**.
@@ -158,17 +162,21 @@ Private access traffic can be forwarded to the service by connecting through the
     1. In the search bar, enter **`MOD Administrator`**, select **MOD Administrator**, press **Select**, then select **Assign**.
 1. In the left navigation pane under **Connect** choose **Client download**.
 1. Under Windows 10/11, select **Download client**.
-1. From the Downloads window, select **Open file**
+1. From the Downloads window, select **Open file**. If the downloads window closed before you were able to select Open file, select **File explorer** from the taskbar, go to the **Downloads** folder, then run the file **GlobalSecureAccessClient**.
 1. Select **I agree to the license terms and conditions**, then select **Install**. In the User Account Control window that pops up, select **Yes**.
 1. Once the installation successfully completes, **Close** the window.
-1. From the task bar, select the up arrow to show the Global Secure Access client icon.  It can take 5-10 minutes to show with a green checkmark to indicate it is connected.
+1. From the task bar, select the up arrow to show hidden icons.  Here you will see the Global Secure Access client icon. If it does not have a green checkmark, right-click the icon and select **Enable**. It may take several minutes to show with a green checkmark to indicate it is connected.
 1. From the task bar, select **File Explorer** and navigate to **This PC**. Select the ellipses (**...**) and select **Map network drive**.
-1. In the Folder field, enter `\\IP-ADDRESS\Share`. Use the IP address you are noted earlier AND select **Connect using different credentials**.
+1. In the Folder field, enter `\\192.168.2.100\Share`. Use the IP address you are noted earlier AND select **Connect using different credentials**.
 1. Select **Finish**.
 1. To map the network drive, use the credentials for the local administrator account on LON-SC2.  
     1. Email field: **`Administrator`** (this may vary by lab hoster).
     1. Password field: **`Pa55w.rd`** (this may vary by lab hoster).
     
-    >[!NOTE] It's acknowledged that using the local Administrator account is not a typical scenario. It's used in this exercise due to the simplified on-premises environment. A more realistic scenario would have the user access the private resources with their Entra ID account.  This requires synchronization of identities between Microsoft Entra and the on-premises AD DS. using Microsoft Entra Connect Sync or Entra Cloud Sync. You could then set up conditional access policies for greater security.
+    >[!NOTE] It's acknowledged that using the local Administrator account is not a typical scenario. It's used in this exercise due to the simplified on-premises environment. A more realistic scenario, with a more involved on-premises environment, would have the user access the private resources with their Entra ID account.
+
+1. Before moving to the next lab, its recommended that you switch user, for optimal screen size.
+    1. From the taskbar, select the **Windows** icon, select **MOD Administrator**, then select **Switch user**.
+    1. From the bottom left of the window, select **Admin**, then log in with your local Administrator account.
 
 You have successfully connected to the file server by using Global Secure Access.
