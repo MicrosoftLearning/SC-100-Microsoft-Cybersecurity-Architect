@@ -43,8 +43,8 @@ The private network connector is a lightweight agent that is installed on a Wind
     1. Open **Microsoft Edge**.
     1. On a browser tab, enter the URL: **`https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-configure-connectors`** then press the enter key on your keyboard to open the product documentation.
     1. Scroll-down to the section **Transport Layer Security (TLS) requirements** and from the code box listed under **Set registry keys**, select **Copy**
-    1. In the search bar of the taskbar, type **`Notepad`**, then select **Notepad** to open the application.
-    1. Use **Ctrl + v** to paste the code into Notepad.
+    1. From within the VM, you'll open Notepad. In the taskbar's search field, type **`Notepad`**, then select **Notepad** to open the application.
+    1. Use **Ctrl + v** to paste the code into Notepad.  Do NOT change anything in the pasted code. The first line of code is required.
     1. From Notepad, select **File** then select **Save as**. 
     1. In the **Save as type** field, select **All files** from the drop-down, and in the **File name** field enter **`EnableTLS.reg`**, then select **Save**.  It's important that you save the file with the .reg extension. Take note of where the document is saved then close Notepad.
     1. From the taskbar, open **File Explorer** and navigate to the folder where you saved the file (the default is This PC > Documents).
@@ -153,7 +153,7 @@ Private access traffic can be forwarded to the service by connecting through the
 1. From the Downloads window, select **Open file**. If the downloads window closed before you were able to select Open file, select **File explorer** from the taskbar, go to the **Downloads** folder, then run the file **GlobalSecureAccessClient**.
 1. Select **I agree to the license terms and conditions**, then select **Install**. In the User Account Control window that pops up, select **Yes**.
 1. Once the installation successfully completes, **Close** the window.
-1. From the task bar, select the up arrow to show hidden icons.  Here you wills ee the Global Secure Access client icon.  It may take a few minutes to show with a green checkmark to indicate it is connected.
+1. From the task bar, select the up arrow to show hidden icons.  Here you will see the Global Secure Access client icon. If it does not have a green checkmark, right-click the icon and select **Enable**. It may take several minutes to show with a green checkmark to indicate it is connected.
 1. From the task bar, select **File Explorer** and navigate to **This PC**. Select the ellipses (**...**) and select **Map network drive**.
 1. In the Folder field, enter `\\192.168.2.100\Share`. Use the IP address you are noted earlier AND select **Connect using different credentials**.
 1. Select **Finish**.
