@@ -123,7 +123,7 @@ In order to use Global Secure Access, you need to join the client endpoint, the 
 1. From the **Make sure this is your organization** window, review the information then select **Join**.
 1. Review the information on the **You're all set** window and select **Done**.
 1. Now that your device is Entra ID joined with you MOD administrator account, you need to log in using that account.
-    1. From the taskbar, select the **Windows** icon, select **Admin**, then select **Switch user**.
+    1. From the taskbar, select the **Windows** icon, select **Admin**, then select **Sign out**. Once the words **Signing out** disappear fro the screen, select the display icon on the top left corner fo the VM window and select **Reconnect**.  Alternatively, you may hear an alert and see a pop-up in the instruction panel asking to reconnect.
     1. From the bottom left of the window, select **Other user**, then log in with your MOD administrator account.
     1. It will take a few minutes to set up the account, then you'll see a **More information required** window appear. This will initiate the process to setup multifactor authentication.  Follow the instructions to setup MFA.
 
@@ -162,9 +162,5 @@ Private access traffic can be forwarded to the service by connecting through the
     1. Password field: **`Pa55w.rd`** (this may vary by lab hoster).
     
     >[!NOTE] It's acknowledged that using the local Administrator account is not a typical scenario. It's used in this exercise due to the simplified on-premises environment. A more realistic scenario, with a more involved on-premises environment, would have the user access the private resources with their Entra ID account.
-
-1. Before moving to the next lab, its recommended that you switch user, for optimal screen size.
-    1. From the taskbar, select the **Windows** icon, select **MOD Administrator**, then select **Switch user**.
-    1. From the bottom left of the window, select **Admin**, then log in with your local Administrator account.
 
 You have successfully connected to the file server by using Global Secure Access.
