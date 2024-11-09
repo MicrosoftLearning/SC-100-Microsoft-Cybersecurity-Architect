@@ -1,10 +1,10 @@
 # Setup lab
 
-The purpose of this setup lab is to get Microsoft Defender XDR and the available workspaces set up so that its ready by the time you get to the second lab in this session.
+The purpose of this setup lab is to get Microsoft Defender XDR ready by the time you get to the second lab.
 
 ### Task - Set up Microsoft Defender XDR
 
-In this task you will trigger the process for Defender to prepare new spaces for your data and connects them.
+In this task you will trigger the process for Defender to prepare new spaces for your data and connects them so it is ready by the time you get to the second lab.
 
 1. Log into the Windows client VM **LON-SC1** with the local **Administrator** account. The password should be provided by your lab hosting provider.
 1. Open **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`** and log into **Microsoft Defender** as MOD Administrator **admin@WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
