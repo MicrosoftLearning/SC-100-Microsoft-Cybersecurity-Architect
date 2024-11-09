@@ -32,13 +32,17 @@ A security baseline policy comprises a set of configuration settings recommended
 
 Your overall goal is to secure your endpoints appropriately and consolidate as many policies as possible in one place. You will achieve this by creating endpoint security baseline policies for Windows devices in Intune.
 
-1. Sign-in to the Microsoft Intune admin center **`https://intune.microsoft.com`** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. Log into the Windows client VM **LON-SC1** with the local **Administrator** account. The password should be provided by your lab hosting provider.
+1. Sign-in to the Microsoft Intune admin center **`https://intune.microsoft.com`** as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
+1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 1. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
 1. On the **Endpoint security | Overview** page, under **Overview** select **Security baselines**.
 1. On the **Endpoint security | Security baselines** page select **Security Baseline for Windows 10 and later**.
-1. On the **MDM Security Baseline | Profiles** page select **+ Create profile**.
+1. On the **Security Baseline for Windows 10 and later | Profiles** page select **+ Create profile**.
 1. Review the description on the **Create a profile** blade and select **Create**.
-1. On the **Basics** blade enter a name and a description.
+1. On the **Basics** blade enter:
+    1. Name: **`Secure Windows Endpoints`**
+    1. Description: **`The Security Baseline for Windows 10 and later represents the recommendations for configuring Windows.`**.
 1. Select **Next**.
 1. On the **Configuration settings** blade investigate the different configuration options. When you have finished, select **Next**.
 1. On the **Scope tags** blade select **Next**.
@@ -48,7 +52,9 @@ Your overall goal is to secure your endpoints appropriately and consolidate as m
 1. On the **Endpoint security | Security baselines** page select **Microsoft Defender for Endpoint Security Baseline**.
 1. On the **Microsoft Defender for Endpoint Security baseline | Profiles** select **+ Create profile**.
 1. Review the description on the **Create a profile** blade and select **Create**.
-1. On the **Basics** blade enter a name and a description.
+1. On the **Basics** blade enter:
+    1. Name: **`Defender for Endpoint Security Baseline`**
+    1. Description: **`Security best practices for the Microsoft security stack on devices managed by Intune`**.
 1. Select **Next**.
 1. On the **Configuration settings** blade investigate the different configuration options. When you have finished, select **Next**.
 1. On the **Scope tags** blade select **Next**.
@@ -67,7 +73,9 @@ After securing Windows devices with endpoint security baseline policies you will
 1. On the **Endpoint security | Antivirus** page select **+ Create policy**.
 1. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **Microsoft Defender Antivirus**.
 1. Select **Create**.
-1. On the **Basics** blade enter a name and a description.
+1. On the **Basics** blade enter:
+    1. Name: **`Deploy antivirus on macOS devices`**
+    1. Description: **`Deploy antivirus and enable encryption on macOS devices to prepare your environment for merging with Trailwind Traders.`**
 1. Select **Next**
 1. On the **Configuration settings** tab ensure the settings are configured as follows:
 1. Under **Cloud delivered protection preferences**:
@@ -83,9 +91,9 @@ After securing Windows devices with endpoint security baseline policies you will
     - In the text box for Threat type, enter: **potentially_unwanted_application**
     - Action to take: **block**
     - Threat type settings merge: **admin_only**
-    - Enable file hash computation: **True****
-    - Run a scan after definitions are updated: **Enabled (Default)**
-    - Enforcement level: **real_time**
+1. Enable file hash computation: **True****
+1. Run a scan after definitions are updated: **Enabled (Default)**
+1. Enforcement level: **real_time**
 1. Under **Network protection**:
     - Enforcement level: block
 1. Under **Tamper protection**:
@@ -112,7 +120,10 @@ In this task you will encrypt macOS devices.
 1. On the **Endpoint security | Disk encryption** page select **+ Create Policy**.
 1. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **FileVault**.
 1. Select **Create**.
-1. On the **Basic** blade enter a name and description. Select **Next**.
+1. On the **Basic** blade enter:
+    1. Name: **`Encrypt macOS devices`**
+    1. Description: **`FileVault provides built-in Full Disk Encryption for macOS devices.`**
+    1. Select **Next**.
 1. On the **Configuration settings** blade under **Encryption** configure the following settings:
    - Enable FileVault: **Yes**
    - Personal recovery key rotation: **6 months**
@@ -121,11 +132,9 @@ In this task you will encrypt macOS devices.
    - Allow deferral until sign out: **Yes**
    - Disable prompt at sign-out: **Yes**
    - Hide recovery key: **Yes**
-  
-1. Select **Next**.
+   - Select **Next**.
 1. On the **Scope tags** blade select **Next**.
-1. On the **Assignments** blade, under **Included groups** select **Add all users**.
-1. Select **Next**.
+1. On the **Assignments** blade, under **Included groups** select **Add all users** then select **Next**.
 1. On the **Review + create** blade select **Create**.
 
 You have successfully configured and deployed a FileVault profile to encrypt macOS devices.

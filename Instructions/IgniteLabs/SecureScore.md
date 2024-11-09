@@ -26,13 +26,9 @@ To ensure that the security ambassadors have the necessary role permissions you 
 
 In this task, you'll set up custom role focused on security posture and more specifically on Exposure Management. As part of the custom role, you'll grant Joni Shermann access to the data source for Exposure Management.
 
-1. Log into the Windows client VM **LON-SC1** with the local **Administrator** account. The password should be provided by your lab hosting provider.
-1. Open **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`** and log into **Microsoft Defender** as MOD Administrator **admin@WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
-1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
-1. Close the password save dialog from the bottom by selecting **Never**, to not save the default global admins credentials in your browser.
-1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
-1. On the left navigation pane, expand **System** then select **Permissions**.
-1. If this is the first time you are accessing Microsoft Defender settings, you will have to wait a few minutes while Defender prepares new spaces for your data and connects them.  Once that completes, refresh the permissions page until you see a listing that includes Microsoft Defender XDR, Microsoft Entra ID, Endpoints roles & groups, Email & collaboration roles, and Cloud Apps.
+1. You should still be in **LON-SC1** VM (the client endpoint), if not switch back.
+1. If you completed the Setup lab, open the Microsoft Defender browser tab. If you previously closed the tab, open **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`**, you should still be logged in as MOD Administrator **admin@WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. On the left navigation pane, expand **System** then select **Permissions**. If you completed the setup lab, you should see a listing that includes Microsoft Defender XDR. Otherwise, it will take several minutes for Defender to prepare new spaces for your data and connect them.
 1. Under **Microsoft Defender XDR(1)**, select **Roles**.
 1. Select **Create custom role**.
 1. In the Role name field, enter **`SecureScore Manager`** then select **Next**.
@@ -50,6 +46,7 @@ In this task, you'll set up custom role focused on security posture and more spe
     - Select, **Add**.
     - Select, **Next**.
 1. In the Review and finish page review your settings, select **Submit**, then select **Done**.
+1. You should be on the **Permissions and roles** page and see the custom role you just created. Keep this tab open, you'll come back to it in the next task.
 
 You successfully set up a custom role for security posture that grants Joni Shermann access to the Exposure Management data source.
 
@@ -61,10 +58,8 @@ When you activate some or all of your workloads to use the new permission model,
 
 In this task you´ll explore the page where workloads are activated.
 
-1. You should still be logged into the Microsoft Defender portal.
-1. On the left navigation pane, expand **System** then select **Settings**.
-1. Select **Microsoft Defender XDR**.
-1. Under General, select **Permissions and roles**.
+1. You should still be logged into the Microsoft Defender portal and be in the **Permissions and roles** page. You should see the custom role you just created.
+1. Note the information in the gray banner, Some of the roles aren't applicable yet, because you haven't activate all workloads. Select **Activate workloads**.
 1. Note the description under **Activate unified role-based access control**.  When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
 1. For this exercise, the data source for Exposure Management is enabled by default, which is why there is no setting to enable that workload. If you had created a custom role that included permissions for other workloads, such as Office 365 or Device and Vulnerability Management, as examples, then you would need to activate those specific workloads to activate the custom role, as part of unified RBAC.
 
@@ -74,7 +69,7 @@ You learned where to activate the Microsoft Defender XDR Unified RBAC model for 
 
 Share a Microsoft Secure Score recommended action. In this task you'll post the action on a Teams channel. By posting it on Teams, users on the channel will see a notice but will not have access to the data source to edit the status or manage the action. Only Joni Shermann who is a member of the Teams channel and has role permissions can access the recommended action.
 
-1. You should still be logged into Microsoft Defender XDR portal.
+1. You should still be logged into Microsoft Defender portal.
 1. On the left navigation pane, expand **Exposure management** then select **Secure Score**.
 1. Select the **Recommended actions** tab.
 1. Search for **`Only invited users should be automatically admitted to Teams meetings`** and select it.
@@ -90,18 +85,33 @@ As Joni Sherman you received the teams notification that a specific action to in
 
 In this task, you´ll manage recommended action and document your solutions.
 
-1. Open a Microsoft Edge inPrivate window, navigate to **`https://office.com`** and sign in as **JoniS@WWLxZZZZZZ.onmicrosoft.com**.
+1. Open a Microsoft Edge InPrivate window, navigate to **`https://office.com`** and sign in as **JoniS@WWLxZZZZZZ.onmicrosoft.com**.
+1. If the landing page appears blurred out, refresh the page.
+1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
+1. On the Welcome to Teams window, select **Get Started**. It may take a minute or two for Teams to set up. If a Teams for Mobile QR-code screen pops-up, close it.
+1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
+1. Review the message posted from the previous task.
+1. From the posted message, select the link **https://security.microsoft.com/securescore?viewid=actions&actionId=meeting_autoadmitusers_v1**.  Because you, Joni Shermann, have been granted permission through the custom role, you are able to access Secure Score.  Other members of the Mark 8 project team can see teh post, but do not have access to Secure Score.
+1. Select **Edit status & action plan**.
+1. Check **Resolved through third party**.
+1. Add a note **Currently secured** to the **Action plan** field.
+1. Select **Save and Close**.
+1. Close the inPrivate browser tabs.
+
+As Joni Shermann, you successfully edited the status for the recommended action.
+
+### Task 5 (Optional) - Adele Vance accesses the Teams post
+
+In this task, Adele Vance access the Mark 8 Project Team channel and selects the link in the posted message.
+
+1. Open a Microsoft Edge InPrivate window, navigate to **`https://office.com`** and sign in as Adele Vance, **AdeleV@WWLxZZZZZZ.onmicrosoft.com**.
 1. If the landing page appears blurred out, refresh the page.
 1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
 1. On the Welcome to Teams window, select **Get Started**.
 1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
 1. Review the message posted from the previous task.
-1. Although all the members of the Team channel can see the message that was posted, only you have the role permission to access the link. Select the link in the posted message. You are taken directly to the recommended action in Microsoft Secure Score.
-1. Open another tab in the Microsoft Edge inPrivate window, navigate to **`https://security.microsoft.com`**.
-1. On the left navigation pane, expand **Exposure management** and select **Secure Score**.
-1. Select **Edit status & action plan**.
-1. Check **Resolved through third party**.
-1. Add a note **Currently secured** to the **Action plan** field.
-1. Select **Save and Close**.
+1. Select the link in the posted message **https://security.microsoft.com/securescore?viewid=actions&actionId=meeting_autoadmitusers_v1**.
+1. You are taken directly to Microsoft Secure Score, but you don't have permission to access this data, as Adele Vance was not added as a member to the custom role that you created.
+1. Close the InPrivate browser tabs.
 
-As Joni Shermann, you successfully edited the status for the recommended action.
+In this task, you confirmed that members of the Mark 8 Project can see the message posted for the recommended action to help improve the organization's security posture, but only those associates that have been added to the custom role can access the Secure Score information.
