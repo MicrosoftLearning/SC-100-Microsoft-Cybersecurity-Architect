@@ -21,11 +21,8 @@ In this exercise, you'll set up a remote access connection from your client endp
 
 The first step is to activate Global Secure Access in your tenant.
 
-1. Log into the **LON-SC1** VM (the client endpoint) as the local **Admin**. The password should be provided by your lab hosting provider.
-1. Open **Microsoft Edge**, select the address bar, navigate to **https://entra.microsoft.com** and log into the Entra Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
-1. On the **Stay signed in?** dialog box select the **Don’t show this again checkbox** and then select **No**.
-1. On the **Save password** dialog box, select **Not now**.
-1. If **Sign into Microsoft Edge** dialog box appears, select **No thanks**.
+1. If you completed the setup lab, you should still be in the **LON-SC1** VM (the client endpoint). If not, log into the **LON-SC1** VM as the local **Admin**. The password should be provided by your lab hosting provider.
+1. Open a new browser tab in **Microsoft Edge**, select the address bar, and navigate to **https://entra.microsoft.com**. You should already be logged into the Entra Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
 1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 1. In the left navigation pane expand **Global Secure Access** and select **Dashboard**.
 1. Under **Activate Global Secure Access in your Tenant** select **Activate**.
