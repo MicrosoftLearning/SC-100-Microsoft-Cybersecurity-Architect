@@ -24,7 +24,7 @@ The third phase involves crafting the solution's concept. Upon investigation, it
 |Requirement|Solution|Action plan|
 |----|----|----|
 |Restrict access from insecure/unknown locations|Entra ID Conditional access policy|Define the current company's networks as trusted network and restrict access to devices inside this network|
-|Require strong authentication for apps containing sensitive information|Entra ID Conditional access policy|Create a new conditional access policy scoped to sensitive applications requiring the just created hardened authentication strenth that excludes insecure authentication methods like SMS and Voice|
+|Require strong authentication for apps containing sensitive information|Entra ID Conditional access policy|Create a new conditional access policy scoped to sensitive applications requiring the just created hardened authentication strength that excludes insecure authentication methods like SMS and Voice|
 
 ## Part 2: Implement the solution (optional)
 
