@@ -113,7 +113,7 @@ You have successfully enabled support for sensitivity labels for groups & sites.
 
 You will create a new sensitivity label to fulfil the requirements.
 
-1. Sign-in to the Microsoft Purview Compliance portal **https://compliance.microsoft.com/** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. Sign-in to the Microsoft Purview Compliance portal **https://purview.microsoft.com/** as Allan Deyoung using his administrator account **MOD Administrator**.
 1. In the Microsoft Purview portal, in the left navigation pane, expand **Information Protection** then select **Labels**.
 1. On the **Labels** page select **+ Create a label**.
 1. On the **Provide basic details for this label** page enter the following information:

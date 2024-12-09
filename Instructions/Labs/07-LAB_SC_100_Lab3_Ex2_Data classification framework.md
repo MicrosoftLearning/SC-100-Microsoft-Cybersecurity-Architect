@@ -34,7 +34,7 @@ This introduction of a new project ID necessitates the creation of a correspondi
 
 You will create a custom sensitive information type to detect documents that contain project IDs.
 
-1. Sign-in to the Microsoft Purview Compliance portal **`https://compliance.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. Sign-in to the Microsoft Purview Compliance portal **`https://purview.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
 1. If you're asked to setup multifactor authentication, follow the instructions.
 1. You're taken to the new Microsoft Purview portal landing page. Select the box next to the statement, **I agree to the terms of data flow disclosure and Privacy Statements**, then select **Get started**.
 1. From the left navigation panel, select **Solutions** then select **Information Protection**. Alternatively, from the main window you can select the **View all solutions** tile, then select the **Information Protection** tile listed under Data Security.
@@ -64,7 +64,7 @@ You have successfully created a new sensitive information type to identify proje
 
 You will create a retention label to retain all documents related to construction projects for 5 years.
 
-1. You should still be logged into the Microsoft Purview portal **https://compliance.microsoft.com/**.
+1. You should still be logged into the Microsoft Purview portal **https://purview.microsoft.com/**.
 1. From the left navigation panel, select **Solutions** then select **Data Lifecycle Management**.
 1. Select **Retention Labels**.
 1. On the **Labels** page, select **Create a label**.
@@ -94,7 +94,7 @@ You have successfully created a retention label with a retention period of 5 yea
 
 You will use the sensitive information type you created in this exercise to auto-apply the retention label.
 
-1. You should still be logged into the Data Lifecycle Management solution in the Microsoft Purview portal.  If not, navigate to **`https://compliance.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
+1. You should still be logged into the Data Lifecycle Management solution in the Microsoft Purview portal.  If not, navigate to **`https://purview.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
 1. On the **Data lifecycle management** pane, select **Label policies**.
 1. On the **Label policies** blade, select **Auto-apply a label**.
 1. On the **Let´s get started** page, enter the following information:
