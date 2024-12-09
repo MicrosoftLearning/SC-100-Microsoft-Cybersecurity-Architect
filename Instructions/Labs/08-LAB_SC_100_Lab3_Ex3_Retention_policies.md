@@ -70,7 +70,7 @@ You have effectively assessed Contoso Ltd.'s retention policies, uncovering an o
 
 Your plan involves implementing a new company-wide retention policy with a five-year retention period. Following this timeframe, data may be retained but is not mandatory for deletion. This adjustment satisfies the legal requirements for minimum retention periods and reduces data overhead.
 
-1. Sign-in to the Microsoft Purview Compliance portal **`https://compliance.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. Sign-in to the Microsoft Purview Compliance portal **`https://purview.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
 1. If you're asked to setup multifactor authentication, follow the instructions.
 1. You're taken to the new Microsoft Purview portal landing page. Select the box next to the statement, **I agree to the terms of data flow disclosure and Privacy Statements**, then select **Get started**.
 1. From the left navigation panel, select **Solutions** then select **Data Lifecycle Management**. Alternatively, from the main window you can select the **View all solutions** tile, then select the ***Data Lifecycle Management** tile listed under Data Governance.
@@ -106,7 +106,7 @@ You have successfully created a retention policy. You can now delete all remaini
 
 To adhere to german regulations you will now create a retention label with a retention period of 10 years and auto-apply it to all documents that contain german financial data.
 
-1. You should still be logged into the **Data Lifecycle Management** solution in the Microsoft Purview portal.  If not, navigate to **`https://compliance.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
+1. You should still be logged into the **Data Lifecycle Management** solution in the Microsoft Purview portal.  If not, navigate to **`https://purview.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
 1. On the **Data lifecycle management** pane, select **Retention policies**.
 1. On the **Labels** page, select **+ Create a label**.
 1. On the **Name your retention label** page enter the following information:

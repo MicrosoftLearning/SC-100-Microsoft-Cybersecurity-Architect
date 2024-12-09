@@ -43,7 +43,7 @@ Design a security policy to restrict the storage of company data on unmanaged, p
 
 The first step of the solution design involves creating of a Data Loss Prevention rule for Endpoints. You will deploy a DLP rule to block copy of data to USB drives. 
 
-1. Sign-in to the Microsoft Purview Compliance portal **https://compliance.microsoft.com** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. Sign-in to the Microsoft Purview Compliance portal **https://purview.microsoft.com** as Allan Deyoung using his administrator account **MOD Administrator**.
 1. If prompted to switch back to the classic Microsoft Purview compliance portal, select **Switch**.
 1. In the Microsoft Purview portal, in the left navigation pane, expand **Data loss prevention** then select **Policies**.
 1. On the **Policies** page select **+ Create policy**.

@@ -29,7 +29,7 @@ Compliance Manager assessments from Microsoft are groupings of controls from spe
 
 Your first step is to analyse the company's current environment. You carry out a compliance assessment to analyse the extent to which Contoso's environment complies with the ISO-27001 regulations.
 
-1. Sign-in to the Microsoft Purview Compliance portal **`https://compliance.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
+1. Sign-in to the Microsoft Purview Compliance portal **`https://purview.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
 1. If you're asked to setup multifactor authentication, follow the instructions.
 1. You're taken to the new Microsoft Purview portal landing page. Select the box next to the statement, **I agree to the terms of data flow disclosure and Privacy Statements**, then select **Get started**.
 1. From the left navigation panel, select **Solutions** then select **Compliance Manager**. Alternatively, from the main window you can select the **View all solutions** tile, then select the **Compliance Manager** tile listed under Risk & Compliance.
@@ -49,7 +49,7 @@ You have successfully created an assessment based on ISO-27001.
 
 The results of the assessment shows you different areas and actions that are essential to comply with ISO-27011 regulations. You will investigate improvement actions and assign a task to a technical engineer.
 
-1. You should still be on the page for the assessment you just created, **ISO-27001 Audit assessment**.  If not, navigate to the Microsoft Purview portal **`https://compliance.microsoft.com/`** and from there select **Solutions** > **Compliance Manager** > **Assessments** > **ISO-27001 Audit assessment**
+1. You should still be on the page for the assessment you just created, **ISO-27001 Audit assessment**.  If not, navigate to the Microsoft Purview portal **`https://purview.microsoft.com/`** and from there select **Solutions** > **Compliance Manager** > **Assessments** > **ISO-27001 Audit assessment**
 1. From the **ISO-27001 Audit assessment** page, select **Your improvement actions**.
 1. Set the filter for **Control family** to **Physical controls**.
 1. Select the box next to **Improvement action** to select all shown improvement actions, then select **Assign to user** (listed above the filters options).
@@ -63,7 +63,7 @@ You have successfully viewed and assigned an improvement action to a technical e
 
 Users need access to view the tasks assigned to them. You will grant Nestor Wilke access to the assessment.
 
-1. You should still be on the **Your improvement actions** tab for **ISO-27001 Audit assessment** page.  If not, navigate to the Microsoft Purview portal **`https://compliance.microsoft.com/`** and from there select **Solutions** > **Compliance Manager** > **Assessments** > **ISO-27001 Audit assessment** > **Your improvement actions**.
+1. You should still be on the **Your improvement actions** tab for **ISO-27001 Audit assessment** page.  If not, navigate to the Microsoft Purview portal **`https://purview.microsoft.com/`** and from there select **Solutions** > **Compliance Manager** > **Assessments** > **ISO-27001 Audit assessment** > **Your improvement actions**.
 1. From the upper right corner of the **ISO/IEC 27001:Assessment** page, select **Manage user access**.
 1. From the new **Manage user access** window, select the **Assessor** tab and select **Add assessors**.
 1. In the **Search for users** text box, enter **`Nestor Wilke`**.
