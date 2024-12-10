@@ -53,7 +53,7 @@ The results of the assessment shows you different areas and actions that are ess
 1. From the **ISO-27001 Audit assessment** page, select **Your improvement actions**.
 1. Set the filter for **Control family** to **Physical controls**.
 1. Select the box next to **Improvement action** to select all shown improvement actions, then select **Assign to user** (listed above the filters options).
-1. In the new **Assign improvement actions** window, in the search text box enter **`Nestor Wilke`**.
+1. In the new **Assign improvement actions** window, in the search text box enter **`Nestor`**.
 1. Select the user and select **Assign**.
 1. Keep this browser tab open for the next task.
 
@@ -66,7 +66,7 @@ Users need access to view the tasks assigned to them. You will grant Nestor Wilk
 1. You should still be on the **Your improvement actions** tab for **ISO-27001 Audit assessment** page.  If not, navigate to the Microsoft Purview portal **`https://purview.microsoft.com/`** and from there select **Solutions** > **Compliance Manager** > **Assessments** > **ISO-27001 Audit assessment** > **Your improvement actions**.
 1. From the upper right corner of the **ISO/IEC 27001:Assessment** page, select **Manage user access**.
 1. From the new **Manage user access** window, select the **Assessor** tab and select **Add assessors**.
-1. In the **Search for users** text box, enter **`Nestor Wilke`**.
+1. In the **Search for users** text box, enter **`Nestor`**.
 1. Select the user and then select **Apply**, then select **Save**.
 1. You have successfully granted Nestor Wilke the Assessor role for this assessment.
 1. You can now exit out of the Microsoft Purview portal by closing the browser tab.
