@@ -32,7 +32,7 @@ Based on above scenario, Microsoft Purview Data Lifecycle Management can be used
 
 ## Part 2: Implement the solution (optional)
 
-### Task 1: Analyse the current structure of the retention policy
+### Task 1: Analyze the current structure of the retention policy
 
 In this task, you will familiarize yourself with your company's existing retention policy. You will have a look into different retention policies, labels and label policies. You will use the Security & Compliance PowerShell module and view the existing policies. You will investigate the current set-up and decide whether the existing retention policies are enough for Contoso Ltd. to meet the legal requirements.
 
@@ -107,7 +107,7 @@ You have successfully created a retention policy. You can now delete all remaini
 To adhere to german regulations you will now create a retention label with a retention period of 10 years and auto-apply it to all documents that contain german financial data.
 
 1. You should still be logged into the **Data Lifecycle Management** solution in the Microsoft Purview portal.  If not, navigate to **`https://purview.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
-1. On the **Data lifecycle management** pane, select **Retention policies**.
+1. On the **Data lifecycle management** pane, select **Retention labels**.
 1. On the **Labels** page, select **+ Create a label**.
 1. On the **Name your retention label** page enter the following information:
 
