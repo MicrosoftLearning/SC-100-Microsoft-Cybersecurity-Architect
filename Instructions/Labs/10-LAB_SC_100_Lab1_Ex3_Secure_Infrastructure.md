@@ -97,10 +97,13 @@ You have successfully enabled Azure Arc on the test server and data should start
 You´ll deploy a Data collection rule to get event logs from the on premise server. The rule will automatically deploy the monitoring agent on the server and forward logs to the previously created log analytics workspace.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-1. Open Defender for Cloud. From the left navigation panel, select **Get started**.
-1. From the top of the Getting started page, select the **Upgrade** tab.
-1. You will see the previously created log analytics workspace, **contosola** listed.  Select where it says **Off**.  This will take you to the **Defender plan** page of contosola.  
-1. On the **Servers** plan, select **On**, then select **Save**, from the top of the page.
+1. Open Defender for Cloud.
+1. In the left navigation pane, expand **Management** and select **Environment settings**.
+1. Select **Expand all**.
+1. You will see the previously created log analytics workspace, **ContosoLA**.  
+1. Select the ellipses (...) for the **ContosoLA** line item, then select **Edit settings**.
+1. Set the **Servers** plan the slider on the right to **On**.
+1. Select **Save** on top of the page.
 1. Use the search bar at the top to search for **Data collection rules**, then select it from the search results.
 1. Select **Create**.
 1. - Rule Name: **`ContosoDCR`**
@@ -131,7 +134,7 @@ Based on the recommendation you can start to secure the resource and assign secu
 1. Select the ellipses (...) next to the subscription and select **Edit settings**.
 1. Select **Security policies** in the navigation menu on the left. The list might take a while to load.
 1. Search for **`NIST SP 800-53 Rev. 5`**. Change the status slider to **On**.
-1. Go back to Defender for Cloud and select **Regulatory compliance**.
+1. Go back to Defender for Cloud, expand **Cloud security**, then select **Regulatory compliance**.
 
 Due to limitation off the lab environment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
 
