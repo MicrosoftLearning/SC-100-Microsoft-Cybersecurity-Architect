@@ -58,7 +58,7 @@ In this task, you will add Sentinel to the created log analytics workspace and a
 1. In the **Add a Microsoft Sentinel to a workspace page** the previously created log analytics workspace should be listed.  Select **law-sentinel** then select **Add**.
 1. It may take a few minutes to add Sentinel to the workspace.  Once it's added, the **Microsoft Sentinel | New & guides** page is displayed.  You're notified that the Microsoft Sentinel fre trial is activated.  Select **Ok**.
 1. From the center of the page, select **Go to content hub**.  Alternatively, from the left navigation panel expand **Content management** then select **Content hub**.
-1. Search for **Microsoft Sentinel Training Lab**, select it from the search results, and **install** the solution.
+1. From the Content Hub, you will install **Microsoft Sentinel Training Lab**.  To find this solution, filter on **Provider = Microsoft** and **Category = Training and Tutorials**. Once these filters are set and applied,  **Microsoft Sentinel Training Lab**, will be listed. Select it from the search results, and **Install** the solution.
 1. Select **Create**.
 1. Choose the resource group **rg_eastus_soc** and workspace **law-sentinel**.
 1. Select **Review & Create** then select **Create**.
