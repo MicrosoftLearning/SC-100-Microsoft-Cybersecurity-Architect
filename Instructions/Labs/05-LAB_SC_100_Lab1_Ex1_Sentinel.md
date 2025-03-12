@@ -30,6 +30,9 @@ In this scenario, you deploy the SIEM SOAR solution based on Microsoft Sentinel,
 
 ## Part 2: Implement the solution (optional)
 
+> [!NOTE]
+> For this part of the lab, the task to create a dashboard with custom views for incidents and their alerts (task 4 of this exercise) is not functional, as there is no data data upon which to do this task. The steps of task 4 are included for information purposes only. Executing the steps will not return any data.
+
 ### Task 1 - Create Log Analytics Workspace
 
 In this task, you'll create a log analytics workspace which is required to house all of the data that Microsoft Sentinel will be ingesting and using for its detections and analytics.
@@ -57,14 +60,9 @@ In this task, you will add Sentinel to the created log analytics workspace and a
 1. From the **Microsoft Sentinel** page, select **Create**.
 1. In the **Add a Microsoft Sentinel to a workspace page** the previously created log analytics workspace should be listed.  Select **law-sentinel** then select **Add**.
 1. It may take a few minutes to add Sentinel to the workspace.  Once it's added, the **Microsoft Sentinel | New & guides** page is displayed.  You're notified that the Microsoft Sentinel fre trial is activated.  Select **Ok**.
-1. From the center of the page, select **Go to content hub**.  Alternatively, from the left navigation panel expand **Content management** then select **Content hub**.
-1. From the Content Hub, you will install **Microsoft Sentinel Training Lab**.  To find this solution, filter on **Provider = Microsoft** and **Category = Training and Tutorials**. Once these filters are set and applied,  **Microsoft Sentinel Training Lab**, will be listed. Select it from the search results, and **Install** the solution.
-1. Select **Create**.
-1. Choose the resource group **rg_eastus_soc** and workspace **law-sentinel**.
-1. Select **Review & Create** then select **Create**.
-1. Wait till the solution is successfully installed.
+1. From the center of the page, select **Go to content hub**.  The content hub is where you would go to download solutions. Explore the content hub, at will.
 
-You have successfully deployed Sentinel to the log analytics workspace and added data. 
+You have successfully deployed Sentinel to the log analytics workspace. 
 
 ### Task 3 - Setup RBAC
 
@@ -137,6 +135,9 @@ Furthermore, the network team needs access to Cisco umbrella logs. You must ensu
 You successfully created role based access model for the role requirements for Contoso´s security operations team and created a custom role for the network team and assigned the role on the specific table in your log analytics workspace.
 
 ### Task 4 - Create Workbook
+
+> [!NOTE]
+> These steps are included for information purposes only. Executing the steps will not return any data.
 
 In this task, you´ll create a workbook, to get a dashboard with custom views and current incidents and their alerts.
 
