@@ -35,9 +35,7 @@ In this task you will create a named location using your VM's external IP addres
 1. Log into the Client 1 VM (LON-Sc1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
 1. Open a **PowerShell** window by selecting the start menu with the right mouse button and then select **Terminal**.
 1. Enter the following cmdlet to check your current external IP address:
-    ```powershell
-    curl ifconfig.me | Select-String -Pattern '.'
-    ```
+    `Invoke-RestMethod -Uri "http://ifconfig.me/ip"`
 1. Note down the IP address powershell returned.
 1. Open **Microsoft Edge**, select the address bar, navigate to **`https://entra.microsoft.com`** and log into the Entra ID Portal as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 1. If you're asked to setup multifactor authentication, follow the instructions.
