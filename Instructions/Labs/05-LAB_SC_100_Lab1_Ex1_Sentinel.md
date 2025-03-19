@@ -53,13 +53,13 @@ You successfully created the log analytics workspace for your Sentinel deploymen
 
 ### Task 2 - Create Sentinel
 
-In this task, you will add Sentinel to the created log analytics workspace and add demo logs, because the demo tenant doesn't have an existing data in the log analytics workspace, you import demo logs to have a better idea of how sentinel works.
+In this task, you will add Sentinel to the created log analytics workspace.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
 1. In the search bar, in the blue banner at the top of the page, enter **Microsoft Sentinel**, then select it from the search results listed under services.
 1. From the **Microsoft Sentinel** page, select **Create**.
 1. In the **Add a Microsoft Sentinel to a workspace page** the previously created log analytics workspace should be listed.  Select **law-sentinel** then select **Add**.
-1. It may take a few minutes to add Sentinel to the workspace.  Once it's added, the **Microsoft Sentinel | New & guides** page is displayed.  You're notified that the Microsoft Sentinel fre trial is activated.  Select **Ok**.
+1. It may take a few minutes to add Sentinel to the workspace.  Once it's added, the **Microsoft Sentinel | New & guides** page is displayed.  You're notified that the Microsoft Sentinel free trial is activated.  Select **Ok**.
 1. From the center of the page, select **Go to content hub**.  The content hub is where you would go to download solutions. Explore the content hub, at will.
 
 You have successfully deployed Sentinel to the log analytics workspace. 
@@ -67,17 +67,14 @@ You have successfully deployed Sentinel to the log analytics workspace.
 ### Task 3 - Setup RBAC
 
 You have to secure the access based on least privilege, you´ll create role assignments for the specific role requirements. In your upcoming productive deployment, there´ll be two different roles in the Security Operation Center.
-Furthermore, the network team needs access to Cisco umbrella logs. You must ensure that the network team can only access these logs.
+
 
 #### Permission requirements
 
 | Role | Permissions |
 |---|---|
-| Security analyst | View data, incidents, worksbooks and other Sentinel resources |
-| | Assigning/dismissing incidents. |
-| Security engineer | Create and edit workbooks and analytics rules |
-| | Install and update solutions from content hub |
-| Network Team | Read Permissions for Group: **NOC** on Table: **Cisco_Umbrella_dns_CL**|
+| Security analyst | View data, incidents, worksbooks and other Sentinel resources and Assigning/dismissing incidents. |
+| Security engineer | Create and edit workbooks and analytics rules  Install and update solutions from content hub |
 
 ---
 
@@ -99,40 +96,8 @@ Furthermore, the network team needs access to Cisco umbrella logs. You must ensu
 1. On the **Select members** blade, search for the **SOC Engineers** Group.  From the search results select **SOC Engineers** press **Select** to add the role assignment.
 1. Select **Review + assign** twice.
 1. Select **Role assignments tab**, Confirm that the role assignments are set.
-1. Now you'll add a custom role. Select **Add**, from the dropdown select **Add custom role**.
-1. Name it, **`NOC-CiscoUmbrellaCL-Read`**.
-1. For **Baseline Permission**, select **Start from scratch**.
-1. Select **Next**.
-1. On the **Permissions** tab, select **Add permissions**.
-1. Search for **`Microsoft.OperationalInsights`**, Select the **Azure Log Analytics** card.
-1. Add the following permissions.
-    - Microsoft.OperationalInsights/workspaces
-        - Read : Get Workspace
-        - Other : Search Workspace Data
 
-    - Microsoft.OperationalInsights/workspaces/analytics
-        - Other : Search
-
-    - Microsoft.OperationalInsights/workspaces/query
-        - Read : Query Data in Workspace
-
-    - Microsoft.OperationalInsights/workspaces/tables/query
-        - Read : Query workspace table data
-
-1. Select **Review + Create**.
-1. Select **Create**, then select **Ok**
-1. In the top search bar, search for **`Resource groups`** and select **rg_eastus_soc**.
-1. Open the log analytics workspace **law-sentinel**.
-1. In the left navigation pane, expand **Settings** and select **Tables**.
-1. Search for **`Cisco_Umbrella_dns_CL`**.
-1. Click on the ellipses (...), select **Access control (IAM)**.
-1. Select **Add** > **Add role assignment**.
-1. Search for **`NOC-CiscoUmbrellaCL-Read`** and select the custom role.
-1. Select **Next**.
-1. Select **Select Members**, search for **NOC**, select it from the search results then press **Select**
-1. Select **Review + assign** twice.
-
-You successfully created role based access model for the role requirements for Contoso´s security operations team and created a custom role for the network team and assigned the role on the specific table in your log analytics workspace.
+You successfully created role based access model for the role requirements for Contoso´s security operations team.
 
 ### Task 4 - Create Workbook
 
