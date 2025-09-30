@@ -1,20 +1,20 @@
 # SC-100: Microsoft Cybersecurity Expert
 
-This repository contains case studies for the SC-100: Microsoft Cybersecurity Architect certification
+This repository includes lab instructions for **SC-100: Microsoft Cybersecurity Expert**.  The labs assume access to a preconfigured M365 E5 tenant and a separate preconfigured Azure subscription provided by the ALH.  Depending on the ALH, you may see these labs organized into separate activities (topics), such as Identity, Security, and Governance, Risk, & Compliance. Lab instructions may be run on a user's own Microsoft 365 tenant and Azure subscription, but are not guaranteed, as some features may not be enabled with a user's personal subscription.
 
-* [Module 0: Case study introduction](/Instructions/CaseStudyv2/00-Case%20study%20introduction.md)
-* [Module 01: Introduction to Zero Trust and best practice frameworks](/Instructions/CaseStudyv2/01a-Build_security_strategy.md)
-* [Module 01: Introduction to Zero Trust and best practice frameworks](/Instructions/CaseStudyv2/01b-Architecture_best_practices.md)
-* [Module 02: Design solutions that align with CAF and WAF](/Instructions/CaseStudyv2/02-Design_solutions_CAF.md)
-* [Module 03: Design solutions that align with MCRA and MCSB](/Instructions/CaseStudyv2/03-Best_practices_MCRA_MCSB.md)
-* [Module 04: Design a resiliency strategy for common cyberthreats like ransomware](/Instructions/CaseStudyv2/04-Design_resiliency_strategy_ransomware.md)
-* [Module 05: Design solutions for regulatory compliance](/Instructions/CaseStudyv2/05-Evaluate_regulatory_compliance.md)
-* [Module 06: Design solutions for identity and access management](/Instructions/CaseStudyv2/06-Design_solutions_identity_access_management.md)
-* [Module 07: Design solutions for securing privileged access](/Instructions/CaseStudyv2/07-Design_solutions_securing_privileged_access.md)
-* [Module 08: Design solutions for security operations](/Instructions/CaseStudyv2/08-Design_solutions_security_operations.md)
-* [Module 09: Design solutions for securing Microsoft 365](/Instructions/CaseStudyv2/09-Design_solutions_securing_Microsoft_365.md)
-* [Module 10: Design solutions for securing applications](/Instructions/CaseStudyv2/10-Design_solutions_securing_applications.md)
-* [Module 11: Design solutions for securing an organizations data](/Instructions/CaseStudyv2/11-Design_solutions_securing_organizations_data.md)
-* [Module 12: Specify requirements for securing SaaS PaaS and IaaS services](/Instructions/CaseStudyv2/12-Specify_requirements_securing_PaaS_IaaS_and_SaaS.md)
-* [Module 13: Design solutions for security posture management in hybrid and multi-cloud environments](/Instructions/CaseStudyv2/13-Evaluate_security_posture.md)
-* [Module 14: Design solutions for securing server and client endpoints](/Instructions/CaseStudyv2/14-Design_solutions_securing_server_client_endpoints.md)
+The user interfaces (UI) for Microsoft 365 and Azure are continually being updated.  As these changes happen every effort is made to ensure lab steps are updated to reflect changes, but it is not uncommon to see variances in the UI described in the labs and the actual tenant.
+
+**Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
+
+## What are we doing?
+
+- To support this course, we will need to make frequent updates to the course content to keep it current with the Azure and Microsoft 365 services used in the course.  We are publishing the lab instructions and lab files on GitHub to allow for open contributions between the course authors and MCTs to keep the content current with changes in Azure and Microsoft 365.
+
+- We hope that this brings a sense of collaboration to the labs like we've never had before - when Azure or Microsoft 365 changes and you find it first during a live delivery, go ahead and make an enhancement right in the lab source.  Help your fellow MCTs.
+
+## How do I contribute?
+
+- Any MCT can submit a pull request to the code or content in the GitHub repo, Microsoft and the course author will triage and include content and lab code changes as needed.
+
+- You can submit bugs, changes, improvement and ideas.  
+
