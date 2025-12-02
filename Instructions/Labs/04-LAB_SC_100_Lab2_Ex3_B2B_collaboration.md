@@ -43,7 +43,7 @@ In this Task you will check the prerequisites of a cross-tenant synchronization 
 1. If you're asked to setup multifactor authentication, follow the instructions.
 1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
 1. Close the password save dialog box by selecting **Not now**, to not save the default global admin's credentials in your browser.
-1. On the left navigation pane, navigate to **Identity** > **Overview**.
+1. On the left navigation pane, expand **Entra ID** and navigate to **Overview**.
 1. Note down the **Tenant ID** and the **Primary domain** that are presented under the **Overview** tab.
 1. Exchange your **Tenant ID** and **Primary domain** with your lab partner.
 
@@ -54,7 +54,7 @@ You should have a plan what topology you want to use, what users will be in scop
 Since you now have prepared the information you need for the implementation of the cross-tenant sync, you will now perform the steps necessary for your tenant to access your partners' tenant and vice versa.
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-1. On the left navigation pane, navigate to **Identity** > **External Identities** > **Cross-tenant access settings**.
+1. On the left navigation pane, expand **Entra ID** then navigate to **External Identities** > **Cross-tenant access settings**.
 1. Select the **Organizational settings** tab and select **Add organization**.
 1. Fill out the **Tenant ID or domain name** field with the tenant ID provided by your lab partner and select **Add**.
 1. Under **Inbound access** for Contoso, select **Inherited from default** to access the cross-tenant sync settings for that specific tenant.
@@ -66,27 +66,27 @@ Since you now have prepared the information you need for the implementation of t
 1. Under **Trust settings** enable **Automatically redeem invitations with the tenant Contoso**.
 1. Select **Save** and close out of the dialog by using the **X** in the top right corner.
 
-You have enabled your tenant to synchronize both ways with your partner's tenant without the need for users to redeem their invitations manually. 
+You have enabled your tenant to synchronize both ways with your partner's tenant without the need for users to redeem their invitations manually.
 
 ### Task 3 - Restrict external access
 
 In this Task you will restrict the ability to invite new guest users to your organization by controlling the scope of users with permission to send invitations. You will limit the scope of domains that can be invited as guests to your partner's tenant domain.
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-1. On the left navigation pane, navigate to **Identity** > **External Identities** > **External collaboration settings**.
+1. On the left navigation pane, expand **Entra ID** then navigate to **External Identities** > **External collaboration settings**.
 1. In the **Guest invite settings** section, select **Member users and users assigned to specific admin roles can invite guest users including guests with member permissions**.
 1. Under **Collaboration restrictions** select **Allow invitations only to the specified domains**.
 1. Add your lab partner's domain **WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your lab partner's unique tenant ID provided by your lab hosting provider).
 1. Select **Save**.
 
-You have now restricted who is able to invite and who can be invited to your tenant.
+You have now restricted who is able to invite and who can be invited to your tenant.    
 
 ### Task 4 - Create a configuration
 
 In this Task you will create a basic configuration and test the connection to the other tenant.
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-1. On the left navigation pane, navigate to **Identity** > **External Identities** > **Cross-tenant synchronization** > **Configurations**.
+1. On the left navigation pane, expand **Entra ID** then navigate to **External Identities** > **Cross-tenant synchronization** > **Configurations**.
 1. Create a **New configuration**.
 1. Enter the name **Contoso cross-tenant synchronization** and select **Create**.
 1. Under **Provisioning** change the **Provisioning Mode** to **Automatic**.
@@ -120,7 +120,7 @@ You have now defined your first scope of users for synchronization to your partn
 In this Task you will review the attribute mappings and make sure that the synchronized users will show up in Contoso's global address list.
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com** in the **Users and groups** settings of your cross-tenant synchronization configuration. If not follow these 2 steps to get back to the configuration page:
-   1. On the left navigation pane, navigate to **Identity** > **External Identities** > **Cross-tenant synchronization** > **Configurations**.
+   1. On the left navigation pane, expand **Entra ID** then navigate to **External Identities** > **Cross-tenant synchronization** > **Configurations**.
    1. Select **Contoso cross-tenant synchronization**.
 1. Navigate to **Provisioning** and expand the **Mappings** section.
 1. Select **Provision Microsoft Entra ID Users**.
@@ -147,7 +147,7 @@ You have now made sure, that all synchronized users will show up in the other te
 In this task you will enable the provisioning and test if your users show up in the other tenant the way you need them to. Since the automatic provisioning may take some time we will trigger a manual provisioning.
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com** in the Provisioning settings of your cross-tenant synchronization configuration. If not follow these 2 steps to get back to the configuration page:
-   1. On the left navigation pane, navigate to **Identity** > **External Identities** > **Cross-tenant synchronization** > **Configurations**.
+   1. On the left navigation pane, expand **Entra ID** then navigate to **External Identities** > **Cross-tenant synchronization** > **Configurations**.
    1. Select **Contoso cross-tenant synchronization**
 1. Navigate to **Provision on demand**.
 1. Search for **`Grady Archie`** as a member of the scoped **Legal team**.
@@ -162,7 +162,7 @@ You have just provisioned your first user manually and when you check your partn
 Since the first user provisioning was successfully testet you will now provision the rest of your user list to the other tenant.
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com** in the **Provision on demand** page of your cross-tenant synchronization configuration. If not follow these 2 steps to get back to the configuration page:
-   1. On the left navigation pane, navigate to **Identity** > **External Identities** > **Cross-tenant synchronization** > **Configurations**.
+   1. On the left navigation pane, expand **Entra ID** then navigate to **External Identities** > **Cross-tenant synchronization** > **Configurations**.
    1. Select **Contoso cross-tenant synchronization**
 1. Select **Users and groups**.
 1. Select **Add user/group**.
