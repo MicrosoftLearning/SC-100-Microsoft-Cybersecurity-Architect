@@ -33,7 +33,7 @@ The third phase involves crafting the solution's concept. Upon investigation, it
 In this task you will create a named location using your VM's external IP address to define a trusted network you can use in a conditional access policy in the following tasks. You will use this address because your machine is located within your company network.
 
 1. Log into the Client 1 VM (LON-Sc1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
-1. Open a **PowerShell** window by selecting the start menu with the right mouse button and then select **Terminal**.
+1. Open a **PowerShell** window by selecting the start menu (Windows icon) with the right mouse button and then select **Terminal**.
 1. Enter the following cmdlet to check your current external IP address:
     `Invoke-RestMethod -Uri "http://ifconfig.me/ip"`
 1. Note down the IP address powershell returned.
@@ -41,9 +41,9 @@ In this task you will create a named location using your VM's external IP addres
 1. If you're asked to setup multifactor authentication, follow the instructions.
 1. On the Stay signed in? dialog box, select the **Don’t show this again** checkbox and then select **No**.
 1. Close the password save dialog box by selecting **Not now**, to not save the default global admin's credentials in your browser.
-1. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Named locations**.
+1. On the left navigation pane, expand **Entra ID** then navigate to **Conditional Access** > **Named locations**.
 1. Select **+ IP ranges location**.
-1. Enter the name **Trusted contoso network**.
+1. Enter the name **Trusted Contoso network**.
 1. Select **Mark as trusted location**.
 1. Select **+** to add the IP address you noted in **Step 4.**
 1. The Input should look like ``168.245.***.***/32`` (*** may be different depending on your lab hosting provider).
@@ -57,21 +57,25 @@ You have now defined your Company's external IP Address named and trusted locati
 As you have successfully created a trusted network you will now use this to create the Conditional Access policy to restrict access outside the corporate network with a scope limited to your personal user to be able to test and prevent a company wide account lockout from Entra ID.
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-2. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Policies**.
-3. Select **+ New policy**.
-4. Enter the name **Block access outside Trusted Network**.
-5. Select **0 users and groups selected**.
-6. Under **Include** select **Select users and groups** and tick **Users and groups**.
-7. Select **Allan Deyoung** as the sole test user for the policy.
-8. Select **No target resources selected** and under **Include** select **All cloud apps**.
-9. Select **0 conditions selected** and under **Locations** select **Not configured**.
-10. Select **Yes** to configure the location condition.
-11. Under **Include** select **Any location**.
-12. Under **Exclude** select **All trusted locations**.
-13. Under **Grant** select **0 controls selected** and switch it from **Grant access** to **Block access** then choose **Select** at the bottom of the page.
-14. Under **Session** select **0 controls selected**.
-15. Enable **Customize continuous access evaluation** and select **Strictly enforce location policies (preview)** and choose **Select** at the bottom to confirm.
-16. Where it says **Enable Policy**, select **On**, then select **Create**.
+1. On the left navigation pane, expand **Entra ID** navigate to **Conditional Access** > **Policies**.
+1. Select **+ New policy** and enter the name **Block access outside Trusted Network**.
+1. Under **Users or agents (preview)**, select **0 users and groups selected**.
+    1. Under **Include** select **Select users and groups** and tick **Users and groups**.
+    2. Select **Allan Deyoung** as the sole test user for the policy, then select **Select** at the bottom of the page.
+1. Under **Target resources**, select **No target resources selected**.
+    1. Under **Include** select **All  resources (formerly 'All cloud apps')**.
+1. Under  **Network**, select **Not configured**.
+    1. Select **Yes** to configure the location condition.
+    1. Under **Include** select **Any location**.
+    1. Under **Exclude** select **All trusted locations**.
+1. Under **Grant** select **0 controls selected**
+    1. Switch it from **Grant access** to **Block access**
+    1. Choose **Select** at the bottom of the page.
+1. Under **Session** select **0 controls selected**.
+    1. Enable **Customize continuous access evaluation**
+    1. Select **Strictly enforce location policies (preview)**
+    1. Choose **Select** at the bottom to confirm.
+1. Where it says **Enable Policy**, select **On**, then select **Create**.
 
 You have now created and enabled your CA policy to restrict access outside trusted networks only affecting your own test user account.
 
@@ -87,13 +91,12 @@ In a real world scenario you would do a longer testing period with a larger, mor
 1. On the Stay signed in? dialog box, select the **Don’t show this again** checkbox and then select **No**.
 1. Since the login was successful, you can close the **InPrivate** window.
 1. Switch back to your Edge browser window where you should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-1. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Monitoring** > **Sign-in logs**.
-1. Select **Add filters** and filter by the **User** of **Allan Deyoung**.
-1. Select the latest log entry of **Allan Deyoung**.
-1. Under the **Conditional Access** tab, select **Block access outside Trusted Network**.
-1. Select the **User** assignment and you should see, that it **Matched** by **Direct assignment**.
-1. Select the **Application** assignment and you should see, that it **Matched** by **All apps included**.
-1. You should also see, that the **Location** condition was **Not matched** since it is within the trusted network that is excluded.
+1. On the left navigation pane, expand **Entra ID** then navigate to **Conditional Access** > **Sign-in logs** (listed under Monitoring).
+1. Select the latest log entry of **Allan Deyoung** (it could take a couple of minutes for the Allan Deyoug entries to appear).
+1. You are currently in the Basic info tab.  From the top of the page, select the **Conditional Access** tab, select **Block access outside Trusted Network**.
+    1. Select the **User** assignment and you should see, that it **Matched** by **Direct assignment**.
+    1. Select the **Resource** assignment and you should see, that it **Matched** by **All resources included**.
+1. You should also see, that the **Network (formerly location)** condition was **Not matched** since it is within the trusted network that is excluded.
 If you tried to log in from a network with a different external IP address, this condition would match and block the login attempt.
 1. Close the **Conditional Access Policy details** and the **Activity Details: Sign-ins**.
 
@@ -107,7 +110,7 @@ After the successful test in the previous task, you can now enable the policy fo
 Make sure, that you have at least one emergency admin account that is excluded from this policy in a productive, real world scenario. 
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-2. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Policies**.
+2. On the left navigation pane, expand **Entra ID** then navigate to **Conditional Access** > **Policies**.
 3. Select the policy **Block access outside Trusted Network**.
 4. Under Users select **Specific users included**.
 5. Select **All users**.
@@ -120,27 +123,29 @@ You have successfully restricted access from outside the trusted network.
 
 ### Task 5 - Require MFA for Salesforce
 
-In this Task you create a CA policy to enforce the authentication strenth you created in the previous exercise when signing into Salesforce. 
+In this Task you create a CA policy to enforce the authentication strength you created in the previous exercise when signing into Salesforce. 
 
 >[!IMPORTANT] Important:
 This task will skip the testing phase. In a real world scenario you would test with a limited user scope first as seen in the previous tasks and perform a full rollout after a successful testing phase.
 
 1. You should still be logged into the Entra ID portal **https://entra.microsoft.com**.
-2. On the left navigation pane, navigate to **Protection** > **Conditional Access** > **Policies**.
+2. On the left navigation pane, expand **Entra ID** then navigate to **Conditional Access** > **Policies**.
 3. Select **+ New policy**.
 4. Enter the name **Salesforce authentication strength**.
-5. Select **0 users and groups selected**.
-6. Under **Include** select **Select users and groups** and tick **Users and groups**.
-7. Select **Alex Wilber** from Sales as the sole test user for the policy.
-8. Select **No target resources selected** and under **Include** select **Select apps**.
-9. Under **Select** select **None** and search for **Salesforce**.
-10. Confirm your choice with **Select**.
-11. Under **Grant** select **0 controls selected** and enable **Require authentication strength**.
-12. Select your custom created authentication strength **Hardened MFA** and confirm with the **Select** button.
-13. Now set the policy to **On** using the control bar at the bottom and select **Create**.
-14. After a successful testing phase with your limited user scope select **Salesforce authentication strength**.
-15. Under Users select **Specific users included**.
-16. Select **All users**.
-17. Select **Save**.
+5. Under **Users or agents (preview)**, select **0 users and groups selected**.
+    1. Under **Include** select **Select users and groups** and tick **Users and groups**.
+    1. Select **Alex Wilber** from Sales as the sole test user for the policy, then select **Select** at the bottom of the page.
+1. Under **Target resources**, select **No target resources selected**
+    1. Under **Include** select **Select resources**.
+    2. Under **Select specific resources** select **None** and search for **Salesforce**.
+    3. Select *Salesforce** then Confirm your choice with **Select**.
+1. Under **Grant** select **0 controls selected**
+    1. Enable **Require authentication strength**.
+    1. From the drop-down menu, select your custom created authentication strength **Hardened MFA** and confirm with the **Select** button.
+1. Now set the policy to **On** using the control bar at the bottom and select **Create**.
+1. After a successful testing phase with your limited user scope select **Salesforce authentication strength**.
+1. Under Users select **Specific users included**.
+1. Select **All users**.
+1. Select **Save**.
 
 You have now created a CA policy to enforce your authentication strength policy to Salesforce excluding SMS OTP and therefore prevent successful attacks using SMS interception.
