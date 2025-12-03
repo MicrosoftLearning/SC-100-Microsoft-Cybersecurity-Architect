@@ -34,11 +34,11 @@ Your overall goal is to secure your endpoints appropriately and consolidate as m
 
 1. Log into the Windows client VM **LON-SC1** with the local **Administrator** account. The password should be provided by your lab hosting provider.
 1. Sign-in to the Microsoft Intune admin center **`https://intune.microsoft.com`** as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
-1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
+1. If asked to complete multifactor authentication, follow the steps.
 1. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
 1. On the **Endpoint security | Overview** page, under **Overview** select **Security baselines**.
 1. On the **Endpoint security | Security baselines** page select **Security Baseline for Windows 10 and later**.
-1. On the **Security Baseline for Windows 10 and later | Profiles** page select **+ Create profile**.
+1. On the **Security Baseline for Windows 10 and later | Profiles** page select **+ Create policy**.
 1. Review the description on the **Create a profile** blade and select **Create**.
 1. On the **Basics** blade enter:
     1. Name: **`Secure Windows Endpoints`**
@@ -50,7 +50,7 @@ Your overall goal is to secure your endpoints appropriately and consolidate as m
 1. On the **Review + create** blade select **Create**.
 1. Go back to **Endpoint security | Security baselines** page.
 1. On the **Endpoint security | Security baselines** page select **Microsoft Defender for Endpoint Security Baseline**.
-1. On the **Microsoft Defender for Endpoint Security baseline | Profiles** select **+ Create profile**.
+1. On the **Microsoft Defender for Endpoint Security baseline | Profiles** select **+ Create policy**.
 1. Review the description on the **Create a profile** blade and select **Create**.
 1. On the **Basics** blade enter:
     1. Name: **`Defender for Endpoint Security Baseline`**
@@ -118,16 +118,19 @@ In this task you will encrypt macOS devices.
 1. In the Microsoft Intune admin center, in the left navigation pane select **Endpoint Security**.
 1. On the **Endpoint security | Overview** page, under **Manage** select **Disk encryption**.
 1. On the **Endpoint security | Disk encryption** page select **+ Create Policy**.
-1. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **FileVault**.
+1. On the **Create a profile** pane, under **Platform** select **macOS** and under **Profile** select **MacOS FileVault**.
 1. Select **Create**.
 1. On the **Basic** blade enter:
     1. Name: **`Encrypt macOS devices`**
     1. Description: **`FileVault provides built-in Full Disk Encryption for macOS devices.`**
     1. Select **Next**.
-1. On the **Configuration settings** blade under **Encryption** configure the following settings:
-   - Enable FileVault: **Yes**
+1. On the **Configuration settings** expand **Full Disk Encryption** configure the following settings:
+   - Defer: **Enabled**
+   - Defer Don't ask At User Logout: **Enabled**.
+   - Defer Force at User Login Max Bypass Attempts: set slider to **Configured** then enter **3** in the field that follows.
+   - Enable FileVault: **On**
    - Personal recovery key rotation: **6 months**
-   - Escrow location description of personal recovery key: **`To recover a lost or recently rotated recovery key, log in to the Intune Company Portal website using any device. Navigate to the Devices section within the portal, choose the device with FileVault enabled, and then select the option to retrieve the recovery key. The portal will display the current recovery key for that device.`**
+   - Under FileValut Recovery Key Escrow, in the location field enter: **`To recover a lost or recently rotated recovery key, log in to the Intune Company Portal website using any device. Navigate to the Devices section within the portal, choose the device with FileVault enabled, and then select the option to retrieve the recovery key. The portal will display the current recovery key for that device.`**
    - Number of times allowed to bypass: **3**
    - Allow deferral until sign out: **Yes**
    - Disable prompt at sign-out: **Yes**

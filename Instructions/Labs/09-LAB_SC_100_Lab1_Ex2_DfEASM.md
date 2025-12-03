@@ -53,7 +53,7 @@ You successfully created the Defender EASM workspace.
 
 ### Task 2 - Create Discovery
 
-In this Task, you´ll create a Discovery on Contoso Ltd. outside facing assets. After you have created an instance you need to populate it with actual data. Therefore you will now create a discovery.
+In this Task, you´ll create a Discovery on Contoso Ltd. external facing assets. After you have created an instance you need to populate it with actual data. Therefore you will now create a discovery.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
 1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
@@ -69,23 +69,35 @@ You successfully created the Discovery of Contoso´s External Attack Surface and
 In this Task, you´ll configure a data connection from Defender EASM to an log analytics workspace that will be used for Sentinel. Defender EASM asset or insights information can be used in Log Analytics to enrich existing workflows with other security data.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-1. In the top search bar, search for **`Log Analytics Workspaces`**.
-1. Select your **law-sentinel** workspace from the last exercise.
+1. To successfully create a data connection, you must first ensure that you've completed the required steps to grant Defender EASM permission to the to the log analytics workspace.  To configure resource group role assignments:
+    1. Navigate to the Resource group that contains the Log Analytics workspace.
+    1. On the leftmost pane, select Access control (IAM).
+    1. Search and select the Reader role.
+    1. Search and select the EASM API as the member for the role assignment.
+    1. Be sure the Assignment type is Permanent and then click Review + assign.
+    1. Repeat this and add the Monitoring Contributor, Log Analytics Contributor, and the Monitoring Metrics Publisher roles for the EASM API app.
+    1. The role assignments for the EASM API may take a few minutes to be assigned after. After configuring the assignments, please wait for a few minutes to create a new data connection.
+1. Next configure subscription resources providers:
+    1. Open the Subscription that contains the Resource Group and Log Analytics workspace.
+    1. On the leftmost pane, under Settings select Resource Providers.
+    1. Search for microsoft.insights and register the provider.
+1. Add the data connection
+    1. In the top search bar, search for **`Log Analytics Workspaces`**.
+    2. Select your **law-sentinel** workspace from the last exercise and make sure you are in the **Overview** section (if not, select it from the left navigation panel).
     >[!NOTE] If the law-sentinel workspace is not listed, you'll need to create it again, as opening a new lab instance does not preserve previous work. Refer to the Security Operations Center exercise, part 2, task 1.
-1. Leave the page as it is and open another tab and log into the Azure portal **`https://portal.azure.com`**.
-1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
-1. Select your **EASM** workspace.
-1. In the left navigation pane, expand **Manage** and select **Data connections**.
-1. Under Log Analytics, select **Add connection**.
-1. Name it **law-sentinel**
-1. Switch to the previous tab with the log analytics workspace that should be open.
-1. Expand **Log Analytics agent instructions**.
-1. Copy the **Workspace ID** into the corresponding field of the Add data connection window.
-1. Copy the ** **Primary key** into the API key field of the Add data connection window.
-1. In Content select **All**.
-1. In Frequency select **Daily**.
-1. Select **Add**.
-1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under Connected (1).
+    1. Leave the page as it is and open another tab and log into the Azure portal **`https://portal.azure.com`**.
+    1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
+    1. Select your **EASM** workspace.
+    1. In the left navigation pane, expand **Manage** and select **Data connections**.
+    1. Under Log Analytics, select **Add connection**.
+    1. Name it **law-sentinel**
+    1. Switch to the previous tab with the log analytics workspace that should be open.
+    1. Expand **Log Analytics agent instructions**.
+    1. Copy the **Workspace ID** into the corresponding field of the Add data connection window.
+    1. In Content select **All**.
+    1. In Frequency select **Daily**.
+    1. Select **Add**.
+    1. The Log Analytics card of the Data connections page should now show law-sentinel, listed under Connected (1).
 
 After the connection has been created, custom log tables are created in the log analytics workspace. In Sentinel, this data can then be used to create or enrich security incidents, build investigation playbooks, train machine learning algorithms or trigger remediation actions.
 
@@ -141,4 +153,4 @@ Since this asset is hosted by a third party but still belongs to your attack sur
 
 Only if the State is set to **Approved Inventory**, assets are represented in dashboard charts and are scanned daily. For that reason its important to review newly discovered assets and changed their state accordingly.
 
-As part of this exercise you set up Defender EASM, created the discovery of Contoso´s outside facing environment, you got deeper insight of assets and their configuration and you have managed assets so that the dashboards only include data for which Contoso is directly responsible.
+As part of this exercise you set up Defender EASM, created the discovery of Contoso´s external facing environment, you got deeper insight of assets and their configuration and you have managed assets so that the dashboards only include data for which Contoso is directly responsible.

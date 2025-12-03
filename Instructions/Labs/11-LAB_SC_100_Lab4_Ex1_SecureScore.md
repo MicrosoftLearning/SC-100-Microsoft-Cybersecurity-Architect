@@ -30,6 +30,7 @@ To ensure that the security ambassadors have the necessary role permissions, you
 
 In this task, you'll set up custom role focused on security posture and more specifically on Exposure Management. As part of the custom role, you'll grant Joni Shermann access to the data source for Exposure Management.
 
+1. For this lab, you will be using the Microsoft 365 tenant, so if you are connected to Azure, log out of Azure.
 1. Log into the Windows client VM **LON-SC1** with the local **Administrator** account. The password should be provided by your lab hosting provider.
 1. Open **Microsoft Edge**, select the address bar, navigate to **`https://security.microsoft.com`** and log into **Microsoft Defender** as MOD Administrator **admin@WWLxZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
@@ -37,7 +38,7 @@ In this task, you'll set up custom role focused on security posture and more spe
 1. If you see an information box on the top right of the screen that says **Manage multifactor authentication**, close it by selecting the **X**.
 1. On the left navigation pane, expand **System** then select **Permissions**.
 1. If this is the first time you are accessing Microsoft Defender settings, you will have to wait a few minutes while Defender prepares new spaces for your data and connects them.  Once that completes, refresh the permissions page until you see a listing that includes Microsoft Defender XDR, Microsoft Entra ID, Endpoints roles & groups, Email & collaboration roles, and Cloud Apps. It may take some time for all of these to show up.
-1. Under **Microsoft Defender XDR(1)**, select **Roles**.
+1. Under **Microsoft Defender XDR**, select **Roles**.
 1. Select **Create custom role**.
 1. In the Role name field, enter **`SecureScore Manager`** then select **Next**.
 1. Select **Security posture**.
@@ -50,7 +51,7 @@ In this task, you'll set up custom role focused on security posture and more spe
 1. On the **Assign users and data sources** page, select **Add assignment** then populate the fields as follows:
     - Assignment name: **`ExposureManagement`**
     - Assign users and group: Enter **`Joni Sherman`**, then select it.
-    - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management**.  If other data sources are listed, unselect them.
+    - Under **Data sources**, select the drop-down menu to see a list of the available data-sources. Select only **Microsoft Security Exposure Management**.  If other data sources are listed, unselect them. Unselect the option "Include future data sources automatically"
     - Select, **Add**.
     - Select, **Next**.
 1. In the Review and finish page review your settings, select **Submit**, then select **Done**.
@@ -79,10 +80,11 @@ Share a Microsoft Secure Score recommended action. In this task you'll post the 
 
 1. You should still be logged into Microsoft Defender XDR portal.
 1. On the left navigation pane, expand **Exposure management** then select **Secure Score**.
+1. You are now on the Secure Scores page. Scroll down then select *View Microsoft Secure Score**.
 1. Select the **Recommended actions** tab.
 1. Search for **`Only invited users should be automatically admitted to Teams meetings`** and select it.
 1. Select **Share**, and in the dropdown menu select **Microsoft Teams**.
-1. In field **Team** select **Mark 8 Project Team** and in the **Channel** field select **Channel Research and Development**.
+1. In field **Team** select **Mark 8 Project Team** and in the **Channel** field select **Research and Development**.
 1. Select **Post message to Teams**.
 
 Joni Sherman and her Mark 8 Project Team will be notified about the recommended action in the Teams channel.
@@ -95,11 +97,11 @@ In this task, you´ll manage recommended action and document your solutions.
 
 1. Open a Microsoft Edge InPrivate window, navigate to **`https://office.com`** and sign in as **JoniS@WWLxZZZZZZ.onmicrosoft.com**.
 1. If the landing page appears blurred out, refresh the page.
-1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
+1. Select the apps launcher icon located on the bottom left of the navigation panel and select **Teams**.
 1. On the Welcome to Teams window, select **Get Started**. It may take a minute or two for Teams to set up. If a Teams for Mobile QR-code screen pops-up, close it.
 1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
 1. Review the message posted from the previous task.
-1. From the posted message, select the link **https://security.microsoft.com/securescore?viewid=actions&actionId=meeting_autoadmitusers_v1**.  Because you, Joni Shermann, have been granted permission through the custom role, you are able to access Secure Score.  Other members of the Mark 8 project team can see teh post, but do not have access to Secure Score.
+1. From the posted message, select the link **https://security.microsoft.com/securescore?viewid=actions&actionId=meeting_autoadmitusers_v1**.  Because you, Joni Shermann, have been granted permission through the custom role, you are able to access Secure Score.  Other members of the Mark 8 project team can see the post, but do not have access to Secure Score.
 1. Select **Edit status & action plan**.
 1. Check **Resolved through third party**.
 1. Add a note **Currently secured** to the **Action plan** field.
@@ -114,7 +116,7 @@ In this task, Adele Vance access the Mark 8 Project Team channel and selects the
 
 1. Open a Microsoft Edge InPrivate window, navigate to **`https://office.com`** and sign in as Adele Vance, **AdeleV@WWLxZZZZZZ.onmicrosoft.com**.
 1. If the landing page appears blurred out, refresh the page.
-1. Select the app launcher icon, located to the left of the top banner that says Contoso Electronics, and select **Teams**.
+1. Select the apps launcher icon located on the bottom left of the navigation panel and select **Teams**.
 1. On the Welcome to Teams window, select **Get Started**.
 1. Open Teams. For the **Mark 8 Project Team** select **See all channels** then select **Research and Development**.
 1. Review the message posted from the previous task.

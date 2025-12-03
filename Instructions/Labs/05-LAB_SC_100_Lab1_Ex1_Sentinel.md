@@ -79,7 +79,7 @@ You have to secure the access based on least privilege, you´ll create role assi
 ---
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
-1. In the top searchbar, search for **Resoure groups** and select your previously created resource group **rg_eastus_soc**.
+1. In the top search bar, search for **Resource groups** and select your previously created resource group **rg_eastus_soc**.
 1. In the left navigation pane, select **Access control (IAM)**.
 1. Select **Add**, from the dropdown select **Add role assignment**.
 1. Search for **`Microsoft Sentinel Responder`** and select **View** in the Details column.
@@ -113,15 +113,15 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 1. Select **Add Workbook**.
 1. Select **Edit**.
 1. Select the first **Edit** button on the right side.
-1. Select **Add** > **Add parameters**.
-1. Select **Add parameter** and fill out the following information:
+1. From the bottom of the New workbook window, select **Add** then from the dropdown menu, select **Add parameters**.
+1. From the blue box in the top left of the editing parameters window, select **Add parameter** and fill out the following information:
      - **Parameter name:** TimeRange
      - **Parameter type:** Time range picker
 1. Check the following settings:
      - **Required?**
 1. Select **Save**.
-1. In the **TimeRange:** dropdown menu in the lower left, select **Last 7 days**.
-1. Select **Add parameter** and fill out the following information:
+1. In the **TimeRange:** dropdown menu in the lower left of the editing parameters window, select **Last 7 days**.
+1. From the blue box in the top left of the editing parameters window, select **Add parameter** and fill out the following information:
      - **Parameter name:** AlertSeverity
      - **Parameter type:** Drop down
 1. Check the following settings:
@@ -140,7 +140,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 1. In the **Time Range** dropdown menu Select **TimeRange**.
 1. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
 1. Select **Save**.
-1. Select **Add parameter** and fill out the following information:
+1. From the blue box in the top left of the editing parameters window, select **Add parameter** and fill out the following information:
      - **Parameter name:** ProductName
      - **Parameter type:** Drop down
 1. Check the following settings:
@@ -160,7 +160,7 @@ In this task, you´ll create a workbook, to get a dashboard with custom views an
 1. In the **Time Range** dropdown menu Select **TimeRange**
 1. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
 1. Select **Save**.
-1. Select **Add** and choose **Add query**.
+1. From the bottom of the Editing parameters window, select **Add** then from the drop-down choose **Add query**.
 1. Under **Log Analytics workspace Logs Query** paste in:
 
     ```KQL
@@ -190,13 +190,14 @@ You´ll setup dynamic content to get all alerts for the selected incident. Alert
     - **Field to export:** Alerts
     - **Parameter name:** Alerts
 1. Select **Save**.
-1. Go back to the **Settings** tab.
-1. Select **Run Query**.
-1. Select **Column Settings**.
-1. Select **IncidentUrl**.
-1. Set Column renderer to **Link**.
-1. Under Link Settings set **View to open** to **Url**.
-1. Select **Save and Close**.
+1. Skip the steps below, unless you have data to run the query
+    1. Go back to the **Settings** tab.
+    1. Select **Run Query**.
+    1. Select **Column Settings**.
+    1. Select **IncidentUrl**.
+    1. Set Column renderer to **Link**.
+    1. Under Link Settings set **View to open** to **Url**.
+    1. Select **Save and Close**.
 1. Next, You´ll create the alerts view based on which incident is selected.
 1. Select **+ Add** on the bottom of the **Editing query item** window. Select **Add query**.
 1. Paste the KQL in the Log Analytics workspace Logs Query
@@ -209,10 +210,11 @@ You´ll setup dynamic content to get all alerts for the selected incident. Alert
     ```
 
 1. Choose **TimeRange** in the Time Range drop down.
-1. Select **Done Editing**.
+1. From the bottom of the Editing query window, select **Done Editing**.
 1. Select **Done Editing** in the top bar of the **New workbook** window.
-1. Select an **Incident**.
-1. Alerts to the linked Incident will show up below.
+1. Skip these steps unless you have data
+    1. Select an **Incident**.
+    1. Alerts to the linked Incident will show up below.
 1. Save your query by selecting the Save icon.  
 1. In the **Save as** window, enter a title for your new workbook, select the **rg_eastus_soc** resource group from the drop-down, then select **Save as**.
 

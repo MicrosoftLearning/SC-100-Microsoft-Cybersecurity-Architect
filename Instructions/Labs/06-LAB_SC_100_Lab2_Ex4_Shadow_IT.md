@@ -62,18 +62,18 @@ Once you have successfully gained an overview of the use of applications in your
 
 You have successfully blocked vulnerable applications from being used by users.
 
-### Task 4: Block unsecure applicatons automatically
+### Task 4: Block unsecure applications automatically
 
 In order to automatically block unsafe applications in the future, you will create a custom app discovery policy. This policy will tag unsafe applications as **Unsanctioned**. As you have integrated Defender for Endpoint with Defender for Cloud Apps, these applications will be blocked automatically.
 
 1. You should still be logged into the Microsoft Defender portal **https://security.microsoft.com/**.
-1. In the Microsoft Defender portal, in the left navigation page expand **Cloud apps** and select **Cloud discovery**.
-1. On the **Discovered apps** page select **+ New policy from search**.
+1. In the Microsoft Defender portal, in the left navigation page expand **Cloud apps** and select **Cloud app catalog**.
+1. On the **Cloud app catalog** page select **+ New policy from search**.
 1. Enter the following information:
     - **Policy Name**: Tag unsafe apps as unsanctioned
     - **Policy severity**: Medium
     - **Description for users**: Applications with a risk score of 4 or lower will be unsanctioned and blocked automatically.
-1. Under **Apps matching all of the following** add a filter and set it to **Risk score equals 0-4**.
+1. Under **Apps matching all of the following** add a filter and set it to **Risk score equals 0-4**, by moving the slider, then select **Apply**.
 1. Under **Alerts** select **Create an alert for each matching event with the policy's severity** and set the value for **Daily alert limit per policy** to 5.
 1. Under **Governance actions** select **Tag app as unsanctioned**.
 1. Select **Create**.
