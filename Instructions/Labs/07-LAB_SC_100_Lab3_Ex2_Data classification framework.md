@@ -34,9 +34,9 @@ This introduction of a new project ID necessitates the creation of a correspondi
 
 You will create a custom sensitive information type to detect documents that contain project IDs.
 
-1. Sign-in to the Microsoft Purview Compliance portal **`https://purview.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
-1. If you're asked to setup multifactor authentication, follow the instructions.
-1. You're taken to the new Microsoft Purview portal landing page. Select the box next to the statement, **I agree to the terms of data flow disclosure and Privacy Statements**, then select **Get started**.
+1. You should still be signed in to the Microsoft Sign-in to the Microsoft Purview portal. If not, access **`https://purview.microsoft.com/`** and sign in as Allan Deyoung using his administrator account **MOD Administrator**.
+    1. If you're asked to setup multifactor authentication, follow the instructions.
+    1. You're taken to the new Microsoft Purview portal landing page. Select **Get started**.
 1. From the left navigation panel, select **Solutions** then select **Information Protection**. Alternatively, from the main window you can select the **View all solutions** tile, then select the **Information Protection** tile listed under Data Security.
 1. Expand **Classifiers** then select **Sensitive info types**.
 1. From the **Sensitive info types** page, select **Create sensitive info Type**.
@@ -45,7 +45,9 @@ You will create a custom sensitive information type to detect documents that con
     - Description: **`Identifies project identification number`**
 1. Select **Next**.
 1. On the **Define patterns for this sensitive info type** page, select **Create pattern**.
-1. On the **New pattern** page, select **Add primary element** and then **Regular expression**.
+1. 
+1. On the **New pattern** page, leave the default confident level set to to **High confidence**.
+1. Select **Add primary element** and then **Regular expression**.
 1. On the **Add a regular expression** page in the **ID** text box, type **`ProjectID`**.
 1. In the text box **Regular expression** enter the following expression:
 
@@ -53,10 +55,10 @@ You will create a custom sensitive information type to detect documents that con
 
     >[!NOTE] The provided regular expression is crafted to identify a sequence characterized by three letters, followed by potentially optional non-word characters, then four digits, followed once again by optional non-word characters, and ultimately ending with two letters. The presence of non-word characters is discretionary, and the overarching pattern is intended to correspond to a specific format or structure within the data.
 
-1. Under the Regular expression text box, select **String match** then select **Done**.
-1. On the **New pattern** window, for the **Confidence level**, select **High confidence**, select **Create**, then select **Next**.
-1. On the **Choose the recommended confidence level to show in compliance policies** page, leave the setting to **High confidence level**, then select **Next**.
-1. On the **Review settings and finish**, verify the settings, select **Create**, then when the policy is created select **Done**.
+1. Under the Regular expression text box, select **String match** then select **Done**, then **Create**.
+1. You are back at the Define patterns for this sensitive info type. Select **Next**.
+1. On the Choose the recommended confidence level to show in compliance policies page, leave the setting to High confidence level, then select **Next** then **Create**.
+1. When the policy is created select **Done**.
 
 You have successfully created a new sensitive information type to identify project IDs.
 
@@ -95,7 +97,7 @@ You have successfully created a retention label with a retention period of 5 yea
 You will use the sensitive information type you created in this exercise to auto-apply the retention label.
 
 1. You should still be logged into the Data Lifecycle Management solution in the Microsoft Purview portal.  If not, navigate to **`https://purview.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
-1. On the **Data lifecycle management** pane, select **Label policies**.
+1. On the **Data lifecycle management** pane, expand **Policies** then select **Label policies**.
 1. On the **Label policies** blade, select **Auto-apply a label**.
 1. On the **Let´s get started** page, enter the following information:
 
