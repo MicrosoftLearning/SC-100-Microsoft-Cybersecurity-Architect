@@ -51,7 +51,7 @@ In this task, you will familiarize yourself with your company's existing retenti
     ```powershell
     Connect-IPPSSession
     ```
-
+1. In the window that opens, select Yes. A window opens stating, Account added to this device. Select **Done**. 
 1. Enter the following cmdlet to view existing retention policies and settings:
 
     ```powershell
@@ -70,9 +70,9 @@ You have effectively assessed Contoso Ltd.'s retention policies, uncovering an o
 
 Your plan involves implementing a new company-wide retention policy with a five-year retention period. Following this timeframe, data may be retained but is not mandatory for deletion. This adjustment satisfies the legal requirements for minimum retention periods and reduces data overhead.
 
-1. Sign-in to the Microsoft Purview Compliance portal **`https://purview.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
-1. If you're asked to setup multifactor authentication, follow the instructions.
-1. You're taken to the new Microsoft Purview portal landing page. Select the box next to the statement, **I agree to the terms of data flow disclosure and Privacy Statements**, then select **Get started**.
+1. You should still be logged in to the Purview portal.  If not, sign-in to the Microsoft Purview portal **`https://purview.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
+    1. If you're asked to setup multifactor authentication, follow the instructions.
+    1. Select **Get started**.
 1. From the left navigation panel, select **Solutions** then select **Data Lifecycle Management**. Alternatively, from the main window you can select the **View all solutions** tile, then select the ***Data Lifecycle Management** tile listed under Data Governance.
 
 1. On the **Data lifecycle management** pane, expand **Policies** and select **Retention policies**.
