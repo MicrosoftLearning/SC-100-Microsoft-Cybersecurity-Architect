@@ -69,24 +69,16 @@ Azure Arc is required so that it can be used to send data to the log analytics w
 
 1. Swap to VM **LON-SC2** and sign into the Azure portal **`https://portal.azure.com`**.
 1. Search for **`Azure Arc`** and open it.
-1. In the left hand navigation pane, expand **Azure Arc resources** and select **Machines**.
-1. Select **Add/Create** > **Add Machine**.
-1. Under Add a single server, select **Generate script**.
+1. In the left hand navigation pane, expand **Infrastructure** and select **Machines**.
+1. Select **Onboard/Create** > **Add Machine**.
+1. Select **Onboard existing machine**
 1. In the Resource group field, use the drop-down menu to select **ContosoRG**.
 1. In the Region field, use the drop-down menu to select **East US**.
 1. Select **Download and run script**.
-1. Select **Download** and run script on your second Lab Client **LON-SC2** to onboard the on-premise Server to Azure.
-1. Run Windows PowerShell as an administrator. To do this, use the right mouse key to select the Windows icon on the bottom right corner of the window and select **Windows PowerShell(Admin)**
-1. Set the Execution Policy to unrestricted.
-
-    ```Powershell
-    Set-ExecutionPolicy -ExecutionPolicy unrestricted
-    ```
-
-1. On the PowerShell windows, select Y
+1. Select **Download** and run script on your second Lab Client **LON-SC2** to onboard the on-premise Server to Azure. If you get a popup window, select **keep**.
 1. Run the onboarding script. To do this, select file explorer. It should take you to the downloads folder on the local C drive of the server VM. Use the right mouse key to select the file **OnboardingScript** and select **Run with **PowerShell**.
 1. When the authentication popup appears, log in with the same account you are using for the Azure portal.
-1. Wait till the script is successfully completed.
+1. Wait till the script is successfully completed, it can take several minutes.  Once completed return to the Azure Arc browser tab and refresh the page. You should see the connected server.
 1. Go back to LON-SC1 and open Azure Arc.
 1. Select **Machines**, select **Refresh** on top of the page and validate your server is successfully deployed to Azure Arc.
 
@@ -136,7 +128,7 @@ Based on the recommendation you can start to secure the resource and assign secu
 1. Search for **`NIST SP 800-53 Rev. 5`**. Change the status slider to **On**.
 1. Go back to Defender for Cloud, expand **Cloud security**, then select **Regulatory compliance**.
 
-Due to limitation off the lab environment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
+Due to limitation of the lab environment, you are not able to see the resources as well as the compliance recommendations. It takes a while until the deployed resources are visible in Defender for Cloud.
 
 In the Regulatory compliance dashboard you can now review any failing assessments that appear in the dashboard to understand the details of the recommendations.
 
