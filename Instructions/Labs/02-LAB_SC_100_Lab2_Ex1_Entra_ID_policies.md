@@ -54,7 +54,7 @@ In this task you will restrict the level of access a user can grant to applicati
 1. Navigate to **User consent settings**.
 1. Select the option **Allow user consent for apps from verified publishers, for selected permissions**. This enables users to consent for permissions classified as "low impact" (that you previously selected), for apps from verified publishers.
 1. Select **Save**.
-1. Navigate to **Admin consent settings** and enable Admin consent requests by selecting **Yes**, to allows users to request admin consent to aps they are unable to content to.
+1. Navigate to **Admin consent settings** and enable Admin consent requests by selecting **Yes**, to allows users to request admin consent to apps they are unable to content to.
 1. Select **+ Add users** to add **`Lidia Holloway`** and **`MOD Administrator`** as users that can review admin consent requests.
 1. Select **Save** on the **Admin consent settings** window.
 1. Keep this browser tab open for the next task.
