@@ -1,30 +1,19 @@
 # Security Posture Management
 
-Contoso's security team wants to improve its security posture by using Microsoft Secure Score, a tool that provides recommendations and guidance on how to reduce the attack surface and protect against threats.
+## Lab scenario
 
-The security team reviews and delegates Secure Score recommended actions to its extended team members (security ambassadors) that manage the status and action plan associated with improvement actions. The security team also wants to control access to security posture information and the data sources that feed it. Joni Shermann is one of the security ambassadors and needs access to exposure management.
+Contoso's security team wants to improve its security posture using Microsoft Secure Score. The team needs to delegate recommended actions to security ambassadors while controlling access to security posture information and the specific data sources that feed it. Joni Sherman is a security ambassador who needs access to Exposure Management. Additionally, there have been reports that uninvited associates were being automatically admitted to Teams calls, which the security team wants to control.
 
-Recently, there have been reports that uninvited associates were automatically being admitted to Teams calls to which they were not directly invited.  Due to the sensitive and confidential nature of calls, the security team want to control this.
+In this lab, you will:
+- Create a custom role for security posture management with Exposure Management permissions
+- Explore Microsoft Defender XDR Unified RBAC workload activation
+- Share a Secure Score recommended action via Microsoft Teams
+- Manage recommendations and document solutions as an authorized user
+- Verify access controls for non-authorized users (optional)
 
-## Part 1: Design a solution (required)
+**Estimated time: 30-40 minutes**
 
-### Design approach
-
-The recommended actions tab in Microsoft Secure Score lists the security recommendations that address possible attack surfaces. Those actions can be shared/delegated.
-
-Security teams need to control access to the organization's security posture information and to the specific data sources that feed it. The Microsoft Defender XDR Unified role-based access control (RBAC) model provides a single permissions management experience that provides one central location for administrators to control user permissions across different security solutions.
-
-To ensure that the security ambassadors have the necessary role permissions, you need to create a custom role. For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new custom roles or imported roles, you must activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
-
-### Proposed solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Joni Shermann will manage actions and status associated with Security Score recommendations. |Exposure Management - Secure Score and Defender XDR unified RBAC | Create role to manage security posture and grant access to Joni Shermann. |
-|Control access to security posture information and the data sources that feed it. | Microsoft Defender XDR Unified RBAC | Activate Microsoft Defender XDR Unified RBAC for custom role. |
-|Share Secure Score recommendd action |Secure Score | Share recommended action. |
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1 - Create a custom role to manage security posture for Exposure Management
 

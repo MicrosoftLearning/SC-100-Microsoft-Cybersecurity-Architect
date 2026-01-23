@@ -1,36 +1,17 @@
 # Retention policies
 
-The German government recently modified specific laws governing retention periods for companies. One significant change is that all financial documents must now be retained for 11 years, instead of the previous requirement of 10 years. Another change is that commercial or business correspondence, including copies of dispatched commercial or business correspondence, can now be retained for 5 years instead of 7. Currently, your company adheres to a retention policy that maintains all documents for a duration of 7 years. However, Contoso Ltd. has encountered challenges in recent years due to the accumulation of a large volume of data in its environment. This has led to increased maintenance costs and significant storage space consumption. Your assignment is to optimize the retention policy in your company to comply with legal regulations while minimizing data storage requirements. The company policy dictates that all data must be retained for at least five years after creation, in strict adherence to all applicable laws governing data retention.
+## Lab scenario
 
-## Part 1: Design a solution (required)
+Recent changes to German law now require financial documents to be retained for 11 years (previously 10 years), while business correspondence can be retained for 5 years (reduced from 7 years). Contoso Ltd.'s current 7-year retention policy doesn't meet these requirements, and the accumulation of unnecessary data has increased storage costs. You need to optimize retention policies to comply with legal regulations while minimizing data storage overhead.
 
-In this task you will design a concept to address the challenges Contoso Ltd. is facing.
+In this lab, you will:
+- Analyze existing retention policies using PowerShell
+- Create a company-wide retention policy with a 5-year minimum retention period
+- Create and auto-apply a retention label for German financial data with an 11-year retention period
 
-### Design Approach
+**Estimated time: 25-35 minutes**
 
-The initial step involves analyzing the requirements based on the described issue and understanding the objectives
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Retain all financial data for 11 years
-- Retain all business correspondence for 5 years
-- Minimization of data storage overhead
-
-In the second step examinine Contoso Ltd.'s existing environment. Contoso has several solutions in place to retain it´s data for a specific time. Your task is to analyse current setup and decide whether they meet the legal requirements. 
-
-The third phase involves crafting the solution concept. After thorough investigation, it becomes clear that none of the existing policies fulfill the specified criteria. Therefore, a new set of policies is essential.
-
-Based on above scenario, Microsoft Purview Data Lifecycle Management can be used to retain the data adequately.
-
-### Proposed Solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Retain all financial data for 11 years| Microsoft Purview Data Lifecycle Management|Create and auto-apply a retention label|
-|Retain all business correspondence for 5 years| Microsoft Purview Data Lifecycle Management|Deploy a retention policy|
-
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1: Analyze the current structure of the retention policy
 

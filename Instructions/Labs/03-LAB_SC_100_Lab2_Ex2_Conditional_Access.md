@@ -1,32 +1,18 @@
 # Conditional Access
 
-You have discovered that employees are accessing Microsoft 365 from unknown locations, despite your Conditional Access policies only allowing access from specific locations and devices. Your investigation has revealed that these employees are accessing Microsoft 365 while traveling home from their office on public transportation. This behavior is in violation of industry regulations, and you want to use Continuous Access Evaluation to prevent it. Additionally, you want to implement the authentication strength you prepared in the previous exercise to secure certain applications that handle customer data. 
+## Lab scenario
 
-## Part 1: Design a solution (required)
+Employees are accessing Microsoft 365 from unknown locations in violation of industry regulations. You need to implement Conditional Access policies to restrict access to trusted networks and enforce strong authentication for sensitive applications like Salesforce.
 
-In this task you will design a concept to address the risks Contoso Ltd. is facing.
+In this lab, you will:
+- Create a named location for your trusted corporate network
+- Configure a Conditional Access policy to block access from untrusted locations
+- Test and roll out the policy company-wide
+- Create a Conditional Access policy requiring hardened MFA for Salesforce
 
-### Design approach
+**Estimated time: 30-40 minutes**
 
-The initial step involves analyzing the requirements based on the described issue, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Restrict access from insecure/unknown locations
-- Require strong authentication for apps containing sensitive information
-
-In the second step examine Contoso Ltd.'s existing environment. Microsoft Entra ID offers solutions to manage and restrict user access with the use of Entra ID Conditional access policies. Investigate which controls exist and which policies are already in place. Use the Entra ID portal to review current configurations and policies and determine if adjustments are necessary or if new policies need to be implemented.
-
-The third phase involves crafting the solution's concept. Upon investigation, it is evident that there is no trusted network yet configured and none of the current policies meet the defined requirements. Therefore, a new set of Conditional access policies is essential. 
-
-### Proposed solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Restrict access from insecure/unknown locations|Entra ID Conditional access policy|Define the current company's networks as trusted network and restrict access to devices inside this network|
-|Require strong authentication for apps containing sensitive information|Entra ID Conditional access policy|Create a new conditional access policy scoped to sensitive applications requiring the just created hardened authentication strength that excludes insecure authentication methods like SMS and Voice|
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1 - Create trusted network
 

@@ -1,32 +1,17 @@
 # Endpoint Security
 
-Contoso uses Microsoft Intune to manage its devices and provides its employees with Windows 10 and Windows 11 devices. The company has implemented several configuration profiles in the past. However, a company-wide infrastructure analysis revealed that the existing policies were created independently, making it difficult to view them holistically and trace them. As the company's cyber security architect, you have decided to consolidate all the necessary and critical configurations in one place. 
+## Lab scenario
 
-In addition, the analysis revealed that Tailwind Traders uses macOS devices in its environment. As part of the upcoming merger, you plan to prepare the Contoso tenant for the new macOS devices.
+Contoso uses Microsoft Intune to manage its devices. A company-wide infrastructure analysis revealed that existing policies were created independently, making them difficult to view holistically. As the cyber security architect, you have decided to consolidate critical configurations using endpoint security baselines. Additionally, with the upcoming merger with Tailwind Traders, which uses macOS devices, you need to prepare the Contoso tenant for new macOS devices.
 
-## Part 1: Design a solution (required)
+In this lab, you will:
+- Deploy endpoint security baseline policies for Windows devices
+- Deploy antivirus protection for macOS devices
+- Configure disk encryption (FileVault) for macOS devices
 
-In this task you will design a concept to address the challenges Contoso Ltd. is facing.
+**Estimated time: 25-35 minutes**
 
-### Design Approach
-
-In the given scenario, the following requirements can be outlined:
-
-- Consolidate all configurations for Windows devices in one place
-- Protect MacOS devices
-
-Microsoft Endpoint Manager, with security baselines, centrally manages and secures endpoints, including desktops, laptops, mobile devices, and servers. It integrates tools like Intune and Configuration Manager, enabling efficient deployment of applications, policy enforcement, compliance, and device monitoring. 
-
-A security baseline policy comprises a set of configuration settings recommended by Microsoft, detailing their security implications. These settings are formulated based on input from Microsoft security engineering teams, product groups, partners, and customers. These baselines encompass device configuration settings similar to those within various Intune policies. Customizing each deployed baseline enables the enforcement of necessary settings and values. When establishing a security baseline profile within Intune, you're essentially creating a template comprising multiple device configuration profiles. These recommendations must be regularly reviewed and adapted according to the respective business requirements.
-
-### Proposed Solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Consolidate all configurations for Windows devices in one place|Microsoft Endpoint Manager - Endpoint Seucurity|Deploy security baseline policies
-|Protect MacOS devices|Micorosft Endpoint Manager|Deploy antivirus on macOS devices|
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1: Deploy endpoint security baseline policies
 

@@ -1,37 +1,19 @@
 # Managing External Attack Surface
 
-## Exercise Overview
+## Lab scenario
 
-Contoso aims to enhance its cybersecurity posture by identifying and managing its external attack surface. This surface includes assets that are hosted on different cloud providers. To achieve this goal, Contoso wants to integrate its attack surface data with Sentinel, its cloud-native SIEM solution. This integration will enhance its security monitoring and incident response capabilities. 
+Contoso aims to enhance its cybersecurity posture by identifying and managing its external attack surface, including assets hosted on different cloud providers. You will use Microsoft Defender External Attack Surface Management (EASM) to discover exposed resources and integrate the data with Sentinel for enhanced security monitoring.
 
-## Part 1: Design a solution (required)
+In this lab, you will:
+- Create a Microsoft Defender EASM workspace
+- Discover Contoso's external-facing assets
+- Configure a data connection to a Log Analytics workspace
+- Review security dashboards and label assets for investigation
+- Manage and categorize discovered assets by state
 
-In this task you´ll design a concept to get an overview on your outside facing assets and their attack surface.
+**Estimated time: 35-45 minutes**
 
-### Design approach
-
-The initial step involves analyzing the requirements based on the described scenario, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Contoso´s outside facing assets need to be monitored and secured
-- Discover all assets associated with contoso
-- Integrate data to Contoso´s SIEM Solution.
-- Assets need to be managed and labeled
-
-In the second step examinine Contoso Ltd.'s existing environment. Microsoft Defender External Attack Surface Management (EASM) continuously discovers and maps the digital attack surface, providing an external view of an organization’s online infrastructure. It identifies exposed resources, prioritizes risks, and extends vulnerability and exposure control beyond the firewall.
-
-### Proposed solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Contoso´s outside facing assets need to be monitored and secured| Defender EASM | Create Microsoft Defender EASM resource|
-|discover all assets associated with contoso | Defender EASM |Create a discovery job on Contoso´s assets  |
-|Integrate data to Contoso´s SIEM Solution |Defender EASM, Log Analytics Workspace | Connect Log analytics workspace to Defender EASM |
-|Assets need to be managed and labeled | Defender EASM | Manage billable Assets and tags |
-
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1 - Setup Defender EASM
 

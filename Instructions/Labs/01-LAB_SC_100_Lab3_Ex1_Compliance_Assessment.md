@@ -1,29 +1,17 @@
 # Compliance assessment
 
-## Lab scenario introduction
+## Lab scenario
 
-You are Allan Deyoung, a member of the IT department at Contoso Ltd. You have recently been transferred to the IT Security division. Your new role is to evaluate Contoso's Zero Trust readiness and develop an action plan to establish a Zero Trust initiative, following the Zero Trust pillars. Contoso is a large multinational corporation with a global presence in multiple industries. The company has a large cloud footprint and a hybrid infrastructure. Contoso's security operations center (SOC) is responsible for monitoring and responding to security incidents across the enterprise. The SOC is staffed with security analysts, security engineers, and network engineers. The SOC uses Microsoft Sentinel as its security information and event management (SIEM) solution. The SOC has a log analytics workspace that is used to collect and analyze security logs from across the enterprise.
+Contoso Ltd. requires ISO-27001 certification to meet customer IT security demands. As the cyber security architect, you need to assess the company's compliance posture and assign remediation tasks to technical staff.
 
-Contoso Ltd. is expanding into Europe to increase sales, but is having trouble satisfying customer IT security demands. Customers want Contoso to maintain a secure environment to facilitate safe collaboration and minimize the risk of data leaks and compromised company assets. Many customers require evidence of well-established IT business processes and a robust security framework, which is often in the form of an ISO-27001 certification. To address this, Contoso has decided to hire an external audit firm to conduct the ISO-27001 Audit and obtain the certification. It is necessary to assess the current organizational stance and develop an action plan to meet the ISO-27001 requirements. As the company's cyber security architect, you are tasked with identifying the existing gaps and assigning specific tasks to people within the organization to resolve them.
+In this lab, you will:
+- Create an ISO-27001 compliance assessment using Microsoft Purview Compliance Manager
+- Assign improvement actions to a technical engineer
+- Grant appropriate access for the engineer to view and work on assigned tasks
 
-## Part 1: Design a solution (required)
+**Estimated Time**: 25 minutes
 
-In this task you will design a concept to address the challenges Contoso Ltd. is facing.
-
-### Design Approach
-
-To address the described issue effectively, it's crucial to grasp ISO 27001 thoroughly. Assessing Contoso's setup against ISO 27001 standards is essential, highlighting any inconsistencies for analysis. This process can be time-consuming due to the complexity of both the M365 environment and the 27001 regulations. However, the Microsoft Compliance Manager assessment streamlines this analysis.
-
-Compliance Manager assessments from Microsoft are groupings of controls from specific regulations, standards, or policies. They help you ensure that your organization meets the requirements of various standards, regulations, or laws. For instance, completing all actions within an assessment may align your Microsoft 365 settings with ISO 27001 requirements. Assessments encompass several components and provide templates for over 360 regulations, offering the necessary controls and steps to assess your compliance effectively. 
-
-### Proposed Solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Comparison of the M365 environment with the ISO 27001 regulations|Microsoft Purview Compliance Manager|Create an assessment|
-|Create an action plan|Microsoft Purview Compliance Manager|Assign tasks to a technical engineer|
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1: Conduct an ISO-27001 assessment
 
