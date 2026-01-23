@@ -1,38 +1,19 @@
 # Cross-tenant Synchronization
 
-Contoso recently acquired Tailwind Traders and it has been difficult to determine which guests are customers or partners, and which are employees of the acquired company. Your task is to provide an initial common address list from Tailwind Traders to Contoso. Additionally, your tenant must only allow known domain names to be added as guest users to Entra ID. You want to limit who can invite guests to the organization to internal users only. You will restrict external access to only one domain. You will also create a B2B collaboration and cross-tenant synchronization from Tailwind Traders to Contoso.
+## Lab scenario
 
-As a Cybersecurity Architect, you must ensure that all requirements are met and implement the necessary changes to Entra ID to apply Zero Trust principles. In this exercise, you will team up with a lab partner to create a cross-tenant synchronization.
+Contoso recently acquired Tailwind Traders and it has been difficult to determine which guests are customers or partners, and which are employees of the acquired company. You need to establish cross-tenant synchronization to enable collaboration while maintaining Zero Trust principles. You will restrict guest invitation rights, limit external access to trusted domains, and configure bidirectional user synchronization between tenants.
 
-## Part 1: Design a solution (required)
+In this lab, you will:
+- Configure cross-tenant access settings between two tenants
+- Restrict external collaboration to trusted domains only
+- Create and configure a cross-tenant synchronization
+- Customize attribute mappings to identify synchronized users
+- Provision users to the partner tenant
 
-In this task you will design a concept to address the requirements Contoso Ltd. and Tailwind Traders are facing.
+**Estimated time: 45-60 minutes**
 
-### Design approach
-
-The initial step involves analyzing the requirements based on the described scenario, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Synchronize both company's users
-- Make external users identifiable as externals
-- Restrict invitation rights to internal employees only 
-- Restrict external access to company trusted domains
-
-In the second step examine Contoso Ltd.'s existing environment. Microsoft Entra ID offers solutions to enable external collaboration. Investigate which controls exist and which policies are already in place. Use the Entra ID portal to review current configurations and policies and determine what adjustments must be implemented to meet the requirements for the carve in.
-
-The third phase involves crafting the solution's concept. Upon investigation, it is evident that cross-tenant synchronization is the best way to enable collaboration meeting all the requirements.  
-
-### Proposed solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Restrict invitation rights to internal employees only|External collaboration settings|Limit invitation rights to members of the tenant and specific admin invitation roles|
-|Block invitations from all but the list of trusted domains|External collaboration settings|Create an invitation allowlist including only trusted domains|
-|Synchronize both company's users|Entra ID Cross-tenant synchronization|Establish access trust between both Entra ID tenants and create a configuration that synchronizes users to the other tenant|
-|Make external users identifiable as externals|Cross-tenant attribute mapping|Edit the displayName attribute of every user synchronized by creating a custom expression using the attribute mapping function of the Cross-tenant synchronization configuration|
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1 - Team up and preparations
 

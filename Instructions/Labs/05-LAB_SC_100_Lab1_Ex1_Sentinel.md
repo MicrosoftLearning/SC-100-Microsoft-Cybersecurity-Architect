@@ -1,37 +1,18 @@
 # Security Operations Center
 
-## Exercise Overview
+## Lab scenario
 
-Contoso has a Security Operations Center (SOC) that monitors and responds to security incidents across the enterprise. The SOC is staffed with security analysts, security engineers, and network engineers. The SOC has decided to use Microsoft Sentinel as their Security Information and Event Management (SIEM) solution. To collect and analyze security logs from across the enterprise, the SOC has a log analytics workspace. The SOC has a requirement to secure access to the log analytics workspace based on the principle of least privilege. The SOC has two different roles, security analyst and security engineer, with different permission requirements. The network team has a requirement to access only the Cisco Umbrella logs.
+Contoso's Security Operations Center (SOC) needs to deploy Microsoft Sentinel as their SIEM solution and configure appropriate access controls. The SOC has two roles—security analysts and security engineers—each with different permission requirements, plus a network team that requires access to only specific logs.
 
-## Part 1: Design a solution (required)
+In this lab, you will:
+- Create a Log Analytics workspace
+- Deploy Microsoft Sentinel to the workspace
+- Configure role-based access control for SOC roles
+- Review the steps to create a custom dashboard for incidents and alerts
 
-In this task, you'll design a concept for monitoring and responding to security events with specific access permissions for Contoso's Security Operations Center.
+**Estimated time: 35-45 minutes**
 
-### Design approach
-
-The initial step involves analyzing the requirements based on the described scenario, understanding the objectives, and defining the requirements.
-
-Based on the provided use case, the following requirements can be outlined:
-
-- Deploy SIEM/SOAR Solution
-- Limit access to specific SOC roles
-- Create a dashboard with custom views for incidents and their alerts
-
-In this scenario, you deploy the SIEM SOAR solution based on Microsoft Sentinel, set up role-based access control in the workspace context, and limit access for the network team to a single table in the log analytics workspace. Workbooks allow security analysts and administrators to visualize security data using graphical displays. They provide a tool for presenting and analyzing data in a dashboard.
-
-### Proposed solution
-
-| Requirement | Solution | Action plan |
-| ---- | ---- | ---- |
-| Deploy SIEM/SOAR Solution | Microsoft Sentinel, Log Analytics Workspace | Set up log analytics workspace and deploy Microsoft Sentinel |
-| Limit access to specific SOC roles | Log Analytics Workspace, Role-based Access Control | Set up RBAC for Log Analytics Workspace |
-| Create a dashboard with custom views for incidents and their alerts | Microsoft Sentinel, Workbook | Create a workbook with a custom view on current incidents and alerts |
-
-## Part 2: Implement the solution (optional)
-
-> [!NOTE]
-> For this part of the lab, the task to create a dashboard with custom views for incidents and their alerts (task 4 of this exercise) is not functional, as there is no data data upon which to do this task. The steps of task 4 are included for information purposes only. Executing the steps will not return any data.
+## Lab tasks
 
 ### Task 1 - Create Log Analytics Workspace
 
@@ -99,12 +80,12 @@ You have to secure the access based on least privilege, you´ll create role assi
 
 You successfully created role based access model for the role requirements for Contoso´s security operations team.
 
-### Task 4 - Create Workbook
+### Task 4 - Review steps to create a dashboard
+
+In this task, you review the steps involved in creating a dashboard with custom views and current incidents and their alerts.
 
 > [!NOTE]
-> These steps are included for information purposes only. Executing the steps will not return any data.
-
-In this task, you´ll create a workbook, to get a dashboard with custom views and current incidents and their alerts.
+> The steps to create a dashboard with custom views for incidents and their alerts are included for information purposes only, as there is no data available upon which to do this task. Executing the steps will not return any data.
 
 1. You should still be logged into the Azure portal **https://portal.azure.com**.
 1. On the Search bar on the top, search for **`Microsoft Sentinel`** and open it.
@@ -218,4 +199,4 @@ You´ll setup dynamic content to get all alerts for the selected incident. Alert
 1. Save your query by selecting the Save icon.  
 1. In the **Save as** window, enter a title for your new workbook, select the **rg_eastus_soc** resource group from the drop-down, then select **Save as**.
 
-You successfully created a dashboard with custom views for incidents and the associated alerts.
+You reviewed the steps required to create a dashboard with custom views for incidents and the associated alerts.

@@ -1,21 +1,20 @@
 # Global Secure Access
 
-Contoso, whose IT infrastructure is all cloud-based, has recently acquired Tailwind Traders that has not yet migrated their infrastructure to the cloud. Tailwind Traders have an on-premise environment with file servers containing private resources that Contoso users need to access. Until these resources can be migrated to the cloud, the security team wants to ensure secure access to these private resources, but wants to avoid using VPN technology.
+## Lab scenario
 
-### Design Approach
+Contoso has recently acquired Tailwind Traders, which has an on-premise environment with file servers containing private resources. Contoso users need to access these resources, but the security team wants to avoid using VPN technology. Microsoft Entra Private Access, part of the Global Secure Access solution, enables secure remote access to private resources hosted on-premises without exposing them to the internet or requiring a VPN.
 
-Microsoft Entra Private Access allows its employees to securely remote into local servers within Tailwind Traders local infrastructure and integrates with the existing cloud infrastructure of Contoso Ltd.
+In this lab, you will:
+- Activate Global Secure Access in your tenant
+- Install the private network connector on the on-premise server
+- Create a shared folder on the file server
+- Configure Quick Access and assign users
+- Join the client endpoint to Microsoft Entra ID
+- Enable the Private Access traffic profile and install the GSA client
 
-Microsoft Entra Private Access is part of the Microsoft Global Secure Access solution, which enables secure and seamless access to any app or resource from anywhere. It is built on the principles of Zero Trust and delivered from Microsoft's Wide Area Network. One compelling use case is remote access to private resources. Microsoft Entra Private Access allows users to securely access private resources hosted on-premises without exposing them to the internet or requiring a VPN. This reduces the attack surface and simplifies network configuration
+**Estimated time: 50-60 minutes**
 
-### Proposed solution
-
-In this exercise, you'll set up a remote access connection from your client endpoint to a resource in your on-premise environment, using Microsoft Entra Private Access.
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Enable secure remote access for on premise server, without VPN| Global Secure Access - Private Access | Enable Global Secure Access and deploy Private Access Network Connector |
-|Remote users connect to private apps in the private network. | Global Secure Access - Private Access | Enable Private Access traffic profile, install GSA client, assign users.|
+## Lab tasks
 
 ### Task 1: Activate Global Secure Access
 

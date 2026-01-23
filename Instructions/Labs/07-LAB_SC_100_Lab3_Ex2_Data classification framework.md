@@ -1,8 +1,10 @@
 # Data classification framework
 
-You have been assigned the task of structuring data classification for Contoso Ltd. in preparation for an ISO-27001:2022 audit. The goal is to establish a robust framework that is crucial for ensuring effective data protection against leakage, deletion, and loss. Your role involves integrating a new project ID system for construction projects within the company. To comply with government regulations, all documents that contain a certain project-ID must be kept for 5 years.
+## Lab scenario
 
-You were given following examples to classify Project IDs:
+Contoso Ltd. is preparing for an ISO-27001:2022 audit and needs to establish a data classification framework. The company is introducing a new project ID system for construction projects, and to comply with government regulations, all documents containing a project ID must be retained for 5 years.
+
+Example Project IDs to classify:
 
 |Project ID|
 |----|
@@ -13,22 +15,14 @@ You were given following examples to classify Project IDs:
 |BaR#0418-ag|
 |dui0522-in|
 
-## Part 1: Design a solution (required)
+In this lab, you will:
+- Create a custom sensitive information type using regular expressions to identify project IDs
+- Create a retention label with a 5-year retention period
+- Configure auto-apply policies to automatically label documents containing project IDs
 
-In this task you will design a concept to address the issues Contoso Ltd. is facing.
+**Estimated time: 20-25 minutes**
 
-### Design Approach
-
-This introduction of a new project ID necessitates the creation of a corresponding sensitive information type (SIT), which requires the development of a custom pattern incorporating a regular expression. Subsequently, this SIT can then be used to devise a retention label and an associated auto-labeling policy.
-
-### Proposed Solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Identify documents containing project IDs|Microsoft Purview Information Protection|Create a custom sensitive information type|
-|Comply with government regulation to retain data for 5 years| Microsoft Purview Data Lifecycle Management|Deploy a retention policy|
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1: Create a custom sensitive information Type
 

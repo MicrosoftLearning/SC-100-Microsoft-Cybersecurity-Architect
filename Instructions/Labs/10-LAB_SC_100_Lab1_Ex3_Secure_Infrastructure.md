@@ -1,34 +1,19 @@
 # Secure Infrastructure
 
-Contoso Ltd. recently acquired Tailwind Traders, which still uses local file servers for storage. As the cybersecurity architect of Contoso Ltd., you want to evaluate a solution to secure these file servers with your existing cloud environment. Tailwind Traders provided you with a test server (The Lab VM 2) that you can use for the implementation of your POC. In this exercise, you will set up the server and integrate it into your cloud infrastructure and security environment using Azure Arc and send server logs to Defender for Cloud.
+## Lab scenario
 
-## Part 1: Design a solution (required)
+Contoso Ltd. recently acquired Tailwind Traders, which still uses local file servers for storage. You need to evaluate a solution to secure these file servers with your existing cloud environment using Azure Arc and Microsoft Defender for Cloud. You will set up a test server and integrate it into your cloud infrastructure and security environment.
 
-In this task you´ll design a concept to secure on premise environment inside your cloud infrastructure.
+In this lab, you will:
+- Create a Log Analytics workspace for log collection
+- Enable Microsoft Defender for Cloud server protection
+- Onboard an on-premises server to Azure Arc
+- Configure data collection rules to gather event logs
+- Add a regulatory compliance standard (NIST SP 800-53 Rev.5)
 
-### Design approach
+**Estimated time: 40-50 minutes**
 
-The initial step involves analyzing the requirements based on the described scenario, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Enable Defender for Cloud on your subscription
-- On premises servers need to be secured
-- Logs should be stored, that Contoso´s SIEM Solution can process them
-- Assess the compliance state of deploy resources
-
-In the second step examine Contoso Ltd.'s existing environment. Defender for Cloud provides recommendations to secure cloud and on-premises resources by identifying steps to improve configuration and deployment. By actively monitoring workloads, it enhances overall security posture and reduces exposure to threats.
-
-### Proposed solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Enable Defender for Cloud on your subscription| Defender for Cloud | Activate Defender plans in Defender for Cloud |
-|On premises servers need to be secured | Azure Arc | Onboard the on premise Server to the cloud enviroment |
-|Logs need to be stored, that Contoso´s SIEM Solution can process them |Defender for Cloud, DataCollectionRules, AzureMonitoring Agent, Log Analytics workspace | Create a Data Collection Rule to gather logs from Contoso´s on premise Server |
-|Assess the compliance state of deploy resources | Defender for Cloud Security policies| Enable the NIST SP 800-53 Rev.5 Compliance and assesses your compliance state.|
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 ### Task 1: Create a Log Analytics Workspace
 

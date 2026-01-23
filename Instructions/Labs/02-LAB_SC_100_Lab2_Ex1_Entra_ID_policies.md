@@ -1,40 +1,17 @@
 # Configure Entra ID
 
-You are Allan Deyoung, the newly promoted IT-Security specialist of Contoso Ltd. As the company recently acquired Tailwind Traders, you reviewed your Entra ID tenant and decided on new security requirements. Your task is to manage the tasks and implement policies to meet the requirements that come with the acquisition.
+## Lab scenario
 
-You reviewed enterprise applications and noted that some users have provided permissions for a third-party application to access their mailbox data. This is a potential risk for data loss from email correspondence. Therefore, you wish to restrict this behavior but allow users to sign-in and share login IDs to websites Microsoft has validated. You also want to allow users to request specific access to new SaaS products using their Entra ID identity. 
+Following the acquisition of Tailwind Traders, Contoso Ltd. needs to strengthen Entra ID security policies. You will restrict third-party application consent, enable admin consent workflows, and create a hardened authentication strength policy to eliminate SMS-based authentication methods.
 
-Since a partner organization was recently attacked using SMS interception, you want to enforce authentication assurance following NIST. To achieve this, you will create an Authentication strength policy to deactivate SMS OTP and restrict the use of AAL1 authentication methods in your organization. You will create this configuration in the Entra ID portal.
+In this lab, you will:
+- Configure user consent settings to limit third-party app permissions
+- Set up admin consent request workflows
+- Create a custom authentication strength policy excluding SMS and voice methods
 
-## Part 1: Design a solution (required)
+**Estimated time: 15-20 minutes**
 
-In this task you will design a concept to address the risks Contoso Ltd. is facing.
-
-### Design approach
-
-The initial step involves analyzing the requirements based on the described issue, understanding the objectives and defining the requirements.
-
-Based on the provided use-case, the following requirements can be outlined:
-
-- Restrict uncontrolled access from third-party applications
-- Allow users to share login IDs to validated services
-- Allow users to request access to SaaS products
-- Improve on authentication strength
-
-In the second step examine Contoso Ltd.'s existing environment. Microsoft Entra ID offers solutions to manage and restrict user's and cloud application's access with the use of Entra ID policies. Investigate which controls exist and which policies are already in place. Use the Entra ID portal to review current configurations and policies and determine if adjustments are necessary or if new policies need to be implemented.
-
-The third phase involves crafting the solution's concept. Upon investigation, it is evident that none of the current policies meet the defined requirements. Therefore, adjustments to the Entra ID configuration are essential.
-
-### Proposed solution
-
-|Requirement|Solution|Action plan|
-|----|----|----|
-|Block uncontrolled access from third-party applications|Entra ID application policy|Restrict user consent to permissions classified as "low impact", for apps from verified publishers or apps registered in this organization|
-|Allow users to share login IDs to validated services|Entra ID application policy|Restrict user consent to permissions classified as "low impact", for apps from verified publishers or apps registered in this organization|
-|Allow users to request access to SaaS products|Entra ID application policy|Define users that are eligible to approve of applications that are safe to use|
-|Restrict use of insecure authentication methods|Entra ID authentication methods|Create an authentication strength excluding SMS and Voice methods|
-
-## Part 2: Implement the solution (optional)
+## Lab tasks
 
 **Note:** These lab steps must be executed on the M365 Lab Profile.
 
