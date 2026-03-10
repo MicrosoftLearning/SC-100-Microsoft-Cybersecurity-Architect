@@ -1,3 +1,19 @@
+---
+lab:
+  title: Endpoint Security
+  description: Contoso uses Microsoft Intune to manage its devices. A company-wide
+    infrastructure analysis revealed that existing policies were created independently,
+    making them difficult to view holistically. As the cyber security architect, you
+    have decided to consolidate critical configurations using endpoint security baselines.
+    Additionally, with the upcoming merger with Tailwind Traders, which uses macOS
+    devices, you need to prepare the Contoso tenant for new macOS devices.
+  duration: 35 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft Intune
+---
+
 # Endpoint Security
 
 ## Lab scenario
