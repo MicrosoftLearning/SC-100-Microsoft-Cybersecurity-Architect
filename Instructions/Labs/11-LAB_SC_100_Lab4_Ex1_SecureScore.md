@@ -1,3 +1,18 @@
+---
+lab:
+  title: Security Posture Management
+  description: Contoso's security team wants to improve its security posture using
+    Microsoft Secure Score. The team needs to delegate recommended actions to security
+    ambassadors while controlling access to security posture information and the specific
+    data sources that feed it. Joni Sherman is a security ambassador who needs access
+    to Exposure Management. Additionally, there have been reports that uninvited associates
+    were being automatically admitted to Teams calls, which the security team wants
+    to control.
+  duration: 40 minutes
+  level: 300
+  islab: true
+---
+
 # Security Posture Management
 
 ## Lab scenario
