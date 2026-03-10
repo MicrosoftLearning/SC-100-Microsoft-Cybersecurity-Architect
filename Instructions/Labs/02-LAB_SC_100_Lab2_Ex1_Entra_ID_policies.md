@@ -1,3 +1,15 @@
+---
+lab:
+  title: Configure Entra ID
+  description: Following the acquisition of Tailwind Traders, Contoso Ltd. needs to
+    strengthen Entra ID security policies. You will restrict third-party application
+    consent, enable admin consent workflows, and create a hardened authentication
+    strength policy to eliminate SMS-based authentication methods.
+  duration: 20 minutes
+  level: 200
+  islab: true
+---
+
 # Configure Entra ID
 
 ## Lab scenario
