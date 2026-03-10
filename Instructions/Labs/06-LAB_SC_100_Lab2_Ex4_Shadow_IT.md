@@ -1,3 +1,23 @@
+---
+lab:
+  title: Shadow-IT
+  description: Over the years, Contoso's various departments have independently adopted
+    cloud applications to meet their specific needs—marketing uses design tools, sales
+    relies on CRM platforms, and development teams have their own collaboration apps.
+    With the recent shift to hybrid work, employees have also started using personal
+    productivity apps to stay connected. As a result, IT lacks full visibility into
+    the applications being used across the organization. As the cyber security architect,
+    you need to discover all applications in use (Shadow IT) and block insecure applications
+    using Microsoft Defender for Cloud Apps.
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft Defender
+  - Microsoft Defender for Cloud
+  - Microsoft Defender for Cloud Apps
+---
+
 # Shadow-IT
 
 ## Lab scenario
