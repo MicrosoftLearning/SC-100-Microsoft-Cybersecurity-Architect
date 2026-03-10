@@ -1,3 +1,19 @@
+---
+lab:
+  title: Global Secure Access
+  description: Contoso has recently acquired Tailwind Traders, which has an on-premise
+    environment with file servers containing private resources. Contoso users need
+    to access these resources, but the security team wants to avoid using VPN technology.
+    Microsoft Entra Private Access, part of the Global Secure Access solution, enables
+    secure remote access to private resources hosted on-premises without exposing
+    them to the internet or requiring a VPN.
+  duration: 60 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Microsoft Entra
+---
+
 # Global Secure Access
 
 ## Lab scenario
