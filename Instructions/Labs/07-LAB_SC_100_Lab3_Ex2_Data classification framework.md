@@ -1,3 +1,15 @@
+---
+lab:
+  title: Data classification framework
+  description: Contoso Ltd. is preparing for an ISO-27001:2022 audit and needs to
+    establish a data classification framework. The company is introducing a new project
+    ID system for construction projects, and to comply with government regulations,
+    all documents containing a project ID must be retained for 5 years.
+  duration: 25 minutes
+  level: 200
+  islab: true
+---
+
 # Data classification framework
 
 ## Lab scenario
