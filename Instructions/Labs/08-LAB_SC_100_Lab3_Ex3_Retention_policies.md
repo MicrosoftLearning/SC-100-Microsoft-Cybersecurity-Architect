@@ -1,3 +1,17 @@
+---
+lab:
+  title: Retention policies
+  description: Recent changes to German law now require financial documents to be
+    retained for 11 years (previously 10 years), while business correspondence can
+    be retained for 5 years (reduced from 7 years). Contoso Ltd.'s current 7-year
+    retention policy doesn't meet these requirements, and the accumulation of unnecessary
+    data has increased storage costs. You need to optimize retention policies to comply
+    with legal regulations while minimizing data storage overhead.
+  duration: 35 minutes
+  level: 200
+  islab: true
+---
+
 # Retention policies
 
 ## Lab scenario
