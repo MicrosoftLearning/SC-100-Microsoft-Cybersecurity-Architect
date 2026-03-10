@@ -1,3 +1,17 @@
+---
+lab:
+  title: Conditional Access
+  description: Employees are accessing Microsoft 365 from unknown locations in violation
+    of industry regulations. You need to implement Conditional Access policies to
+    restrict access to trusted networks and enforce strong authentication for sensitive
+    applications like Salesforce.
+  duration: 40 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft 365
+---
+
 # Conditional Access
 
 ## Lab scenario
