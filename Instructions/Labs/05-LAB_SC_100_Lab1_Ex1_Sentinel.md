@@ -1,3 +1,18 @@
+---
+lab:
+  title: Security Operations Center
+  description: Contoso's Security Operations Center (SOC) needs to deploy Microsoft
+    Sentinel as their SIEM solution and configure appropriate access controls. The
+    SOC has two roles—security analysts and security engineers—each with different
+    permission requirements, plus a network team that requires access to only specific
+    logs.
+  duration: 45 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Microsoft Sentinel
+---
+
 # Security Operations Center
 
 ## Lab scenario
