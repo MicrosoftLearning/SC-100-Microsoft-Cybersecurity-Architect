@@ -1,3 +1,14 @@
+---
+lab:
+  title: Compliance assessment
+  description: Contoso Ltd. requires ISO-27001 certification to meet customer IT security
+    demands. As the cyber security architect, you need to assess the company's compliance
+    posture and assign remediation tasks to technical staff.
+  duration: 25 minutes
+  level: 200
+  islab: true
+---
+
 # Compliance assessment
 
 ## Lab scenario
