@@ -1,3 +1,17 @@
+---
+lab:
+  title: Secure Infrastructure
+  description: Contoso Ltd. recently acquired Tailwind Traders, which still uses local file servers for storage. You need to evaluate a solution to secure these file servers with your existing cloud environment using Azure Arc and Microsoft Defender for Cloud. You will set up a test server and integrate it into your cloud infrastructure and security environment.
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Arc
+    - Microsoft Defender
+    - Microsoft Defender for Cloud
+---
+
 # Secure Infrastructure
 
 ## Lab scenario
