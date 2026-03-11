@@ -1,3 +1,12 @@
+---
+lab:
+  title: Security Posture Management
+  description: You successfully set up a custom role for security posture that grants Joni Shermann access to the Exposure Management data source.
+  duration: 40 minutes
+  level: 300
+  islab: true
+---
+
 # Security Posture Management
 
 ## Lab scenario
