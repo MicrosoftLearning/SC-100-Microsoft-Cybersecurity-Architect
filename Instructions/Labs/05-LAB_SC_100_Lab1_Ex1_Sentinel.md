@@ -1,9 +1,9 @@
 ---
 lab:
   title: Security Operations Center
-  description: In this task, you will add Sentinel to the created log analytics workspace.
+  description: In this lab, you add Sentinel to the created log analytics workspace and configure role-based access control for SOC roles.
   duration: 45 minutes
-  level: 400
+  level: 300
   islab: true
 ---
 

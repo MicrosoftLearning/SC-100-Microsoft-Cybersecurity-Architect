@@ -1,9 +1,9 @@
 ---
 lab:
   title: Global Secure Access
-  description: Once your endpoint is joined to Entra ID you will be able to set up the GSA client which is used to connect to any resources you are protecting with Global Secure Access.
+  description: In this lab, Activate Global Secure Access in your tenant and do the necessary setup and configuration to use Microsoft Entra Private Access to enable secure remote access to private resources hosted on-premises without exposing them to the internet or requiring a VPN..
   duration: 60 minutes
-  level: 100
+  level: 400
   islab: true
 ---
 

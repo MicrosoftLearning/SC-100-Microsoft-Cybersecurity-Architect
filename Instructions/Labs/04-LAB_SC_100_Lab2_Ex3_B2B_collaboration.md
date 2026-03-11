@@ -1,9 +1,9 @@
 ---
 lab:
   title: Cross-tenant Synchronization
-  description: Contoso recently acquired Tailwind Traders and it has been difficult to determine which guests are customers or partners, and which are employees of the acquired company. You need to establish cross-tenant synchronization to enable collaboration while maintaining Zero Trust principles. You will restrict guest invitation rights, limit external access to trusted domains, and configure bidirectional user synchronization between tenants.
+  description: Int his lab, you establish cross-tenant synchronization to enable collaboration while maintaining Zero Trust principles by restricting guest invitation rights, limiting external access to trusted domains, and configuring bidirectional user synchronization between tenants.
   duration: 60 minutes
-  level: 200
+  level: 400
   islab: true
 ---
 

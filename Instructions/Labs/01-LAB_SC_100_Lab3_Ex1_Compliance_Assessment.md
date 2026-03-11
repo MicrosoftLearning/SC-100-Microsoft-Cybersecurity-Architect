@@ -1,9 +1,9 @@
 ---
 lab:
   title: Compliance assessment
-  description: Users need access to view the tasks assigned to them. You will grant Nestor Wilke access to the assessment.
+  description: Use Microsoft Purview to assess compliance posture and assign remediation tasks to technical staff.
   duration: 25 minutes
-  level: 200
+  level: 300
   islab: true
 ---
 

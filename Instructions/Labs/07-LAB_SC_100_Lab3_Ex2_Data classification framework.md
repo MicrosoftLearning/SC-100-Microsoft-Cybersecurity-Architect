@@ -1,9 +1,9 @@
 ---
 lab:
   title: Data classification framework
-  description: You will create a custom sensitive information type to detect documents that contain project IDs.
-  duration: 25 minutes
-  level: 200
+  description: In this lab, you create a custom sensitive information type to detect documents that contain project IDs.
+  duration: 40 minutes
+  level: 300
   islab: true
 ---
 
@@ -29,7 +29,7 @@ In this lab, you will:
 - Create a retention label with a 5-year retention period
 - Configure auto-apply policies to automatically label documents containing project IDs
 
-**Estimated time: 20-25 minutes**
+**Estimated time: 30-40 minutes**
 
 ## Lab tasks
 

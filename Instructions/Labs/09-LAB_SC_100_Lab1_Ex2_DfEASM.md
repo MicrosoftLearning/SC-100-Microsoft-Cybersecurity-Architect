@@ -1,7 +1,7 @@
 ---
 lab:
   title: Managing External Attack Surface
-  description: Contoso aims to enhance its cybersecurity posture by identifying and managing its external attack surface, including assets hosted on different cloud providers. You will use Microsoft Defender External Attack Surface Management (EASM) to discover exposed resources and integrate the data with Sentinel for enhanced security monitoring.
+  description: In this lab, you will use Microsoft Defender External Attack Surface Management (EASM) to discover exposed resources and integrate the data with Sentinel for enhanced security monitoring.
   duration: 45 minutes
   level: 300
   islab: true
@@ -22,7 +22,7 @@ In this lab, you will:
 - Review security dashboards and label assets for investigation
 - Manage and categorize discovered assets by state
 
-**Estimated time: 35-45 minutes**
+**Estimated time: 45 minutes**
 
 ## Lab tasks
 

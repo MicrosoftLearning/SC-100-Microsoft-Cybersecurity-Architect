@@ -1,9 +1,9 @@
 ---
 lab:
   title: Shadow-IT
-  description: In order to automatically block unsafe applications in the future, you will create a custom app discovery policy. This policy will tag unsafe applications as Unsanctioned. As you have integrated Defender for Endpoint with Defender for Cloud Apps, these applications will be blocked automatically.
+  description: In this lab, you enable integration of Microsoft Defender for Endpoint with Defender for Cloud Apps, investigate discovered applications and their risk scores, then create a policy to automatically unsanction risky applications.
   duration: 30 minutes
-  level: 200
+  level: 300
   islab: true
 ---
 
@@ -19,7 +19,7 @@ In this lab, you will:
 - Block unsafe applications manually
 - Create an automated policy to unsanction risky applications
 
-**Estimated time: 20-30 minutes**
+**Estimated time: 30 minutes**
 
 ## Lab tasks
 

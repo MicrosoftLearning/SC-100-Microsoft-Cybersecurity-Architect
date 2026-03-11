@@ -1,7 +1,7 @@
 ---
 lab:
   title: Secure Infrastructure
-  description: Contoso Ltd. recently acquired Tailwind Traders, which still uses local file servers for storage. You need to evaluate a solution to secure these file servers with your existing cloud environment using Azure Arc and Microsoft Defender for Cloud. You will set up a test server and integrate it into your cloud infrastructure and security environment.
+  description: In this lab, you create a Log Analytics workspace for log collection, enable Microsoft Defender for Cloud server protection, set up a test server and integrate it into your cloud infrastructure and security environment through Azure Arc, then configure data collection rules to gather event logs.
   duration: 50 minutes
   level: 400
   islab: true
@@ -25,7 +25,7 @@ In this lab, you will:
 - Configure data collection rules to gather event logs
 - Add a regulatory compliance standard (NIST SP 800-53 Rev.5)
 
-**Estimated time: 40-50 minutes**
+**Estimated time: 50 minutes**
 
 ## Lab tasks
 
