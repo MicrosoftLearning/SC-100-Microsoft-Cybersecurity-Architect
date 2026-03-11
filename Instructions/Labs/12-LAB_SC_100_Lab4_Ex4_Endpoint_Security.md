@@ -1,3 +1,14 @@
+---
+lab:
+  title: Endpoint Security
+  description: After securing Windows devices with endpoint security baseline policies you will deploy antivirus and enable encryption on macOS devices to prepare your environment for merging with Trailwind Traders.
+  duration: 35 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Windows
+---
+
 # Endpoint Security
 
 ## Lab scenario
