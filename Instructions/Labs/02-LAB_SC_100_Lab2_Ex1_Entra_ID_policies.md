@@ -1,3 +1,12 @@
+---
+lab:
+  title: Configure Entra ID
+  description: In this Task you will use the Entra ID portal to create an own Authentication strength to restrict the use of SMS OTP within your organization.
+  duration: 20 minutes
+  level: 200
+  islab: true
+---
+
 # Configure Entra ID
 
 ## Lab scenario
