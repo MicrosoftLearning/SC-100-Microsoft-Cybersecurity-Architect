@@ -1,3 +1,12 @@
+---
+lab:
+  title: Retention policies
+  description: To adhere to german regulations you will now create a retention label with a retention period of 10 years and auto-apply it to all documents that contain german financial data.
+  duration: 35 minutes
+  level: 200
+  islab: true
+---
+
 # Retention policies
 
 ## Lab scenario
