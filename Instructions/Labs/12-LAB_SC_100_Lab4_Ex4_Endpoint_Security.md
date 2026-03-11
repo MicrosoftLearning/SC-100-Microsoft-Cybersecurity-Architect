@@ -1,3 +1,14 @@
+---
+lab:
+  title: Endpoint Security
+  description: In this lab, you deploy endpoint security baseline policies for Windows devices, you deploy antivirus and enable encryption on macOS devices, and you configure disk encryption (FileVault) for macOS devices.
+  duration: 35 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Windows
+---
+
 # Endpoint Security
 
 ## Lab scenario
@@ -9,7 +20,7 @@ In this lab, you will:
 - Deploy antivirus protection for macOS devices
 - Configure disk encryption (FileVault) for macOS devices
 
-**Estimated time: 25-35 minutes**
+**Estimated time: 35 minutes**
 
 ## Lab tasks
 

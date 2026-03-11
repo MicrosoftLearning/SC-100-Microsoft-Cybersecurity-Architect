@@ -1,3 +1,12 @@
+---
+lab:
+  title: Compliance assessment
+  description: Use Microsoft Purview to assess compliance posture and assign remediation tasks to technical staff.
+  duration: 25 minutes
+  level: 300
+  islab: true
+---
+
 # Compliance assessment
 
 ## Lab scenario

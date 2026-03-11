@@ -1,3 +1,12 @@
+---
+lab:
+  title: Security Posture Management
+  description: In this lab, you create a custom role for security posture management with Exposure Management permissions that grants a user access to the Exposure Management data source and activate the Microsoft Defender XDR Unified RBAC model for your workloads. You also share a recommended action with a user who will manage the recommendations.
+  duration: 40 minutes
+  level: 300
+  islab: true
+---
+
 # Security Posture Management
 
 ## Lab scenario

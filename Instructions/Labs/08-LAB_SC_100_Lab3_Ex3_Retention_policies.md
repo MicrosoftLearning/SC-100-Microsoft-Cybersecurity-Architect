@@ -1,3 +1,12 @@
+---
+lab:
+  title: Retention policies
+  description: In this lab, you create a company-wide retention policy with a 5-year minimum retention period. You also you create a retention label with a retention period of 10 years and auto-apply it to all documents that contain german financial data.
+  duration: 40 minutes
+  level: 300
+  islab: true
+---
+
 # Retention policies
 
 ## Lab scenario
@@ -9,7 +18,7 @@ In this lab, you will:
 - Create a company-wide retention policy with a 5-year minimum retention period
 - Create and auto-apply a retention label for German financial data with an 11-year retention period
 
-**Estimated time: 25-35 minutes**
+**Estimated time: 40 minutes**
 
 ## Lab tasks
 

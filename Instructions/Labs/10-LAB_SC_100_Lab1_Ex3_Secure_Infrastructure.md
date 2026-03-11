@@ -1,3 +1,17 @@
+---
+lab:
+  title: Secure Infrastructure
+  description: In this lab, you create a Log Analytics workspace for log collection, enable Microsoft Defender for Cloud server protection, set up a test server and integrate it into your cloud infrastructure and security environment through Azure Arc, then configure data collection rules to gather event logs.
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Arc
+    - Microsoft Defender
+    - Microsoft Defender for Cloud
+---
+
 # Secure Infrastructure
 
 ## Lab scenario
@@ -11,7 +25,7 @@ In this lab, you will:
 - Configure data collection rules to gather event logs
 - Add a regulatory compliance standard (NIST SP 800-53 Rev.5)
 
-**Estimated time: 40-50 minutes**
+**Estimated time: 50 minutes**
 
 ## Lab tasks
 

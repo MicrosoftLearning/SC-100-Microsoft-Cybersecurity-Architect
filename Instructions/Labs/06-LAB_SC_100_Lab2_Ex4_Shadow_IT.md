@@ -1,3 +1,12 @@
+---
+lab:
+  title: Shadow-IT
+  description: In this lab, you enable integration of Microsoft Defender for Endpoint with Defender for Cloud Apps, investigate discovered applications and their risk scores, then create a policy to automatically unsanction risky applications.
+  duration: 30 minutes
+  level: 300
+  islab: true
+---
+
 # Shadow-IT
 
 ## Lab scenario
@@ -10,7 +19,7 @@ In this lab, you will:
 - Block unsafe applications manually
 - Create an automated policy to unsanction risky applications
 
-**Estimated time: 20-30 minutes**
+**Estimated time: 30 minutes**
 
 ## Lab tasks
 
