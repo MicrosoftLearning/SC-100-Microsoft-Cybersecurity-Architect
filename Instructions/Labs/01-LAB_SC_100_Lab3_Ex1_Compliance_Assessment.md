@@ -1,3 +1,12 @@
+---
+lab:
+  title: Compliance assessment
+  description: Users need access to view the tasks assigned to them. You will grant Nestor Wilke access to the assessment.
+  duration: 25 minutes
+  level: 200
+  islab: true
+---
+
 # Compliance assessment
 
 ## Lab scenario
