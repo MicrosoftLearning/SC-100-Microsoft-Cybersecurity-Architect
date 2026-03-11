@@ -1,7 +1,7 @@
 ---
 lab:
   title: Cross-tenant Synchronization
-  description: Int his lab, you establish cross-tenant synchronization to enable collaboration while maintaining Zero Trust principles by restricting guest invitation rights, limiting external access to trusted domains, and configuring bidirectional user synchronization between tenants.
+  description: In this lab, you establish cross-tenant synchronization to enable collaboration while maintaining Zero Trust principles by restricting guest invitation rights, limiting external access to trusted domains, and configuring bidirectional user synchronization between tenants.
   duration: 60 minutes
   level: 400
   islab: true
