@@ -1,3 +1,12 @@
+---
+lab:
+  title: Data classification framework
+  description: You will create a custom sensitive information type to detect documents that contain project IDs.
+  duration: 25 minutes
+  level: 200
+  islab: true
+---
+
 # Data classification framework
 
 ## Lab scenario
