@@ -1,3 +1,12 @@
+---
+lab:
+  title: Conditional Access
+  description: In this task you will create a named location using your VM's external IP address to define a trusted network you can use in a conditional access policy in the following tasks. You will use this address because your machine is located within your company network.
+  duration: 40 minutes
+  level: 300
+  islab: true
+---
+
 # Conditional Access
 
 ## Lab scenario
