@@ -1,3 +1,12 @@
+---
+lab:
+  title: Security Operations Center
+  description: In this task, you will add Sentinel to the created log analytics workspace.
+  duration: 45 minutes
+  level: 400
+  islab: true
+---
+
 # Security Operations Center
 
 ## Lab scenario
