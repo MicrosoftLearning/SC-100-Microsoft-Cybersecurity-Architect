@@ -1,3 +1,12 @@
+---
+lab:
+  title: Global Secure Access
+  description: Once your endpoint is joined to Entra ID you will be able to set up the GSA client which is used to connect to any resources you are protecting with Global Secure Access.
+  duration: 60 minutes
+  level: 100
+  islab: true
+---
+
 # Global Secure Access
 
 ## Lab scenario
