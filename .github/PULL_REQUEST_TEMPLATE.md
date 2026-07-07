@@ -1,8 +1,8 @@
-**Replace the PR title LAB00: QUICK_DESCRIPTION, for example "LAB01: My new issue" (or same name as linked Issue)**
+**Replace the PR title LAB00: QUICK_DESCRIPTION, for example "LAB01: My new change" (or same name as linked Issue)**
 
 ## Related Issue
 
-**Link related Github Issue** 🢂 Fixes # . (Include issue number after #)
+**Link related GitHub Issue** 🢂 Fixes # . (Include issue number after #)
 
 ## Checklist 
 Mark completed with "x" between brackets, "[x]", or checking the box once the PR is created:
