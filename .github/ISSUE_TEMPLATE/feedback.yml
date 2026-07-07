@@ -1,0 +1,56 @@
+name: Feedback Report
+description: File a feedback report
+title: "LAB00: QUICK_DESCRIPTION"
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Thanks for taking the time to fill out this feedback report!
+        
+        **Replace the feedback title LAB00: QUICK_DESCRIPTION, for example "LAB01: My new feedback"**
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info 😉?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What should we change?
+      description: What should we change?
+      placeholder: Tell us your proposal!
+      value: PROPOSAL
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Lab
+      description: Which lab does this feedback relate to?
+      options:
+        - Other
+        - Lab 1 Ex 1 - Security Operations Center
+        - Lab 1 Ex 2 - Managing External Attack Surface
+        - Lab 1 Ex 3 - Secure Infrastructure
+        - Lab 2 Ex 1 - Configure Entra ID
+        - Lab 2 Ex 2 - Conditional Access
+        - Lab 2 Ex 3 - Cross-tenant Synchronization
+        - Lab 2 Ex 4 - Shadow-IT
+        - Lab 3 Ex 1 - Compliance assessment
+        - Lab 3 Ex 2 - Data classification framework
+        - Lab 3 Ex 3 - Retention policies
+        - Lab 4 Ex 1 - Security Posture Management
+        - Lab 4 Ex 4 - Endpoint Security
+    validations:
+      required: true
+  - type: textarea
+    id: Screenshots
+    attributes:
+      label: Relevant screenshots
+      description: Please copy and paste any relevant screenshots 📸
+      value: paste here 😉 
+  
