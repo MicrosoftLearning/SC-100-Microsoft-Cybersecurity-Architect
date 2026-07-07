@@ -58,7 +58,7 @@ For the Pull Request title, use the following syntax:
 
 The screenshot being used by some instructions are organized the following way, a folder located under `SC-100-Microsoft-Cybersecurity-Architect/Instructions/Labs/images` with the lab number. 
 
-![Github Repo showing images folder](images/image_folder_location.png)
+![GitHub Repo showing images folder](images/image_folder_location.png)
 
 On the lab specific folder, screenshots will be saved on the following format (PNG) and naming:
 `[descriptive_name]_[versionnumber].png`, for example, `create_epic_v1.png`
@@ -73,7 +73,7 @@ For example,
 
 `![Azure DevOps Generator website. Click on "Sign In" option](images/m1/demo_signin_v1.png)`
 
-> ⚠️ For accesibility, the ALT text should include a **clear** description of the screenshot, as shown in the example above.
+> ⚠️ For accessibility, the ALT text should include a **clear** description of the screenshot, as shown in the example above.
 
 > ⚠️ Image could be resized using the following syntax example, modifying with to your needs: 
 `[<img src="images/m1/child_feature_v1.png" alt="Include Title 'Training Dashboard' and click 'OK' " width="500"/>]()`
