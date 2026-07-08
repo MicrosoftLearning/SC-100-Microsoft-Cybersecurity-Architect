@@ -1,7 +1,7 @@
 ---
 lab:
   title: Retention policies
-  description: In this lab, you create a company-wide retention policy with a 5-year minimum retention period. You also you create a retention label with a retention period of 10 years and auto-apply it to all documents that contain german financial data.
+  description: In this lab, you create a company-wide retention policy with a 5-year minimum retention period. You also create a retention label with a retention period of 10 years and auto-apply it to all documents that contain German financial data.
   duration: 40 minutes
   level: 300
   islab: true
@@ -29,19 +29,25 @@ In this task, you will familiarize yourself with your company's existing retenti
 >[!NOTE] You should have already installed the Exchange Online PowerShell module. If the module is missing follow the instructions for installing the module.
 
 1. Open an elevated Windows PowerShell window by selecting the Windows button with the right mouse button and then select **Terminal (Admin)**.
+
 1. Confirm the **User Account Control** window with **Yes**.
+
 1. Enter the following cmdlet to install the latest Exchange Online PowerShell module version:
 
     ```powershell
     Install-Module ExchangeOnlineManagement
     ```
+
 1. Confirm the untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
+
 1. Enter the following cmdlet to connect to Security & Compliance PowerShell then when prompted, login with your MOD administrator credentials:
 
     ```powershell
     Connect-IPPSSession
     ```
+
 1. In the window that opens, select Yes. A window opens stating, Account added to this device. Select **Done**. 
+
 1. Enter the following cmdlet to view existing retention policies and settings:
 
     ```powershell
@@ -63,16 +69,23 @@ Your plan involves implementing a new company-wide retention policy with a five-
 1. You should still be logged in to the Purview portal.  If not, sign-in to the Microsoft Purview portal **`https://purview.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
     1. If you're asked to setup multifactor authentication, follow the instructions.
     1. Select **Get started**.
+
 1. From the left navigation panel, select **Solutions** then select **Data Lifecycle Management**. Alternatively, from the main window you can select the **View all solutions** tile, then select the ***Data Lifecycle Management** tile listed under Data Governance.
 
 1. On the **Data lifecycle management** pane, expand **Policies** and select **Retention policies**.
+
 1. On the **Retention policies** page select **+ New retention policy**.
+
 1. On the **Name your retention policy** page enter the following information:
     - **Name**: **`General retention policy`**
     - **Description**: **`This policy is the default retention policy for the entire organization. All data must be retained for at least 5 years.`**
+
 1. Select **Next**.
+
 1. On the **Policy Scope** page select **Next**.
+
 1. On the **Choose the type of retention policy to create** page select **Static** and select **Next**.
+
 1. On the **Choose where to apply this policy** page enable following locations:
 
     - Exchange mailboxes
@@ -81,24 +94,29 @@ Your plan involves implementing a new company-wide retention policy with a five-
     - Microsoft 365 Group mailboxes & sites
 
 1. Select **Next**.
+
 1. On the **Decide if you want to retain content, delete it or both** page enter the following settings:
 
     - Retain items for a specific period: **5 years**
-    - Start the retention period based on: **When items were cerated**
+    - Start the retention period based on: **When items were created**
     - At the end of the retention period: **Do nothing**
 
 1. Select **Next**.
+
 1. On the **Review and finish** page select **Submit**, then select **Done**.
 
 You have successfully created a retention policy. You can now delete all remaining retention policies as they do not meet the company's requirements.
 
 ### Task 3: Create a retention label
 
-To adhere to german regulations you will now create a retention label with a retention period of 10 years and auto-apply it to all documents that contain german financial data.
+To adhere to German regulations you will now create a retention label with a retention period of 10 years and auto-apply it to all documents that contain German financial data.
 
 1. You should still be logged into the **Data Lifecycle Management** solution in the Microsoft Purview portal.  If not, navigate to **`https://purview.microsoft.com/`** > **Solutions** > **Data Lifecycle Management**.
+
 1. On the **Data lifecycle management** pane, select **Retention labels**.
+
 1. On the **Labels** page, select **+ Create a label**.
+
 1. On the **Name your retention label** page enter the following information:
 
     - Name: **`German financial data`**
@@ -106,27 +124,39 @@ To adhere to german regulations you will now create a retention label with a ret
     - Description for admins: **`The label retains all financial data for 10 years and it is automatically applied.`**
 
 1. Select **Next**.
+
 1. On the **Define label settings** page select **Enforce actions after a specific period** and select **Next**.
+
 1. On the **Define the period** page enter the following information:
 
     - How long is the period?: **10 years**
     - When should the period begin?: **When items were created**
 
 1. Select **Next**.
+
 1. On the **Choose what happens after the period** page select **Delete items automatically**. Click **Next**.
+
 1. On the **Review and finish** page select **Create label**.
+
 1. On the **Your retention label is created** page select **Auto-apply this label to a specific type of content** and select **Done**.
+
 1. On the **Let´s get started** page enter the following information:
 
     - Name: **`Automatically retain all German financial data for 10 years`**
     - Descriptions: **`This policy auto-applies the label German financial data.`**
 
 1. Select **Next**.
+
 1. On the **Choose the type of content you want to apply this label to** page select **Apply label to content that contains sensitive info** and select **Next**.
+
 1. On the **Content that contains sensitive info** page set the filter to **Germany** and select **Financial** and then **Germany Financial Data** then select **Next**.
+
 1. On the **Define content that contains sensitive info** page, leave all existing settings (no change) and select **Next**.
+
 1. On the **Policy scope** page select **Next**.
+
 1. On the **Choose the type of retention policy to create**, page select **Static**.
+
 1. On the **Choose where to automatically apply the label** page enable following locations:
 
     - Exchange mailboxes
@@ -135,8 +165,11 @@ To adhere to german regulations you will now create a retention label with a ret
     - Microsoft 365 Group mailboxes & sites
 
 1. Select **Next**.
+
 1. On the **Choose a label to auto-apply** page make sure that the  **German Financial Data** label is already present. Otherwise add it using the **+ Add label** button. Select **Next**.
+
 1. On the **Decide whether to test or run your policy** page select **Turn on policy** then select **Next**.
+
 1. On the **Review and finish** page select **Submit** then select **Done**.
 
 You have successfully created and auto-applied a retention label.
