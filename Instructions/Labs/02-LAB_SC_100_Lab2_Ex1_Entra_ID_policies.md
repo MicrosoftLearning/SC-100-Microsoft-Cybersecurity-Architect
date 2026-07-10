@@ -32,7 +32,7 @@ In this task you will restrict the level of access a user can grant to applicati
 
 1. Open **Microsoft Edge**, select the address bar, navigate to **`https://entra.microsoft.com`** and log into the **Microsoft Entra admin center** as **MOD Administrator** admin@WWLxZZZZZZ.onmicrosoft.com (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The admin password should be provided by your lab hosting provider.
 
-1. If you're asked to setup multifactor authentication, follow the instructions.
+1. If you're asked to set up multifactor authentication, follow the instructions.
 
 1. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **No**.
 
@@ -52,7 +52,7 @@ In this task you will restrict the level of access a user can grant to applicati
 
 1. Select **Save**.
 
-1. Navigate to **Admin consent settings** and enable Admin consent requests by selecting **Yes**, to allows users to request admin consent to apps they are unable to content to.
+1. Navigate to **Admin consent settings** and enable Admin consent requests by selecting **Yes**, to allow users to request admin consent to apps they are unable to content to.
 
 1. Select **+ Add users** to add **`Lidia Holloway`** and **`MOD Administrator`** as users that can review admin consent requests.
 
@@ -64,7 +64,7 @@ You have now configured the application consent settings limiting the access eve
 
 ### Task 2 - Create an Authentication strength
 
-In this Task you will use the **Microsoft Entra admin center** to create an own Authentication strength to restrict the use of SMS OTP within your organization. 
+In this task you will use the **Microsoft Entra admin center** to create an own Authentication strength to restrict the use of SMS OTP within your organization. 
 
 1. You should still be logged into the **Microsoft Entra admin center** **`https://entra.microsoft.com`**.
 
@@ -85,7 +85,7 @@ In this Task you will use the **Microsoft Entra admin center** to create an own 
 
 7. Select **Next**.
 
-8. Review and check, that none of the above factors are left in the authentication strength.
+8. Review and check that none of the above factors are left in the authentication strength.
 
 9.  Select **Create**.
 
