@@ -26,7 +26,7 @@ In this lab, you will:
 
 In this task, you will familiarize yourself with your company's existing retention policy. You will have a look into different retention policies, labels and label policies. You will use the Security & Compliance PowerShell module and view the existing policies. You will investigate the current set-up and decide whether the existing retention policies are enough for Contoso Ltd. to meet the legal requirements.
 
->[!NOTE] You should have already installed the Exchange Online PowerShell module. If the module is missing follow the instructions for installing the module.
+ > **Note:** You should have already installed the Exchange Online PowerShell module. If the module is missing follow the instructions for installing the module.
 
 1. Open an elevated Windows PowerShell window by selecting the Windows button with the right mouse button and then select **Terminal (Admin)**.
 
@@ -56,7 +56,7 @@ In this task, you will familiarize yourself with your company's existing retenti
 
 1. Take some time to assess the resulting table.
 
-    >[!NOTE] You can also access the Microsoft Purview Compliance portal to view retention policies but you have to look into each policy one by one instead of getting an overview over all your policies at a glance.
+    > **Note:** You can also access the Microsoft Purview Compliance portal to view retention policies but you have to look into each policy one by one instead of getting an overview over all your policies at a glance.
 
 You successfully viewed the existing labels and settings to decide whether they meet the legal requirements.
 
@@ -70,7 +70,7 @@ Your plan involves implementing a new company-wide retention policy with a five-
     1. If you're asked to setup multifactor authentication, follow the instructions.
     1. Select **Get started**.
 
-1. From the left navigation panel, select **Solutions** then select **Data Lifecycle Management**. Alternatively, from the main window you can select the **View all solutions** tile, then select the ***Data Lifecycle Management** tile listed under Data Governance.
+1. From the left navigation panel, select **Solutions** then select **Data Lifecycle Management**. Alternatively, from the main window you can select the **View all solutions** tile, then select the **Data Lifecycle Management** tile listed under Data Governance.
 
 1. On the **Data lifecycle management** pane, expand **Policies** and select **Retention policies**.
 
@@ -87,7 +87,6 @@ Your plan involves implementing a new company-wide retention policy with a five-
 1. On the **Choose the type of retention policy to create** page select **Static** and select **Next**.
 
 1. On the **Choose where to apply this policy** page enable following locations:
-
     - Exchange mailboxes
     - SharePoint classic and communication sites
     - OneDrive accounts
@@ -96,7 +95,6 @@ Your plan involves implementing a new company-wide retention policy with a five-
 1. Select **Next**.
 
 1. On the **Decide if you want to retain content, delete it or both** page enter the following settings:
-
     - Retain items for a specific period: **5 years**
     - Start the retention period based on: **When items were created**
     - At the end of the retention period: **Do nothing**
@@ -118,7 +116,6 @@ To adhere to German regulations you will now create a retention label with a ret
 1. On the **Labels** page, select **+ Create a label**.
 
 1. On the **Name your retention label** page enter the following information:
-
     - Name: **`German financial data`**
     - Description for users: **`This label retains all German financial data for 10 years.`**
     - Description for admins: **`The label retains all financial data for 10 years and it is automatically applied.`**
@@ -128,7 +125,6 @@ To adhere to German regulations you will now create a retention label with a ret
 1. On the **Define label settings** page select **Enforce actions after a specific period** and select **Next**.
 
 1. On the **Define the period** page enter the following information:
-
     - How long is the period?: **10 years**
     - When should the period begin?: **When items were created**
 
@@ -141,7 +137,6 @@ To adhere to German regulations you will now create a retention label with a ret
 1. On the **Your retention label is created** page select **Auto-apply this label to a specific type of content** and select **Done**.
 
 1. On the **Let´s get started** page enter the following information:
-
     - Name: **`Automatically retain all German financial data for 10 years`**
     - Descriptions: **`This policy auto-applies the label German financial data.`**
 
@@ -158,7 +153,6 @@ To adhere to German regulations you will now create a retention label with a ret
 1. On the **Choose the type of retention policy to create**, page select **Static**.
 
 1. On the **Choose where to automatically apply the label** page enable following locations:
-
     - Exchange mailboxes
     - SharePoint classic and communication sites
     - OneDrive accounts
