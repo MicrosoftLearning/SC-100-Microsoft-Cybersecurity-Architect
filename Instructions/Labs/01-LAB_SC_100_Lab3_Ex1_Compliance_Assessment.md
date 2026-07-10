@@ -28,7 +28,7 @@ Your first step is to analyse the company's current environment. You carry out a
 
 1. Sign-in to the **Microsoft Purview** portal **`https://purview.microsoft.com/`** as Allan Deyoung using his administrator account **MOD Administrator**.
 
-1. If you're asked to setup multifactor authentication, follow the instructions.
+1. If you're asked to set up multifactor authentication, follow the instructions.
 
 1. You're taken to the new **Microsoft Purview** portal landing page. Select **Get started**.
 
@@ -40,7 +40,7 @@ Your first step is to analyse the company's current environment. You carry out a
 
 1. From the **Base your assessment on a regulation** window, select **Select regulation**.
 
-1. In the search text box enter **`ISO/IEC 27001:2022`**, then select the regulation then select **Save** and then select **Next**.
+1. In the search text box, enter **`ISO/IEC 27001:2022`**, select the regulation, select **Save**, and then select **Next**.
 
 1. On the **Add name and group** page, in the text box **Assessment name**, enter **`ISO-27001 Audit assessment`**. Leave the **Assessment group** setting to **Use existing group** with the **Default group**, then select **Next**.
 
@@ -66,7 +66,7 @@ The results of the assessment shows you different areas and actions that are ess
 
 1. Select the box next to **Improvement action** to select all shown improvement actions, then select **Assign to user** (listed above the filters options).
 
-1. In the new **Assign improvement actions** window, in the search text box enter **`Nestor`** and press enter.
+1. In the new **Assign improvement actions** window, in the search text box enter **`Nestor`** and press Enter.
 
 1. Select the user and select **Assign**.
 
@@ -84,7 +84,7 @@ Users need access to view the tasks assigned to them. You will grant Nestor Wilk
 
 1. From the new **Manage user access** window, select the **Assessor** tab and select **Add assessors**.
 
-1. In the **Search for users** text box, enter **`Nestor`** and press enter.
+1. In the **Search for users** text box, enter **`Nestor`** and press Enter.
 
 1. Select the user and then select **Apply**, then select **Save**.
 
