@@ -46,7 +46,7 @@ Your overall goal is to secure your endpoints appropriately and consolidate as m
 
 1. On the **Basics** blade enter:
     1. Name: **`Secure Windows Endpoints`**
-    1. Description: **`The Security Baseline for Windows 10 and later represents the recommendations for configuring Windows.`**.
+    1. Description: **`The Security Baseline for Windows 10 and later represents the recommendations for configuring Windows`**.
 
 1. Select **Next**.
 
