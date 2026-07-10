@@ -78,11 +78,11 @@ For the Microsoft Defender XDR security portal to start enforcing the permission
 
 When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
 
-In this task you´ll explore the page where workloads are activated.
+In this task you'll explore the page where workloads are activated.
 
 1. You should still be logged into the Microsoft Defender portal and be in the **Permissions and roles** page. You should see the custom role you just created.
 
-1. Note the information in the gray banner, Some of the roles aren't applicable yet, because you haven't activate all workloads. Select **Activate workloads**.
+1. Note the information in the gray banner, Some of the roles aren't applicable yet, because you haven't activated all workloads. Select **Activate workloads**.
 
 1. Note the description under **Activate unified role-based access control**.  When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender XDR Unified RBAC model in the Microsoft Defender portal.
 
@@ -92,7 +92,7 @@ You learned where to activate the Microsoft Defender XDR Unified RBAC model for 
 
 ### Task 3 - Share a recommended action
 
-Share a Microsoft Secure Score recommended action. In this task you'll post the action on a Teams channel. By posting it on Teams, users on the channel will see a notice but will not have access to the data source to edit the status or manage the action. Only Joni Shermann who is a member of the Teams channel and has role permissions can access the recommended action.
+Share a Microsoft Secure Score recommended action. In this task you'll post the action on a Teams channel. By posting it on Teams, users on the channel will see a notice but will not have access to the data source to edit the status or manage the action. Only Joni Sherman who is a member of the Teams channel and has role permissions can access the recommended action.
 
 1. You should still be logged into Microsoft Defender XDR portal.
 
@@ -116,7 +116,7 @@ Joni Sherman and her Mark 8 Project Team will be notified about the recommended 
 
 As Joni Sherman you received the teams notification that a specific action to increase the organization's security posture was recommended.  As an extended member of the security team you have the role permissions to manage the recommended action and document the solution.
 
-In this task, you´ll manage recommended action and document your solutions.
+In this task, you'll manage recommended action and document your solutions.
 
 1. Open a Microsoft Edge InPrivate window, navigate to **`https://office.com`** and sign in as **JoniS@WWLxZZZZZZ.onmicrosoft.com**.
 
@@ -146,7 +146,7 @@ As Joni Sherman, you successfully edited the status for the recommended action.
 
 ### Task 5 (Optional) - Adele Vance accesses the Teams post
 
-In this task, Adele Vance access the Mark 8 Project Team channel and selects the link in the posted message.
+In this task, Adele Vance accesses the Mark 8 Project Team channel and selects the link in the posted message.
 
 1. Open a Microsoft Edge InPrivate window, navigate to **`https://office.com`** and sign in as Adele Vance, **AdeleV@WWLxZZZZZZ.onmicrosoft.com**.
 
