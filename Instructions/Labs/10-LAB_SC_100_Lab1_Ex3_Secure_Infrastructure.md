@@ -135,9 +135,8 @@ You´ll deploy a Data collection rule to get event logs from the on premise serv
 
 1. Use the search bar at the top to search for **Data collection rules**, then select it from the search results.
 
-1. Select **+ Create a data collection rule**.
-
-1. - Rule Name: **`ContosoDCR`**
+1. Select **+ Create a data collection rule** and configure the following settings:
+   - Rule Name: **`ContosoDCR`**
    - Resource group: **ContosoRG**
 
 1. Select **Next: Resources**.
@@ -154,10 +153,9 @@ You´ll deploy a Data collection rule to get event logs from the on premise serv
 
 1. Select **Next: Destination**.
 
-1. Select **+ Add destination**.
-
-   - **Destination type:** **Log Analytics Workspaces**
-   - **Log Analytics Workspace:** **ContosoLA**
+1. Select **+ Add destination** and configure the following settings:
+   - Destination type: **Log Analytics Workspaces**
+   - Log Analytics Workspace: **ContosoLA**
 
 1. Select **Apply**.
 
