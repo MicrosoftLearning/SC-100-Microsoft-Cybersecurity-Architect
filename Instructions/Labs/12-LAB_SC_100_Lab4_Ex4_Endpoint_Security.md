@@ -167,7 +167,7 @@ In this task you will encrypt macOS devices.
 
 1. Select **Create**.
 
-1. On the **Basic** blade enter:
+1. On the **Basics** blade enter:
     1. Name: **`Encrypt macOS devices`**
     1. Description: **`FileVault provides built-in Full Disk Encryption for macOS devices.`**
     1. Select **Next**.
