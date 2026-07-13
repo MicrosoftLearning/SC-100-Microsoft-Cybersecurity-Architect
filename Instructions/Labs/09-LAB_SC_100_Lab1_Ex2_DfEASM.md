@@ -43,7 +43,8 @@ In this Task, you´ll create a Defender EASM workspace.
 1. Select **Create**.
 
 1. On Create Microsoft Defender EASM Resource, select the existing resource group **rg_eastus_soc**.
-    >[!NOTE] If the rg_eastus_soc resource group is not listed, you'll need to create it again, as opening a new lab instance does not preserve previous work.
+
+    > **Note:** If the rg_eastus_soc resource group is not listed, you'll need to create it again, as opening a new lab instance does not preserve previous work.
 
 1. In Instance details enter the name **`EASM`**, select **East US** for region.
 
@@ -91,16 +92,16 @@ In this Task, you´ll configure a data connection from Defender EASM to a log an
     1. On the leftmost pane, under Settings select Resource Providers.
     1. Search for microsoft.insights and register the provider.
 
-1. Add the data connection
+1. Add the data connection:
     1. In the top search bar, search for **`Log Analytics Workspaces`**.
-    2. Select your **law-sentinel** workspace from the last exercise and make sure you are in the **Overview** section (if not, select it from the left navigation panel).
-    >[!NOTE] If the law-sentinel workspace is not listed, you'll need to create it again, as opening a new lab instance does not preserve previous work. Refer to the Security Operations Center exercise, part 2, task 1.
+    1. Select your **law-sentinel** workspace from the last exercise and make sure you are in the **Overview** section (if not, select it from the left navigation panel).
+       > **Note:** If the law-sentinel workspace is not listed, you'll need to create it again, as opening a new lab instance does not preserve previous work. Refer to the Security Operations Center exercise, part 2, task 1.
     1. Leave the page as it is and open another tab and log into the Azure portal **`https://portal.azure.com`**.
     1. On the search bar on the top, search for **`Microsoft Defender EASM`** and open it.
     1. Select your **EASM** workspace.
     1. In the left navigation pane, expand **Manage** and select **Data connections**.
     1. Under Log Analytics, select **Add connection**.
-    1. Name it **law-sentinel**
+    1. Name it **law-sentinel**.
     1. Switch to the previous tab with the log analytics workspace that should be open.
     1. Expand **Log Analytics agent instructions**.
     1. Copy the **Workspace ID** into the corresponding field of the Add data connection window.
@@ -161,7 +162,7 @@ In this task, you´ll manage and categorize the discovered assets.
 
 1. In the left navigation pane, expand **General** and select **Inventory**.
 
-1. In the EASM | Inventory page, the Search tab is selected (underlined). In the search field use the dropdown menu to select **Labels**
+1. In the EASM | Inventory page, the Search tab is selected (underlined). In the search field use the dropdown menu to select **Labels**.
 
 1. In the dropdown menu below choose the label you recently created, **Open ports**.
 
@@ -179,7 +180,8 @@ Since this asset is hosted by a third party but still belongs to your attack sur
 1. In the Modify Asset window, use the drop-down the **State** field to select **Dependency**.
 
 1. Select **Update**.
-    >[!NOTE]In this Case you choose Dependency, because the asset is Infrastructure that is owned by a third party but is part of your attack surface because it directly supports the operation of your owned assets.
+   
+    > **Note:** In this Case you choose Dependency, because the asset is Infrastructure that is owned by a third party but is part of your attack surface because it directly supports the operation of your owned assets.
 
 1. Go back to Inventory by selecting **X** in the top right and create a new Search.
 
