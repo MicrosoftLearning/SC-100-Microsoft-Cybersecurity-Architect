@@ -175,7 +175,7 @@ In this Task you will review the attribute mappings and make sure that the synch
 
 1. In the **Enter suffix** field, enter **' (Contoso)'** including the space in front of the bracket but without the quotation marks.
 
-1. Select **Add expression**. Your expression on the right should look like `Append([displayName], " (Contoso)")`
+1. Select **Add expression**. Your expression on the right should look like `Append([displayName], " (Contoso)")`.
 
 1. You can test your expression by selecting a user.
 
