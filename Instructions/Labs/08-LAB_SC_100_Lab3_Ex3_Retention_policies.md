@@ -130,7 +130,7 @@ To adhere to German regulations you will now create a retention label with a ret
 
 1. Select **Next**.
 
-1. On the **Choose what happens after the period** page select **Delete items automatically**. Click **Next**.
+1. On the **Choose what happens after the period** page select **Delete items automatically**. Select **Next**.
 
 1. On the **Review and finish** page select **Create label**.
 
