@@ -102,7 +102,7 @@ After securing Windows devices with endpoint security baseline policies you will
     1. Name: **`Deploy antivirus on macOS devices`**
     1. Description: **`Deploy antivirus and enable encryption on macOS devices to prepare your environment for merging with Tailwind Traders.`**
 
-1. Select **Next**
+1. Select **Next**.
 
 1. On the **Configuration settings** tab ensure the settings are configured as follows:
 
@@ -122,11 +122,11 @@ After securing Windows devices with endpoint security baseline policies you will
     - Action to take: **block**
     - Threat type settings merge: **admin_only**
 
-1. Enable file hash computation: **True**
+1. Enable file hash computation: **True**.
 
-1. Run a scan after definitions are updated: **Enabled (Default)**
+1. Run a scan after definitions are updated: **Enabled (Default)**.
 
-1. Enforcement level: **real_time**
+1. Enforcement level: **real_time**.
 
 1. Under **Network protection**:
     - Enforcement level: block
@@ -134,7 +134,7 @@ After securing Windows devices with endpoint security baseline policies you will
 1. Under **Tamper protection**:
     - Enforcement level: **block (Default)**
 
-1. Under **User interface preferences**
+1. Under **User interface preferences**:
     - Control sign-in to consumer version: **enabled (Default)**
     - Show / hide status menu icon: **Disabled (Default)**
     - User initiated feedback: **enabled (Default)**
