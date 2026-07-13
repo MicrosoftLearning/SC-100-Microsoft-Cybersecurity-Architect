@@ -29,25 +29,25 @@ In this task, you'll create a log analytics workspace which is required to house
 
 1. Log into the Client 1 VM (LON-SC1) as the **lon-sc1\admin** account. The password should be provided by your lab hosting provider.
 
-2. Open **Microsoft Edge**, select the address bar, navigate to **`https://portal.azure.com`** and log into the Azure portal as user **User1-*******@LODSUATMCA.onmicrosoft.com** (where ****** is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
+1. Open **Microsoft Edge**, select the address bar, navigate to **`https://portal.azure.com`** and log into the Azure portal as user **User1-*******@LODSUATMCA.onmicrosoft.com** (where ****** is your unique tenant ID provided by your lab hosting provider). User´s password should be provided by your lab hosting provider.
 
-3. On the Stay signed in? dialog box, select the Don’t show this again checkbox and then select **No**.
+1. On the Stay signed in? dialog box, select the Don’t show this again checkbox and then select **No**.
 
-4. Close the password save dialog from the bottom by selecting Never, to not save the default global admins credentials in your browser.
+1. Close the password save dialog from the bottom by selecting Never, to not save the default global admins credentials in your browser.
 
-5. Cancel Welcome to Microsoft Azure screen.
+1. Cancel Welcome to Microsoft Azure screen.
 
-6. Select **+ Create a resource** and search for **log analytics workspace**.
+1. Select **+ Create a resource** and search for **log analytics workspace**.
 
-7. Find the **Log Analytics Workspace tile**, select **Create**.
+1. Find the **Log Analytics Workspace tile**, select **Create**.
 
-8. On Create Log Analytics workspace site, create a new **Resource Group** and name it **`rg_eastus_soc`**.
+1. On Create Log Analytics workspace site, create a new **Resource Group** and name it **`rg_eastus_soc`**.
 
-9. In Instance details enter the name **`law-sentinel`**, select **East US** for region.
+1. In Instance details enter the name **`law-sentinel`**, select **East US** for region.
 
-10. Select **Review & Create**
+1. Select **Review & Create**.
 
-11. Select **Create** to start the deployment.
+1. Select **Create** to start the deployment.
 
 You successfully created the log analytics workspace for your Sentinel deployment.
 
