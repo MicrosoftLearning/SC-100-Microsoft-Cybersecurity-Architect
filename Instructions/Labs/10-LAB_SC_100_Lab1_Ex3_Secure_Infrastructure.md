@@ -43,7 +43,7 @@ In this task, you´ll create a log analytics workspace which is required to hous
 
 1. Cancel Welcome to Microsoft Azure screen.
 
-1. Select **+ Create a resource** and search for **log analytics workspace**
+1. Select **+ Create a resource** and search for **log analytics workspace**.
 
 1. Find the **Log Analytics Workspace tile**, select **Create**.
 
@@ -51,7 +51,7 @@ In this task, you´ll create a log analytics workspace which is required to hous
 
 1. In Instance details enter the name **`ContosoLA`**, select **East US** for region.
 
-1. Select **Review & Create**
+1. Select **Review & Create**.
 
 1. Select **Create** to start the deployment.
 
