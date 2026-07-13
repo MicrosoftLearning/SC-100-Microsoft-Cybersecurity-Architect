@@ -65,8 +65,7 @@ You will create a custom sensitive information type to detect documents that con
 
     **`[a-zA-Z]{3}\W?[\d]{4}\W?[a-zA-Z]{2}`**
 
-    >[!NOTE]
-    > This regular expression matches a sequence of three letters, an optional non-word character, four digits, another optional non-word character, and two letters. Examples include `ABC1234DE`, `ABC-1234-DE`, and `ABC 1234 DE`.
+    > **Note:** This regular expression matches a sequence of three letters, an optional non-word character, four digits, another optional non-word character, and two letters. Examples include `ABC1234DE`, `ABC-1234-DE`, and `ABC 1234 DE`.
 
 1. Under the Regular expression text box, select **String match** then select **Done**, then **Create**.
 
@@ -91,7 +90,6 @@ You will create a retention label to retain all documents related to constructio
 1. On the **Labels** page, select **+ Create a label**.
 
 1. On the **Name your retention label** page, enter the following information:
-
     - Name: **`Retention of Construction Project Documentation`**
     - Description for users: **`The construction project documentation Retention Policy dictates the retention of all project-related documents for five years following project completion.`**
     - Description for admins: **`This label is applied to retain construction project documents for a period of five years, and it is utilized in conjunction with auto-labeling.`**
@@ -101,7 +99,6 @@ You will create a retention label to retain all documents related to constructio
 1. On the **Define label settings** page, select **Retain items forever or for a specific period** and select **Next**.
 
 1. On the **Define the retention period** page, enter the following information:
-
     - Retain items for: **5 years**
     - Start the retention period based on: **When items were created**
 
@@ -128,7 +125,6 @@ You will use the sensitive information type you created in this exercise to auto
 1. On the **Label policies** blade, select **Auto-apply a label**.
 
 1. On the **Let´s get started** page, enter the following information:
-
     - Name: **`Label documents related to construction projects`**
     - Description: **`This policy automatically enforces the "Construction Project Documentation Retention" policy on any document pertaining to construction projects.`**
 
