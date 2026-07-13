@@ -37,7 +37,7 @@ In this task, you'll create a log analytics workspace which is required to house
 
 5. Cancel Welcome to Microsoft Azure screen.
 
-6. Select **+ Create a resource** and search for **log analytics workspace**
+6. Select **+ Create a resource** and search for **log analytics workspace**.
 
 7. Find the **Log Analytics Workspace tile**, select **Create**.
 
@@ -125,8 +125,7 @@ You successfully created role based access model for the role requirements for C
 
 In this task, you review the steps involved in creating a dashboard with custom views and current incidents and their alerts.
 
-> [!NOTE]
-> The steps to create a dashboard with custom views for incidents and their alerts are included for information purposes only, as there is no data available upon which to do this task. Executing the steps will not return any data.
+ > **Note:** The steps to create a dashboard with custom views for incidents and their alerts are included for information purposes only, as there is no data available upon which to do this task. Executing the steps will not return any data.
 
 1. You should still be logged into the Azure portal **`https://portal.azure.com`**.
 
@@ -197,7 +196,7 @@ In this task, you review the steps involved in creating a dashboard with custom 
     | project Value = ProductName, Label = strcat(ProductName, ' - ', Count)
     ```
 
-1. In the **Time Range** dropdown menu Select **TimeRange**
+1. In the **Time Range** dropdown menu Select **TimeRange**.
 
 1. Scroll down to **Include in the drop down**, check **All** and set **Default selected item** to **All**.
 
@@ -239,7 +238,7 @@ You´ll setup dynamic content to get all alerts for the selected incident. Alert
 
 1. Select **Save**.
 
-1. Skip the steps below, unless you have data to run the query
+1. Skip the steps below, unless you have data to run the query:
     1. Go back to the **Settings** tab.
     1. Select **Run Query**.
     1. Select **Column Settings**.
@@ -252,7 +251,7 @@ You´ll setup dynamic content to get all alerts for the selected incident. Alert
 
 1. Select **+ Add** on the bottom of the **Editing query item** window. Select **Add query**.
 
-1. Paste the KQL in the Log Analytics workspace Logs Query
+1. Paste the KQL in the Log Analytics workspace Logs Query:
 
     ```KQL
     SecurityAlert
@@ -267,7 +266,7 @@ You´ll setup dynamic content to get all alerts for the selected incident. Alert
 
 1. Select **Done Editing** in the top bar of the **New workbook** window.
 
-1. Skip these steps unless you have data
+1. Skip these steps unless you have data:
     1. Select an **Incident**.
     1. Alerts to the linked Incident will show up below.
 
