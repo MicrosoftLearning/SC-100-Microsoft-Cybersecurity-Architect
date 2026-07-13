@@ -146,7 +146,7 @@ As Joni Sherman, you successfully edited the status for the recommended action.
 
 ### Task 5 (Optional) - Adele Vance accesses the Teams post
 
-In this task, Adele Vance accesses the Mark 8 Project Team channel and selects the link in the posted message.
+In this task, Adele Vance access the Mark 8 Project Team channel and selects the link in the posted message.
 
 1. Open a Microsoft Edge InPrivate window, navigate to **`https://office.com`** and sign in as Adele Vance, **AdeleV@WWLxZZZZZZ.onmicrosoft.com**.
 
