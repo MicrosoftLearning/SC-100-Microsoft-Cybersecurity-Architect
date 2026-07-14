@@ -118,7 +118,7 @@ After securing Windows devices with endpoint security baseline policies you will
     - Exclusion merge: **admin_only**
 
 1. Under **Threat type settings** select **+ Add**:
-    - In the text box for Threat type, enter: **potentially_unwanted_application**
+    - In the text box for Threat type, enter: **`potentially_unwanted_application`**
     - Action to take: **block**
     - Threat type settings merge: **admin_only**
 
