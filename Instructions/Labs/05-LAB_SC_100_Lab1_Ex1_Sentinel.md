@@ -37,7 +37,7 @@ In this task, you'll create a log analytics workspace which is required to house
 
 1. Cancel Welcome to Microsoft Azure screen.
 
-1. Select **+ Create a resource** and search for **log analytics workspace**.
+1. Select **+ Create a resource** and search for **`log analytics workspace`**.
 
 1. Find the **Log Analytics Workspace tile**, select **Create**.
 
