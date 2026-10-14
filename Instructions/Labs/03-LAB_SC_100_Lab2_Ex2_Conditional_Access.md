@@ -188,7 +188,7 @@ This task will skip the testing phase. In a real world scenario you would test w
 
 1. On the **Policy details** pane, select **View or Edit** button.
 
-1. Under **Users or agents** select **Specific users included**.
+1. Under **Users** select **Specific users included**.
 
 1. Select **All users**.
 
