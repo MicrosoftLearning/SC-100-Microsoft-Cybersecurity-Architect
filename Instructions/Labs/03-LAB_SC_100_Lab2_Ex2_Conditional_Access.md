@@ -72,7 +72,7 @@ As you have successfully created a trusted network you will now use this to crea
 
 1. Select **+ New policy** and enter the name **`Block access outside Trusted Network`**.
 
-1. Under **Users or agents**, select **0 users or agents selected**.
+1. Under **Users**, select **0 users and groups selected**.
     1. Under **Include** select **Select users and groups** and tick **Users and groups**.
     2. Select **Allan Deyoung** as the sole test user for the policy, then select **Select** at the bottom of the page.
 
@@ -169,7 +169,7 @@ This task will skip the testing phase. In a real world scenario you would test w
 
 4. Enter the name **`Salesforce authentication strength`**.
 
-5. Under **Users or agents**, select **0 users or agents selected**.
+5. Under **Users**, select **0 users and groups selected**.
     1. Under **Include** select **Select users and groups** and tick **Users and groups**.
     1. Select **Alex Wilber** from Sales as the sole test user for the policy, then select **Select** at the bottom of the page.
 
@@ -188,7 +188,7 @@ This task will skip the testing phase. In a real world scenario you would test w
 
 1. On the **Policy details** pane, select **View or Edit** button.
 
-1. Under **Users or agents** select **Specific users included**.
+1. Under **Users** select **Specific users included**.
 
 1. Select **All users**.
 
