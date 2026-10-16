@@ -94,7 +94,7 @@ Your plan involves implementing a new company-wide retention policy with a five-
 
 1. Select **Next**.
 
-1. On the **Decide if you want to retain content, delete it or both** page enter the following settings:
+1. On the **Decide if you want to retain, archive, or delete content** page enter the following settings:
     - Retain items for a specific period: **5 years**
     - Start the retention period based on: **When items were created**
     - At the end of the retention period: **Do nothing**
