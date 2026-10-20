@@ -31,7 +31,7 @@ In order to control the use of application on users company owned devices you mu
 
 1. In the Microsoft Defender portal, expand **Investigation & response** then expand **Hunting** and select **Advanced Hunting**. Wait for the completion of the new spaces preparation.  This step is only for the purpose of setting up the new spaces, there is no hunting in this step.
 
-1. In the Microsoft Defender portal, in the left navigation page expand **System** then select **Settings**.
+1. In the Microsoft Defender portal, in the left navigation page expand **Setup & configuration** then select **Settings**.
 
 1. On the **Settings** page select **Endpoints**. NOTE: It can take anywhere from 10 minutes to 1 hour for this option to appear. If after 10 minutes, you don't see it, continue with another exercise and then come back to this step.
 
